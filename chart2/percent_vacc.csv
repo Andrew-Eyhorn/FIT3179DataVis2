@@ -1,0 +1,32 @@
+PHN_Code,State,PHN_Name,Test_Population
+PHN101,NSW,Central and Eastern Sydney,1530000
+PHN102,NSW,Northern Sydney,955000
+PHN103,NSW,Western Sydney,1035000
+PHN104,NSW,Nepean Blue Mountains,385000
+PHN105,NSW,South Western Sydney,1040000
+PHN106,NSW,South Eastern NSW,640000
+PHN107,NSW,Western NSW,315000
+PHN108,NSW,Hunter New England and Central Coast,1325000
+PHN109,NSW,North Coast,545000
+PHN110,NSW,Murrumbidgee,250000
+PHN201,VIC,North Western Melbourne,1780000
+PHN202,VIC,Eastern Melbourne,1105000
+PHN203,VIC,South Eastern Melbourne,1545000
+PHN204,VIC,Gippsland,305000
+PHN205,VIC,Murray,645000
+PHN206,VIC,Western Victoria,630000
+PHN301,QLD,Brisbane North,1065000
+PHN302,QLD,Brisbane South,1250000
+PHN303,QLD,Gold Coast,650000
+PHN304,QLD,Darling Downs and West Moreton,605000
+PHN305,QLD,Western Queensland,400000
+PHN306,QLD,Central Queensland, Wide Bay and Sunshine Coast,890000
+PHN307,QLD,Northern Queensland,690000
+PHN401,SA,Adelaide,1335000
+PHN402,SA,Country SA,440000
+PHN501,WA,Perth North,1060000
+PHN502,WA,Perth South,1010000
+PHN503,WA,Country WA,540000
+PHN601,TAS,Tasmania,570000
+PHN701,NT,Northern Territory,250000
+PHN801,ACT,Australian Capital Territory,455000

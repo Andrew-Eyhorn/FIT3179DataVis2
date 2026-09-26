@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Child Immunisation Age 5 By State",
+  "width": 800,
+  "height": 400,
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "chart2testgeophnbound.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "PHN_202308_AUST_GDA2020"
+        }
+      },
+
+      "transform": [
+        {
+          "lookup": "properties.PHN_CODE",
+          "from": {
+            "data": {
+              "url": "chart2testdata.csv"
+            },
+            "key": "PHN_Code",
+            "fields": ["Test_Population", "Value", "Test_Lat", "Test_Long"]
+          },
+          "as": ["Population", "Value", "Latitude", "Longitude"]
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      }
+    },
+
+    {
+      "data": {
+        "url": "chart2testdata.csv"
+      },
+
+      "mark": {
+        "type": "circle",
+        "tooltip": {
+          "content": "data"
+        }
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "Test_Long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Test_Lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "Test_Population",
+          "type": "quantitative",
+          "title": "Test Population"
+        },
+        "color": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Value",
+          "scale": {
+            "scheme": "reds"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "PHN_Code",
+            "title": "PHN Code"
+          },
+          {
+            "field": "PHN_Name",
+            "title": "PHN Name"
+          },
+          {
+            "field": "Test_Population",
+            "title": "Test Population"
+          },
+          {
+            "field": "Value",
+            "title": "Value"
+          }
+        ]
+      }
+    }
+  ]
+}
