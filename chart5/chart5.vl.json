@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "chart5data.csv"},
+  "title": { "text": "Child Immune Slope Chart" },
+"width": 800,
+"height": 500,
+  "layer": [ {"mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Period",
+      "type": "ordinal",
+      "scale": {"padding": 0.5}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative"
+    },
+    "color": {"field": "GeographicAreaName", "type": "nominal"}
+  }
+},{
+      "mark": {
+        "type": "rule",
+        "strokeDash": [6, 4],
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "datum": 95
+        }
+      }
+    },{
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "dx": 5,
+      "dy": -5
+    },
+    "encoding": {
+      "x": {"value": 0},
+      "y": {"datum": 95},
+      "text": {"value": "95% target"}
+    }
+  }
+]}
