@@ -1,0 +1,18 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"title": { "text": "Child Immune over Time" },
+"width": 800,
+"height": 500,
+"data": {
+"url": "immunenational.csv"
+},
+"transform": [
+  { "filter": "datum.Category1 === 'All children'" }
+],
+"mark": "line",
+"encoding": {
+"x": { "field": "Period", "type": "ordinal" },
+"y": { "field": "Value", "type": "quantitative" },
+"color": { "field": "Filter1", "type": "nominal" }
+}
+}

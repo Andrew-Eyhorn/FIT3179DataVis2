@@ -1,0 +1,19 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"title": { "text": "Child Immune All vs Indigineous" },
+"width": 800,
+"height": 500,
+"data": {
+"url": "immunenational.csv"
+},
+"transform": [
+  { "filter": "datum.Period === '2018-19'" }
+],
+"mark": "bar",
+"encoding": {
+"xOffset": { "field": "Category1", "type": "ordinal" },
+"y": { "field": "Value", "type": "quantitative" },
+"x": { "field": "Filter1", "type": "nominal" },
+"color": { "field": "Category1", "type": "ordinal" }
+}
+}
