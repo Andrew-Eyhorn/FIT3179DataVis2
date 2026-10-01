@@ -1,0 +1,96 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "layer": [
+    {
+      "data": {
+        "url": "europe_only.json",
+        "format": {
+          "type": "topojson",
+          "feature": "europe_only"
+        }
+      },
+      "projection": {
+        "type": "conicConformal",
+        "center": [10, 52],
+        "scale": 1200
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "vaccinesources.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Source Long": "number",
+            "Source Lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum['Source Long'] + (datum['Vaccine Type'] === 'DTP' ? -0.3 : datum['Vaccine Type'] === 'Polio' ? -0.2 : datum['Vaccine Type'] === 'Hib' ? -0.1 : datum['Vaccine Type'] === 'Hep B' ? 0 : datum['Vaccine Type'] === 'MMR' ? 0.1 : datum['Vaccine Type'] === 'Pneumococcal' ? 0.2 : datum['Vaccine Type'] === 'MenC' ? 0.3 : 0.4)",
+          "as": "jitter_long"
+        },
+        {
+          "calculate": "datum['Source Lat'] + (datum['Vaccine Type'] === 'DTP' ? 0.3 : datum['Vaccine Type'] === 'Polio' ? 0.2 : datum['Vaccine Type'] === 'Hib' ? 0.1 : datum['Vaccine Type'] === 'Hep B' ? 0 : datum['Vaccine Type'] === 'MMR' ? -0.1 : datum['Vaccine Type'] === 'Pneumococcal' ? -0.2 : datum['Vaccine Type'] === 'MenC' ? -0.3 : -0.4)",
+          "as": "jitter_lat"
+        }
+      ],
+      "projection": {
+        "type": "conicConformal",
+        "center": [10, 52],
+        "scale": 1200
+      },
+      "mark": {
+        "type": "circle",
+        "size": 60
+      },
+      "encoding": {
+        "longitude": {
+          "field": "jitter_long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "jitter_lat",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Vaccine Type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "DTP",
+              "Polio",
+              "Hib",
+              "Hep B",
+              "MMR",
+              "Pneumococcal",
+              "MenC",
+              "Varicella"
+            ],
+            "range": [
+              "#0072B2",
+              "#E69F00",
+              "#56B4E9",
+              "#009E73",
+              "#F0E442",
+              "#CC79A7",
+              "#D55E00",
+              "#000000"
+            ]
+          },
+          "legend": {
+            "title": "Vaccine Type"
+          }
+        }
+      }
+    }
+  ]
+}

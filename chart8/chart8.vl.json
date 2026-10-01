@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "A simple bar chart",
+  "width": 800,
+  "height": 500,
+  "data": {
+        "url": "vaccinedpt31yearcomparison.csv"
+      },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": 0}, "sort": "-y"},
+    "y": {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative"},
+    "color": {
+          "condition": {
+            "test": "datum.Country == 'Australia'",
+            "value": "#ff9900"
+          },
+          "value": "#4682b4"
+        }
+  }
+}
+

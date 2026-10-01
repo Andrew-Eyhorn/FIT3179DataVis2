@@ -1,0 +1,147 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 800,
+  "height": 500,
+  "layer": [
+    {
+      "data": {
+        "url": "ne_110m_admin_0_countries.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "projection": {
+        "type": "equalEarth"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "vaccinesources.csv"
+      },
+      "projection": {
+        "type": "equalEarth"
+      },
+      "mark": "circle",
+      "encoding": {
+        "longitude": {
+          "field": "Source Long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Source Lat",
+          "type": "quantitative"
+        },
+        "size": {"value": 5},
+        "color": {"value": "black"}
+      }
+    },
+    {
+  "data": {
+    "url": "vaccinesources.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Source Long": "number",
+        "Source Lat": "number",
+        "Dest Long": "number",
+        "Dest Lat": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum['Dest Long'] - datum['Source Long']",
+      "as": "dx"
+    },
+    {
+      "calculate": "datum['Dest Lat'] - datum['Source Lat']",
+      "as": "dy"
+    },
+    {
+      "calculate": "sqrt(datum.dx * datum.dx + datum.dy * datum.dy)",
+      "as": "distance"
+    },
+    {
+      "calculate": "datum['Vaccine Type'] === 'DTP' ? -3.5 : datum['Vaccine Type'] === 'Polio' ? -2.5 : datum['Vaccine Type'] === 'Hib' ? -1.5 : datum['Vaccine Type'] === 'Hep B' ? -0.5 : datum['Vaccine Type'] === 'MMR' ? 0.5 : datum['Vaccine Type'] === 'Pneumococcal' ? 1.5 : datum['Vaccine Type'] === 'MenC' ? 2.5 : 3.5",
+      "as": "offset"
+    },
+    {
+      "calculate": "datum['Source Long'] + (-datum.dy / datum.distance) * datum.offset",
+      "as": "line_source_long"
+    },
+    {
+      "calculate": "datum['Source Lat'] + (datum.dx / datum.distance) * datum.offset",
+      "as": "line_source_lat"
+    },
+    {
+      "calculate": "datum['Dest Long'] + (-datum.dy / datum.distance) * datum.offset",
+      "as": "line_dest_long"
+    },
+    {
+      "calculate": "datum['Dest Lat'] + (datum.dx / datum.distance) * datum.offset",
+      "as": "line_dest_lat"
+    }
+  ],
+  "projection": {
+    "type": "equalEarth"
+  },
+  "mark": {
+    "type": "rule",
+    "strokeWidth": 3,
+    "opacity": 0.8
+  },
+  "encoding": {
+    "longitude": {
+      "field": "line_source_long",
+      "type": "quantitative"
+    },
+    "latitude": {
+      "field": "line_source_lat",
+      "type": "quantitative"
+    },
+    "longitude2": {
+      "field": "line_dest_long"
+    },
+    "latitude2": {
+      "field": "line_dest_lat"
+    },
+    "color": {
+      "field": "Vaccine Type",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "DTP",
+          "Polio",
+          "Hib",
+          "Hep B",
+          "MMR",
+          "Pneumococcal",
+          "MenC",
+          "Varicella"
+        ],
+        "range": [
+          "#1f77b4",
+          "#ff7f0e",
+          "#2ca02c",
+          "#d62728",
+          "#9467bd",
+          "#8c564b",
+          "#e377c2",
+          "#17becf"
+        ]
+      },
+      "legend": {
+        "title": "Vaccine Type"
+      }
+    }
+  }
+}
+  ]
+}
+

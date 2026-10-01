@@ -1,0 +1,20 @@
+Origin Country,Origin City,Vaccine Type,Product/Brand,Manufacturer,Australia,Source Long,Source Lat,Dest Long,Dest Lat,Source
+Belgium,Rixensart,DTP,Infanrix hexa,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://www.health.gov.au/news/national-immunisation-program-nip-changes-from-1-july-2023?language=mwf
+Belgium,Rixensart,Polio,Infanrix hexa,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://www.health.gov.au/news/national-immunisation-program-nip-changes-from-1-july-2023?language=mwf
+Belgium,Rixensart,Hib,Infanrix hexa,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://www.health.gov.au/topics/immunisation/vaccines/hib-haemophilus-influenzae-type-b-vaccine?language=und
+Belgium,Rixensart,Hep B,Infanrix hexa,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://www.health.gov.au/news/national-immunisation-program-nip-changes-from-1-july-2023?language=mwf
+Netherlands,Leiden,DTP,Vaxelis,MCM Vaccine B.V.,Australia,4.497,52.160,133.775,-25.274,https://ec.europa.eu/health/documents/community-register/2020/20200113146950/anx_146950_en.pdf
+Netherlands,Leiden,Polio,Vaxelis,MCM Vaccine B.V.,Australia,4.497,52.160,133.775,-25.274,https://ec.europa.eu/health/documents/community-register/2020/20200113146950/anx_146950_en.pdf
+Netherlands,Leiden,Hib,Vaxelis,MCM Vaccine B.V.,Australia,4.497,52.160,133.775,-25.274,https://ec.europa.eu/health/documents/community-register/2020/20200113146950/anx_146950_en.pdf
+Netherlands,Leiden,Hep B,Vaxelis,MCM Vaccine B.V.,Australia,4.497,52.160,133.775,-25.274,https://ec.europa.eu/health/documents/community-register/2020/20200113146950/anx_146950_en.pdf
+Belgium,Rixensart,MMR,Priorix,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://immunisationhandbook.health.gov.au/resources/tables/table-components-of-immunisation-products-used-in-australia
+United States,"West Point, Pennsylvania",MMR,M-M-R II,Merck Sharp & Dohme Corp.,Australia,-75.114,40.196,133.775,-25.274,https://www.health.gov.au/sites/default/files/2025-10/foi-26-1947---mandatory-reporting-changes-to-australian-immunisation-register.pdf
+Belgium,Puurs-Sint-Amands,Pneumococcal,Prevenar 20,Pfizer Manufacturing Belgium NV,Australia,4.288,51.074,133.775,-25.274,https://www.health.gov.au/sites/default/files/2025-08/nip-childhood-and-adolescence-pneumococcal-vaccine-provider-advice-for-health-professionals_1.pdf
+Belgium,Puurs-Sint-Amands,MenC,NeisVac-C,Pfizer Manufacturing Belgium NV,Australia,4.288,51.074,133.775,-25.274,https://immunisationhandbook.health.gov.au/contents/vaccine-preventable-diseases/meningococcal-disease
+France,Marcy-l'Étoile,DTP,Hexaxim,Sanofi Pasteur SA,Australia,4.704,45.687,133.775,-25.274,https://www.ema.europa.eu/en/documents/outside-eu-assessment-report/hexaxim-public-assessment-report_en.pdf
+France,Marcy-l'Étoile,Polio,Hexaxim,Sanofi Pasteur SA,Australia,4.704,45.687,133.775,-25.274,https://www.ema.europa.eu/en/documents/outside-eu-assessment-report/hexaxim-public-assessment-report_en.pdf
+France,Marcy-l'Étoile,Hib,Hexaxim,Sanofi Pasteur SA,Australia,4.704,45.687,133.775,-25.274,https://www.ema.europa.eu/en/documents/outside-eu-assessment-report/hexaxim-public-assessment-report_en.pdf
+France,Marcy-l'Étoile,Hep B,Hexaxim,Sanofi Pasteur SA,Australia,4.704,45.687,133.775,-25.274,https://www.ema.europa.eu/en/documents/outside-eu-assessment-report/hexaxim-public-assessment-report_en.pdf
+Belgium,Rixensart,MMR,Priorix-Tetra,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://immunisationhandbook.health.gov.au/resources/tables/table-components-of-immunisation-products-used-in-australia
+Belgium,Rixensart,Varicella,Priorix-Tetra,GlaxoSmithKline Biologicals S.A.,Australia,4.566,50.712,133.775,-25.274,https://immunisationhandbook.health.gov.au/resources/tables/table-components-of-immunisation-products-used-in-australia
+United States,"West Point, Pennsylvania",Varicella,Varivax,Merck Sharp & Dohme Corp.,Australia,-75.114,40.196,133.775,-25.274,https://www.fda.gov/media/102819/download
