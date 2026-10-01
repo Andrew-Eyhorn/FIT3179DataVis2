@@ -1,0 +1,32 @@
+PHN Number,PHN Name,Age Group,% DTP,% Polio,% HIB,% HEP,% MMR,% Pneumo,% MenC,% Varicella
+PHN101,Central and Eastern Sydney,2 Year olds,91.67%,95.90%,92.75%,96.07%,91.94%,93.97%,94.50%,92.24%
+PHN102,Northern Sydney,2 Year olds,93.58%,96.39%,94.32%,96.55%,93.89%,95.33%,95.54%,94.18%
+PHN103,Western Sydney,2 Year olds,90.62%,95.32%,91.92%,95.82%,91.04%,93.65%,94.02%,91.24%
+PHN104,Nepean Blue Mountains,2 Year olds,90.63%,94.47%,91.93%,94.83%,90.99%,93.30%,93.74%,91.01%
+PHN105,South Western Sydney,2 Year olds,87.93%,93.40%,89.67%,94.20%,88.59%,91.46%,92.00%,88.88%
+PHN106,South Eastern NSW,2 Year olds,91.30%,95.18%,92.29%,95.39%,91.54%,93.71%,94.01%,91.71%
+PHN107,Western NSW,2 Year olds,92.87%,96.53%,93.92%,97.16%,93.29%,95.42%,95.79%,93.50%
+PHN108,Hunter New England and Central Coast,2 Year olds,92.85%,95.93%,93.76%,96.19%,93.14%,94.81%,95.20%,93.24%
+PHN109,North Coast,2 Year olds,85.07%,89.35%,86.54%,89.73%,85.67%,87.48%,88.77%,85.93%
+PHN110,Murrumbidgee,2 Year olds,92.32%,95.72%,93.41%,95.86%,92.78%,94.39%,94.50%,92.71%
+PHN201,North Western Melbourne,2 Year olds,90.96%,95.45%,92.49%,95.70%,91.64%,93.73%,94.11%,91.91%
+PHN202,Eastern Melbourne,2 Year olds,92.52%,96.10%,93.70%,96.21%,92.91%,94.71%,94.98%,93.17%
+PHN203,South Eastern Melbourne,2 Year olds,91.70%,95.28%,92.89%,95.42%,92.21%,93.86%,94.31%,92.46%
+PHN204,Gippsland,2 Year olds,90.70%,94.14%,91.72%,94.31%,91.00%,93.12%,93.63%,91.14%
+PHN205,Murray,2 Year olds,92.74%,95.67%,93.66%,95.87%,93.07%,94.50%,95.12%,93.10%
+PHN206,Western Victoria,2 Year olds,92.71%,95.59%,93.57%,95.65%,92.86%,94.41%,94.83%,92.99%
+PHN301,Brisbane North,2 Year olds,92.36%,95.69%,93.43%,95.82%,92.71%,94.53%,94.68%,92.95%
+PHN302,Brisbane South,2 Year olds,90.84%,94.86%,92.23%,94.90%,91.36%,93.29%,93.63%,91.56%
+PHN303,Gold Coast,2 Year olds,85.30%,90.37%,86.90%,90.82%,85.99%,88.55%,88.87%,86.24%
+PHN304,Darling Downs and West Moreton,2 Year olds,89.80%,93.64%,90.92%,94.06%,90.36%,92.40%,92.81%,90.45%
+PHN305,Western Queensland,2 Year olds,87.44%,95.63%,91.48%,95.85%,88.90%,94.73%,95.07%,89.01%
+PHN306,"Central Queensland, Wide Bay, Sunshine Coast",2 Year olds,87.05%,91.33%,88.29%,91.59%,87.56%,89.92%,90.28%,87.67%
+PHN307,Northern Queensland,2 Year olds,89.77%,94.28%,91.42%,94.90%,90.58%,93.07%,93.56%,90.70%
+PHN401,Adelaide,2 Year olds,91.69%,95.52%,92.81%,95.81%,91.96%,94.12%,94.21%,92.18%
+PHN402,Country SA,2 Year olds,90.05%,93.85%,91.10%,94.37%,90.35%,92.56%,92.97%,90.70%
+PHN501,Perth North,2 Year olds,90.15%,94.63%,91.65%,94.88%,90.66%,93.04%,93.63%,90.76%
+PHN502,Perth South,2 Year olds,89.59%,94.52%,91.07%,94.89%,89.96%,92.86%,93.63%,90.19%
+PHN503,Country WA,2 Year olds,86.47%,93.15%,88.88%,93.52%,87.46%,91.59%,92.16%,87.61%
+PHN601,Tasmania,2 Year olds,93.38%,96.06%,94.21%,96.05%,93.51%,95.02%,95.12%,93.70%
+PHN701,Northern Territory,2 Year olds,89.58%,95.22%,91.63%,96.03%,90.24%,94.10%,94.10%,90.59%
+PHN801,Australian Capital Territory,2 Year olds,93.93%,96.72%,94.78%,97.10%,94.13%,95.92%,95.86%,94.29%

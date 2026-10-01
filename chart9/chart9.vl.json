@@ -1,0 +1,15 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"title": { "text": "Aboriginal Immune Vs Aus over Time" },
+"width": 800,
+"height": 500,
+"data": {
+"url": "chart9data.csv"
+},
+"mark": "line",
+"encoding": {
+"x": { "field": "year", "type": "ordinal" },
+"y": { "field": "immune %", "type": "quantitative" },
+"color": { "field": "group", "type": "nominal" }
+}
+}

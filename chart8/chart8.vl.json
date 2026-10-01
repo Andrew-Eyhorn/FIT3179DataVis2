@@ -16,7 +16,11 @@
             "value": "#ff9900"
           },
           "value": "#4682b4"
-        }
+        },
+          "tooltip": 
+            [{"field": "Country", "type": "nominal"}, {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative"}]
+
   }
+
 }
 
