@@ -1,0 +1,172 @@
+State,State Name,Year,Value
+ACT,Australian Capital Territory,2024,95.44
+NSW,New South Wales,2024,93.74
+VIC,Victoria,2024,94.65
+QLD,Queensland,2024,92.39
+SA,South Australia,2024,94.69
+WA,Western Australia,2024,92.54
+TAS,Tasmania,2024,93.63
+NT,Northern Territory,2024,91.53
+AUS,Australia,2024,93.63
+ACT,Australian Capital Territory,2023,95.55
+NSW,New South Wales,2023,93.99
+VIC,Victoria,2023,94.86
+QLD,Queensland,2023,92.94
+SA,South Australia,2023,95.03
+WA,Western Australia,2023,92.82
+TAS,Tasmania,2023,93.78
+NT,Northern Territory,2023,92.38
+AUS,Australia,2023,93.93
+ACT,Australian Capital Territory,2022,95.73
+NSW,New South Wales,2022,94.16
+VIC,Victoria,2022,95.04
+QLD,Queensland,2022,93.5
+SA,South Australia,2022,95.53
+WA,Western Australia,2022,93.26
+TAS,Tasmania,2022,94.47
+NT,Northern Territory,2022,93.79
+AUS,Australia,2022,94.27
+ACT,Australian Capital Territory,2021,95.91
+NSW,New South Wales,2021,94.85
+VIC,Victoria,2021,95.76
+QLD,Queensland,2021,94.4
+SA,South Australia,2021,96.11
+WA,Western Australia,2021,93.88
+TAS,Tasmania,2021,94.97
+NT,Northern Territory,2021,93.89
+AUS,Australia,2021,94.98
+ACT,Australian Capital Territory,2020,95.45
+NSW,New South Wales,2020,94.9
+VIC,Victoria,2020,96.06
+QLD,Queensland,2020,94.72
+SA,South Australia,2020,95.06
+WA,Western Australia,2020,94.13
+TAS,Tasmania,2020,94.77
+NT,Northern Territory,2020,94.88
+AUS,Australia,2020,95.09
+ACT,Australian Capital Territory,2019,94.91
+NSW,New South Wales,2019,94.66
+VIC,Victoria,2019,95.69
+QLD,Queensland,2019,94.45
+SA,South Australia,2019,94.84
+WA,Western Australia,2019,93.55
+TAS,Tasmania,2019,95.51
+NT,Northern Territory,2019,94.06
+AUS,Australia,2019,94.79
+ACT,Australian Capital Territory,2018,94.54
+NSW,New South Wales,2018,94.56
+VIC,Victoria,2018,95.52
+QLD,Queensland,2018,94.54
+SA,South Australia,2018,94.67
+WA,Western Australia,2018,93.2
+TAS,Tasmania,2018,95.54
+NT,Northern Territory,2018,93.4
+AUS,Australia,2018,94.67
+ACT,Australian Capital Territory,2017,94.47
+NSW,New South Wales,2017,93.91
+VIC,Victoria,2017,94.55
+QLD,Queensland,2017,94.25
+SA,South Australia,2017,93.75
+WA,Western Australia,2017,92.17
+TAS,Tasmania,2017,94.58
+NT,Northern Territory,2017,93.22
+AUS,Australia,2017,93.96
+ACT,Australian Capital Territory,2016,93.56
+NSW,New South Wales,2016,93.48
+VIC,Victoria,2016,93.63
+QLD,Queensland,2016,93.07
+SA,South Australia,2016,93.11
+WA,Western Australia,2016,91.47
+TAS,Tasmania,2016,94.21
+NT,Northern Territory,2016,92.18
+AUS,Australia,2016,93.19
+ACT,Australian Capital Territory,2015,93.54
+NSW,New South Wales,2015,93.05
+VIC,Victoria,2015,93.02
+QLD,Queensland,2015,92.44
+SA,South Australia,2015,91.25
+WA,Western Australia,2015,91.08
+TAS,Tasmania,2015,93.25
+NT,Northern Territory,2015,92.79
+AUS,Australia,2015,92.59
+ACT,Australian Capital Territory,2014,93.29
+NSW,New South Wales,2014,92.43
+VIC,Victoria,2014,92.46
+QLD,Queensland,2014,92.41
+SA,South Australia,2014,90.99
+WA,Western Australia,2014,90.0
+TAS,Tasmania,2014,92.32
+NT,Northern Territory,2014,91.64
+AUS,Australia,2014,92.08
+ACT,Australian Capital Territory,2013,92.17
+NSW,New South Wales,2013,92.06
+VIC,Victoria,2013,92.64
+QLD,Queensland,2013,91.85
+SA,South Australia,2013,91.32
+WA,Western Australia,2013,89.69
+TAS,Tasmania,2013,92.84
+NT,Northern Territory,2013,91.3
+AUS,Australia,2013,91.86
+ACT,Australian Capital Territory,2012,91.68
+NSW,New South Wales,2012,90.82
+VIC,Victoria,2012,91.99
+QLD,Queensland,2012,91.07
+SA,South Australia,2012,89.13
+WA,Western Australia,2012,88.38
+TAS,Tasmania,2012,92.04
+NT,Northern Territory,2012,90.29
+AUS,Australia,2012,90.82
+ACT,Australian Capital Territory,2011,91.38
+NSW,New South Wales,2011,89.43
+VIC,Victoria,2011,91.18
+QLD,Queensland,2011,89.85
+SA,South Australia,2011,87.21
+WA,Western Australia,2011,86.03
+TAS,Tasmania,2011,90.46
+NT,Northern Territory,2011,87.88
+AUS,Australia,2011,89.48
+ACT,Australian Capital Territory,2010,89.41
+NSW,New South Wales,2010,87.6
+VIC,Victoria,2010,90.07
+QLD,Queensland,2010,88.22
+SA,South Australia,2010,85.61
+WA,Western Australia,2010,85.36
+TAS,Tasmania,2010,90.07
+NT,Northern Territory,2010,85.77
+AUS,Australia,2010,88.02
+ACT,Australian Capital Territory,2009,85.32
+NSW,New South Wales,2009,80.61
+VIC,Victoria,2009,85.48
+QLD,Queensland,2009,82.22
+SA,South Australia,2009,77.48
+WA,Western Australia,2009,79.75
+TAS,Tasmania,2009,82.92
+NT,Northern Territory,2009,81.8
+AUS,Australia,2009,81.97
+ACT,Australian Capital Territory,2008,86.17
+NSW,New South Wales,2008,76.58
+VIC,Victoria,2008,83.11
+QLD,Queensland,2008,81.24
+SA,South Australia,2008,74.38
+WA,Western Australia,2008,77.77
+TAS,Tasmania,2008,80.6
+NT,Northern Territory,2008,81.4
+AUS,Australia,2008,79.39
+ACT,Australian Capital Territory,2007,87.57
+NSW,New South Wales,2007,83.74
+VIC,Victoria,2007,85.65
+QLD,Queensland,2007,83.83
+SA,South Australia,2007,80.47
+WA,Western Australia,2007,80.31
+TAS,Tasmania,2007,83.89
+NT,Northern Territory,2007,83.61
+AUS,Australia,2007,83.71
+ACT,Australian Capital Territory,2006,83.53
+NSW,New South Wales,2006,78.72
+VIC,Victoria,2006,80.98
+QLD,Queensland,2006,82.29
+SA,South Australia,2006,76.5
+WA,Western Australia,2006,77.4
+TAS,Tasmania,2006,80.5
+NT,Northern Territory,2006,78.8
+AUS,Australia,2006,79.83

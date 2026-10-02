@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Child Immunisation Age 5 By State",
+  "title": "Child Immunisation Age 5 By State 2024",
   "width": 800,
   "height": 400,
 
@@ -23,7 +23,7 @@
         "data": {
           "url": "chart1data.csv"
         },
-        "key": "GeographicAreaName",
+        "key": "State Name",
         "fields": ["Value"]
       },
       "as": "immunisationValue"

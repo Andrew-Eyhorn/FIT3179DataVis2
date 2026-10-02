@@ -1,9 +1,10 @@
-Code,Domain/Dimension,Name,Filter1,Filter2,Disaggregation1,Category1,Disaggregation2,Category2,Period,GeographicUnit,GeographicCode,GeographicAreaName,Value,UnitType
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,ACT,Australian Capital Territory,94.7,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,NSW,New South Wales,94.7,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,NT,Northern Territory,94.1,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,Qld,Queensland,94.7,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,SA,South Australia,94.9,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,Tas,Tasmania,95.6,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,Vic,Victoria,95.7,PercentageOne
-2.1.1,Health system: effectiveness,Immunisation rates for vaccines in the national schedule,5 years,Percentage,Indigenous status,All children,,,2018-19,State/Territory,WA,Western Australia,93.7,PercentageOne
+State Name,State Code,Value
+Australian Capital Territory,ACT,95.44
+New South Wales,NSW,93.74
+Victoria,VIC,94.65
+Queensland,QLD,92.39
+South Australia,SA,94.69
+Western Australia,WA,92.54
+Tasmania,TAS,93.63
+Northern Territory,NT,91.53
+Australia,AUS,93.63

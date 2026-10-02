@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Child Immunisation Age 5 By State",
+  "title": "Child Immunisation Age 5 By Phn 2025",
   "width": 800,
   "height": 400,
 
@@ -23,10 +23,10 @@
           "lookup": "properties.PHN_CODE",
           "from": {
             "data": {
-              "url": "chart2testdata.csv"
+              "url": "chart2data.csv"
             },
-            "key": "PHN_Code",
-            "fields": ["Test_Population", "Value", "Test_Lat", "Test_Long"]
+            "key": "phn_code",
+            "fields": ["population", "% 5 year olds vaccinated children", "latitude", "longitude"]
           },
           "as": ["Population", "Value", "Latitude", "Longitude"]
         }
@@ -45,7 +45,7 @@
       },
 
       "mark": {
-        "type": "circle",
+        "type": "square",
         "tooltip": {
           "content": "data"
         }

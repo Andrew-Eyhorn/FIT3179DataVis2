@@ -1,0 +1,32 @@
+phn_code,phn_name,population,% 5 year olds vaccinated children,% 5 year olds vaccinated aboriginal,group,longitude,latitude
+PHN101,Central and Eastern Sydney,1632114,92.51,92.77,Metropolitan,151.05,-33.93
+PHN102,Northern Sydney,963869,93.91,86.15,Metropolitan,151.17,-33.75
+PHN103,Western Sydney,1138271,93.12,94.29,Metropolitan,150.86,-33.81
+PHN104,Nepean Blue Mountains,408019,94.30,96.24,Metropolitan,150.45,-33.63
+PHN105,South Western Sydney,1134964,92.81,94.52,Metropolitan,150.79,-33.96
+PHN106,South Eastern NSW,663538,94.56,95.29,Regional,149.55,-35.00
+PHN107,Western NSW,315382,96.07,96.51,Regional,148.25,-32.80
+PHN108,Hunter New England and Central Coast,1355513,94.16,95.36,Regional,151.30,-32.35
+PHN109,North Coast,557038,88.00,92.52,Regional,152.70,-29.60
+PHN110,Murrumbidgee,251882,95.18,95.48,Regional,145.90,-34.70
+PHN201,North Western Melbourne,2044455,94.17,96.64,Metropolitan,144.82,-37.65
+PHN202,Eastern Melbourne,1618442,94.68,93.75,Metropolitan,145.15,-37.75
+PHN203,South Eastern Melbourne,1687808,93.99,94.94,Metropolitan,145.15,-38.05
+PHN204,Gippsland,311434,94.11,89.60,Regional,146.60,-38.25
+PHN205,Murray,655032,95.25,96.06,Regional,145.10,-36.10
+PHN206,Western Victoria,720272,94.85,97.09,Regional,143.00,-37.40
+PHN301,Brisbane North,1143413,93.62,93.81,Metropolitan,153.00,-27.25
+PHN302,Brisbane South,1312051,92.35,92.17,Metropolitan,153.05,-27.60
+PHN303,Gold Coast,698017,89.12,93.81,Metropolitan,153.35,-28.05
+PHN304,Darling Downs and West Moreton,650844,92.92,95.30,Regional,151.80,-27.60
+PHN305,Western Queensland,64186,93.22,94.37,Regional,144.00,-22.50
+PHN306,"Central Queensland, Wide Bay, Sunshine Coast",970173,89.20,93.50,Regional,151.50,-25.80
+PHN307,Northern Queensland,745148,92.36,93.81,Regional,145.50,-18.00
+PHN401,Adelaide,1341842,94.50,95.58,Metropolitan,138.60,-34.95
+PHN402,Country SA,536164,93.14,96.37,Regional,136.50,-33.00
+PHN501,Perth North,1225822,92.16,91.57,Metropolitan,115.85,-31.85
+PHN502,Perth South,1163859,92.32,90.98,Metropolitan,115.90,-32.15
+PHN503,Country WA,575397,90.69,93.37,Regional,121.00,-30.00
+PHN601,Tasmania,575496,93.65,95.30,Regional,146.60,-42.00
+PHN701,Northern Territory,255069,91.68,94.90,Regional,133.00,-19.50
+PHN801,Australian Capital Territory,473855,94.68,93.51,Metropolitan,149.10,-35.45
