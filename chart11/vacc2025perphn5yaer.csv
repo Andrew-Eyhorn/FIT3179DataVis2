@@ -1,0 +1,32 @@
+﻿phn_code,phn_name,population,% 5 year olds vaccinated children,% 5 year olds vaccinated aboriginal,group
+PHN101,Central and Eastern Sydney,1632114,92.51,92.77,Metropolitan
+PHN102,Northern Sydney,963869,93.91,86.15,Metropolitan
+PHN103,Western Sydney,1138271,93.12,94.29,Metropolitan
+PHN104,Nepean Blue Mountains,408019,94.30,96.24,Metropolitan
+PHN105,South Western Sydney,1134964,92.81,94.52,Metropolitan
+PHN106,South Eastern NSW,663538,94.56,95.29,Regional
+PHN107,Western NSW,315382,96.07,96.51,Regional
+PHN108,Hunter New England and Central Coast,1355513,94.16,95.36,Regional
+PHN109,North Coast,557038,88.00,92.52,Regional
+PHN110,Murrumbidgee,251882,95.18,95.48,Regional
+PHN201,North Western Melbourne,2044455,94.17,96.64,Metropolitan
+PHN202,Eastern Melbourne,1618442,94.68,93.75,Metropolitan
+PHN203,South Eastern Melbourne,1687808,93.99,94.94,Metropolitan
+PHN204,Gippsland,311434,94.11,89.60,Regional
+PHN205,Murray,655032,95.25,96.06,Regional
+PHN206,Western Victoria,720272,94.85,97.09,Regional
+PHN301,Brisbane North,1143413,93.62,93.81,Metropolitan
+PHN302,Brisbane South,1312051,92.35,92.17,Metropolitan
+PHN303,Gold Coast,698017,89.12,93.81,Metropolitan
+PHN304,Darling Downs and West Moreton,650844,92.92,95.30,Regional
+PHN305,Western Queensland,64186,93.22,94.37,Regional
+PHN306,"Central Queensland, Wide Bay, Sunshine Coast",970173,89.20,93.50,Regional
+PHN307,Northern Queensland,745148,92.36,93.81,Regional
+PHN401,Adelaide,1341842,94.50,95.58,Metropolitan
+PHN402,Country SA,536164,93.14,96.37,Regional
+PHN501,Perth North,1225822,92.16,91.57,Metropolitan
+PHN502,Perth South,1163859,92.32,90.98,Metropolitan
+PHN503,Country WA,575397,90.69,93.37,Regional
+PHN601,Tasmania,575496,93.65,95.30,Regional
+PHN701,Northern Territory,255069,91.68,94.90,Regional
+PHN801,Australian Capital Territory,473855,94.68,93.51,Metropolitan
