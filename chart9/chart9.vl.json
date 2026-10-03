@@ -4,7 +4,7 @@
 "width": 800,
 "height": 500,
 "data": {
-"url": "chart9data.csv"
+"url": "chart9/chart9data.csv"
 },
 "mark": "line",
 "encoding": {

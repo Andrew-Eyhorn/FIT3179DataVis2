@@ -4,7 +4,7 @@
   "width": 800,
   "height": 500,
   "data": {
-        "url": "vaccinedpt31yearcomparison.csv"
+        "url": "chart8/vaccinedpt31yearcomparison.csv"
       },
   "mark": "bar",
   "encoding": {

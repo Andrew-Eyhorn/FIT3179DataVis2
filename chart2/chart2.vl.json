@@ -11,7 +11,7 @@
   "layer": [
     {
       "data": {
-        "url": "chart2testgeophnbound.topojson",
+        "url": "chart2/chart2testgeophnbound.topojson",
         "format": {
           "type": "topojson",
           "feature": "PHN_202308_AUST_GDA2020"
@@ -23,7 +23,7 @@
           "lookup": "properties.PHN_CODE",
           "from": {
             "data": {
-              "url": "chart2data.csv"
+              "url": "chart2/chart2data.csv"
             },
             "key": "phn_code",
             "fields": ["population", "% 5 year olds vaccinated children", "latitude", "longitude"]
@@ -41,7 +41,7 @@
 
     {
       "data": {
-        "url": "chart2testdata.csv"
+        "url": "chart2/chart2testdata.csv"
       },
 
       "mark": {

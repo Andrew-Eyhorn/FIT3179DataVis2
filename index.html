@@ -1,0 +1,259 @@
+<!-- Based on example from week 9 content https://github.com/FIT3179/Vega-Lite/blob/main/5_multiple_charts_html/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Multiple Visualisations</h1>
+        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Two Columns Layout</h2>
+          <p>The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis1" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Three Equal Columns</h2>
+          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
+            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3" style="width: 31.5%;">
+        <div id="vis3" class="vis-container" style="margin-left: 15px;"></div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>First and Second Columns Combined</h2>
+          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
+            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Two Columns Layout</h2>
+          <p>The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis5" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Three Equal Columns</h2>
+          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
+            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis6" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3" style="width: 31.5%;">
+        <div id="vis7" class="vis-container" style="margin-left: 15px;"></div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Two Columns Layout</h2>
+          <p>The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis7detail" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis8" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>First and Second Columns Combined</h2>
+          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
+            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Two Columns Layout</h2>
+          <p>The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis9" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Three Equal Columns</h2>
+          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
+            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis10" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3" style="width: 31.5%;">
+        <div id="vis11" class="vis-container" style="margin-left: 15px;"></div>
+      </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var vis1 = "./chart1/chart1.vl.json";
+
+    vegaEmbed('#vis1', vis1, { "actions": false });
+
+    var vis2 = "./chart2/chart2.vl.json";
+
+    vegaEmbed('#vis2', vis2, { "actions": false });
+
+    var vis3 = "./chart3/chart3.vl.json";
+
+    vegaEmbed('#vis3', vis3, { "actions": false });
+
+    var vis4 = "./chart4/chart4.vl.json";
+
+    vegaEmbed('#vis4', vis4, { "actions": false });
+
+    var vis5 = "./chart5/chart5.vl.json";
+
+    vegaEmbed('#vis5', vis5, { "actions": false });
+
+    var vis6 = "./chart6/chart6.vl.json";
+
+    vegaEmbed('#vis6', vis6, { "actions": false });
+
+    var vis7 = "./chart7/chart7.vl.json";
+
+    vegaEmbed('#vis7', vis7, { "actions": false });
+
+    var vis7detail = "./chart7/chart7detail.vl.json";
+
+    vegaEmbed('#vis7detail', vis7detail, { "actions": false });
+
+    var vis8 = "./chart8/chart8.vl.json";
+
+    vegaEmbed('#vis8', vis8, { "actions": false });
+
+    var vis9 = "./chart9/chart9.vl.json";
+
+    vegaEmbed('#vis9', vis9, { "actions": false });
+
+    var vis10 = "./chart10/chart10.vl.json";
+
+    vegaEmbed('#vis10', vis10, { "actions": false });
+
+    var vis11 = "./chart11/chart11.vl.json";
+
+    vegaEmbed('#vis11', vis11, { "actions": false });
+  </script>
+</body>
+
+</html>

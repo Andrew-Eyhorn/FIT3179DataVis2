@@ -5,7 +5,7 @@
   "layer": [
     {
       "data": {
-        "url": "europe_only.json",
+        "url": "chart7/europe_only.json",
         "format": {
           "type": "topojson",
           "feature": "europe_only"
@@ -24,7 +24,7 @@
     },
     {
       "data": {
-        "url": "vaccinesources.csv",
+        "url": "chart7/vaccinesources.csv",
         "format": {
           "type": "csv",
           "parse": {
