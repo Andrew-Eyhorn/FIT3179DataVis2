@@ -4,16 +4,16 @@
 "width": 800,
 "height": 500,
 "data": {
-"url": "immunenational.csv"
+"url": "../data/overtimegeneralvax.csv"
 },
 "transform": [
-  { "filter": "datum.Period === '2018-19'" }
+  { "filter": "datum.year == 2024 && datum.state_name == 'Australia'" }
 ],
 "mark": "bar",
 "encoding": {
-"xOffset": { "field": "Category1", "type": "ordinal" },
-"y": { "field": "Value", "type": "quantitative" },
-"x": { "field": "Filter1", "type": "nominal" },
-"color": { "field": "Category1", "type": "ordinal" }
+"xOffset": { "field": "category", "type": "ordinal" },
+"y": { "field": "value", "type": "quantitative" },
+"x": { "field": "age", "type": "nominal" },
+"color": { "field": "category", "type": "ordinal" }
 }
 }
