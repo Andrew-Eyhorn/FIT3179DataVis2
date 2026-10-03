@@ -1,146 +1,225 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
   "data": {
-    "url": "chart6data.csv"
+    "url": "../data/overtimegeneralvax.csv"
   },
+
+  "transform": [
+    {
+      "filter": "datum.year == 2024 && datum.category == 'all children'"
+    },
+    {
+      "calculate": "datum.age == 1 ? 0 : datum.age == 2 ? 1 : 2",
+      "as": "age_pos"
+    }
+  ],
+
   "title": {
     "text": "Child Immune Parallel Coordinates"
   },
+
   "width": 800,
   "height": 500,
 
   "layer": [
     {
       "mark": "line",
+
       "encoding": {
         "x": {
-          "field": "Age",
-          "type": "ordinal",
-          "sort": ["1 year", "2 years", "5 years"],
-          "axis": null
-        },
-        "y": {
-          "field": "Value",
+          "field": "age_pos",
           "type": "quantitative",
-          "scale": {"domain": [87, 96]},
+          "scale": {
+            "domain": [-0.2, 2.2]
+          },
           "axis": null
         },
-        "detail": {"field": "State_Name"},
-        "color": {
-          "field": "State",
-          "type": "nominal"
-        }
-      }
-    },
-    {
-      "mark": "rule",
-      "encoding": {
-        "x": {
-          "field": "Age",
-          "type": "ordinal",
-          "sort": ["1 year", "2 years", "5 years"]
-        },
-        "y": {
-          "datum": 87,
-          "scale": {"domain": [87, 96]}
-        },
-        "y2": {"datum": 96}
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {"Age": "1 year", "value": 87},
-          {"Age": "1 year", "value": 90},
-          {"Age": "1 year", "value": 93},
-          {"Age": "1 year", "value": 96},
-          {"Age": "2 years", "value": 87},
-          {"Age": "2 years", "value": 90},
-          {"Age": "2 years", "value": 93},
-          {"Age": "2 years", "value": 96},
-          {"Age": "5 years", "value": 87},
-          {"Age": "5 years", "value": 90},
-          {"Age": "5 years", "value": 93},
-          {"Age": "5 years", "value": 96}
-        ]
-      },
-      "mark": "tick",
-      "encoding": {
-        "x": {
-          "field": "Age",
-          "type": "ordinal",
-          "sort": ["1 year", "2 years", "5 years"]
-        },
+
         "y": {
           "field": "value",
           "type": "quantitative",
-          "scale": {"domain": [87, 96]}
+          "scale": {
+            "domain": [87, 96]
+          },
+          "axis": null
+        },
+
+        "detail": {
+          "field": "state_name"
+        },
+
+        "color": {
+  "field": "state_name",
+  "type": "nominal",
+  "scale": {
+    "range": [
+  "steelblue",
+  "darkorange",
+  "crimson",
+  "purple",
+  "goldenrod",
+  "slateblue",
+  "deeppink",
+  "saddlebrown"
+]
+  }
+}
+      }
+    },
+
+    {
+      "mark": "rule",
+
+      "encoding": {
+        "x": {
+          "field": "age_pos",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.2, 2.2]
+          },
+          "axis": null
+        },
+
+        "y": {
+          "datum": 87,
+          "scale": {
+            "domain": [87, 96]
+          }
+        },
+
+        "y2": {
+          "datum": 96
         }
       }
     },
+
     {
       "data": {
         "values": [
-          {"Age": "1 year", "value": 87},
-          {"Age": "1 year", "value": 90},
-          {"Age": "1 year", "value": 93},
-          {"Age": "1 year", "value": 96},
-          {"Age": "2 years", "value": 87},
-          {"Age": "2 years", "value": 90},
-          {"Age": "2 years", "value": 93},
-          {"Age": "2 years", "value": 96},
-          {"Age": "5 years", "value": 87},
-          {"Age": "5 years", "value": 90},
-          {"Age": "5 years", "value": 93},
-          {"Age": "5 years", "value": 96}
+          {"age_pos": 0, "value": 87},
+          {"age_pos": 0, "value": 90},
+          {"age_pos": 0, "value": 93},
+          {"age_pos": 0, "value": 96},
+
+          {"age_pos": 1, "value": 87},
+          {"age_pos": 1, "value": 90},
+          {"age_pos": 1, "value": 93},
+          {"age_pos": 1, "value": 96},
+
+          {"age_pos": 2, "value": 87},
+          {"age_pos": 2, "value": 90},
+          {"age_pos": 2, "value": 93},
+          {"age_pos": 2, "value": 96}
         ]
       },
+
+      "mark": "tick",
+
+      "encoding": {
+        "x": {
+          "field": "age_pos",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.2, 2.2]
+          },
+          "axis": null
+        },
+
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [87, 96]
+          }
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"age_pos": 0, "value": 87},
+          {"age_pos": 0, "value": 90},
+          {"age_pos": 0, "value": 93},
+          {"age_pos": 0, "value": 96},
+
+          {"age_pos": 1, "value": 87},
+          {"age_pos": 1, "value": 90},
+          {"age_pos": 1, "value": 93},
+          {"age_pos": 1, "value": 96},
+
+          {"age_pos": 2, "value": 87},
+          {"age_pos": 2, "value": 90},
+          {"age_pos": 2, "value": 93},
+          {"age_pos": 2, "value": 96}
+        ]
+      },
+
       "mark": {
         "type": "text",
         "dx": -10,
-        "dy": 0,
         "align": "right",
         "baseline": "middle"
       },
+
       "encoding": {
         "x": {
-          "field": "Age",
-          "type": "ordinal",
-          "sort": ["1 year", "2 years", "5 years"]
+          "field": "age_pos",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.2, 2.2]
+          },
+          "axis": null
         },
+
         "y": {
           "field": "value",
           "type": "quantitative",
-          "scale": {"domain": [87, 96]}
+          "scale": {
+            "domain": [87, 96]
+          }
         },
-        "text": {"field": "value"}
+
+        "text": {
+          "field": "value"
+        }
       }
     },
+
     {
       "data": {
         "values": [
-          {"Age": "1 year"},
-          {"Age": "2 years"},
-          {"Age": "5 years"}
+          {"age_pos": 0, "label": "1 year"},
+          {"age_pos": 1, "label": "2 years"},
+          {"age_pos": 2, "label": "5 years"}
         ]
       },
+
       "mark": {
         "type": "text",
-        "dy": 520,
         "fontSize": 14,
-        "fontWeight": "bold"
+        "fontWeight": "bold",
+        "baseline": "top"
       },
+
       "encoding": {
         "x": {
-          "field": "Age",
-          "type": "ordinal",
-          "sort": ["1 year", "2 years", "5 years"]
+          "field": "age_pos",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-0.2, 2.2]
+          },
+          "axis": null
         },
+
         "y": {
-          "datum": 87,
-          "scale": {"domain": [87, 96]}
+          "value": 520
         },
-        "text": {"field": "Age"}
+
+        "text": {
+          "field": "label"
+        }
       }
     }
   ]

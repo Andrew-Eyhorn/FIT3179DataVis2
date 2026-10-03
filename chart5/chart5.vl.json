@@ -1,21 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "chart5data.csv"},
+  "data": {
+"url": "../data/overtimegeneralvax.csv"
+},
   "title": { "text": "Child Immune Slope Chart" },
+  "transform": [
+  { "filter": "datum.category == 'all children' && datum.age == 5" },
+  { "filter": "datum.year == 2024 || datum.year == 2006" }
+],
 "width": 800,
 "height": 500,
   "layer": [ {"mark": "line",
   "encoding": {
     "x": {
-      "field": "Period",
+      "field": "year",
       "type": "ordinal",
       "scale": {"padding": 0.5}
     },
     "y": {
-      "field": "Value",
+      "field": "value",
       "type": "quantitative"
     },
-    "color": {"field": "GeographicAreaName", "type": "nominal"}
+    "color": {"field": "state_name", "type": "nominal"}
   }
 },{
       "mark": {
