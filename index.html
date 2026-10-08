@@ -1,259 +1,475 @@
-<!-- Based on example from week 9 content https://github.com/FIT3179/Vega-Lite/blob/main/5_multiple_charts_html/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Childhood Immunisation in Australia</title>
+
+  <!-- Vega & Vega-Lite -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-  <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    body {
+      margin: 0;
+      background: #f5f5f2;
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
 
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    .page {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 36px 40px;
+    }
 
+    /* --------------------
+       Header
+    -------------------- */
 
+    .page-header {
+      padding: 10px 0 32px;
+      border-bottom: 1px solid #d8d8d4;
+      margin-bottom: 42px;
+    }
+
+    .page-header h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .page-header .subtitle {
+      margin: 0;
+      font-size: 17px;
+      color: #555;
+      max-width: 800px;
+    }
+
+    /* --------------------
+       Sections
+    -------------------- */
+
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      margin-bottom: 26px;
+    }
+
+    .section-header h2 {
+      margin: 0 0 7px;
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .section-header p {
+      margin: 0;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* --------------------
+       Two-column chart layout
+    -------------------- */
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+
+    .chart-grid:last-child {
+      margin-bottom: 0;
+    }
+
+    .story {
+      padding: 8px 4px 8px 0;
+    }
+
+    .story h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .story p {
+      margin: 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .story-above {
+      grid-column: 1 / -1;
+      padding: 0 4px;
+    }
+
+    .story-above h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .story-above p {
+      margin: 0;
+      font-size: 14px;
+      color: #444;
+      max-width: 850px;
+    }
+
+    .visualisation {
+      min-width: 0;
+      background: #ffffff;
+      padding: 12px;
+      border: 1px solid #e1e1dd;
+      border-radius: 3px;
+    }
+
+    .visualisation.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .vis-container {
+      width: 100%;
+      min-height: 100px;
+    }
+
+    /* --------------------
+       Footer
+    -------------------- */
+
+    .page-footer {
+      margin-top: 70px;
+      padding-top: 22px;
+      border-top: 1px solid #d8d8d4;
+      color: #666;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .page-footer h3 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: #444;
+      font-weight: 700;
+    }
+
+    .page-footer p {
+      margin: 3px 0;
+    }
+
+    /* --------------------
+       Responsive adjustment
+    -------------------- */
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 24px 20px 32px;
+      }
+
+      .chart-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .story-above,
+      .visualisation.full-width {
+        grid-column: 1;
+      }
+
+      .page-header h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <div class="page">
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>Multiple Visualisations</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+    <header class="page-header">
+      <h1>Main Title Placeholder</h1>
+      <p class="subtitle">
+        Subtitle placeholder explaining the overall topic, scope and purpose of the visualisation.
+      </p>
+    </header>
+
+
+    <!-- =========================
+         SECTION 1: OVERVIEW
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-header">
+        <h2>Section 1 — Overview</h2>
+        <p>
+          This paragraph will introduce the overall story and explain how the charts in this section should be read together.
+        </p>
+      </div>
+
+
+      <!-- Chart 1 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 1 — Child Immunisation by State</h3>
+          <p>
+            This paragraph will explain the story linking the state-level choropleth map to the overall pattern in child immunisation coverage.
+          </p>
         </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis1" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>Three Equal Columns</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        <div class="visualisation">
+          <div id="vis1" class="vis-container"></div>
         </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div id="vis2" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis3" class="vis-container" style="margin-left: 15px;"></div>
+
       </div>
 
-    </div>
-    <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis4" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+      <!-- Chart 4 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 4 — Immunisation Over Time</h3>
+          <p>
+            This paragraph will explain the story linking changes in immunisation coverage over time across the different age groups.
+          </p>
         </div>
-      </div>
 
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        <div class="visualisation">
+          <div id="vis4" class="vis-container"></div>
         </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis5" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>Three Equal Columns</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+      </div>
+
+
+      <!-- Chart 10 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 10 — Vaccine Coverage by PHN</h3>
+          <p>
+            This paragraph will explain the story linking differences between vaccine types and Primary Health Network areas.
+          </p>
         </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div id="vis6" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis7" class="vis-container" style="margin-left: 15px;"></div>
-      </div>
 
-    </div>
-    <!-- end pure grid group -->
-
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        <div class="visualisation">
+          <div id="vis10" class="vis-container"></div>
         </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis7detail" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis8" class="vis-container"></div>
       </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+
+    </section>
+
+
+    <!-- =========================
+         SECTION 2: PER STATE
+         EXPLORATION
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-header">
+        <h2>Section 2 — Per State Exploration</h2>
+        <p>
+          This paragraph will introduce the state-level exploration and explain how the following charts allow differences between states and regions to be examined.
+        </p>
+      </div>
+
+
+      <!-- Chart 5 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 5 — Start-to-End State Comparison</h3>
+          <p>
+            This paragraph will explain the story linking the starting and ending immunisation values for each state.
+          </p>
         </div>
-      </div>
 
-    </div>
-    <!-- end pure grid group -->
-
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        <div class="visualisation">
+          <div id="vis5" class="vis-container"></div>
         </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis9" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>Three Equal Columns</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+      </div>
+
+
+      <!-- Chart 6 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 6 — Age Group Comparison by State</h3>
+          <p>
+            This paragraph will explain the story linking differences between age groups across the states.
+          </p>
         </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div id="vis10" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis11" class="vis-container" style="margin-left: 15px;"></div>
+
+        <div class="visualisation">
+          <div id="vis6" class="vis-container"></div>
+        </div>
+
       </div>
 
-    </div>
-    <!-- end pure grid group -->
 
-    
-  </div> <!-- end page -->
+      <!-- Chart 2 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 2 — Child Immunisation by PHN</h3>
+          <p>
+            This paragraph will explain the story linking the proportional symbols to immunisation coverage and the geographic distribution of PHNs.
+          </p>
+        </div>
+
+        <div class="visualisation">
+          <div id="vis2" class="vis-container"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECTION 3:
+         INDIGENOUS VS ALL CHILDREN
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-header">
+        <h2>Section 3 — Indigenous vs All Children</h2>
+        <p>
+          This paragraph will introduce the comparison between Indigenous children and all children and explain the main questions explored in this section.
+        </p>
+      </div>
+
+
+      <!-- Chart 3 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 3 — Indigenous and All Children Comparison</h3>
+          <p>
+            This paragraph will explain the story linking immunisation coverage for Indigenous children with coverage for all children.
+          </p>
+        </div>
+
+        <div class="visualisation">
+          <div id="vis3" class="vis-container"></div>
+        </div>
+
+      </div>
+
+
+      <!-- Chart 9 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 9 — Indigenous and All Children Over Time</h3>
+          <p>
+            This paragraph will explain the story linking changes in immunisation coverage over time for Indigenous children and all children.
+          </p>
+        </div>
+
+        <div class="visualisation">
+          <div id="vis9" class="vis-container"></div>
+        </div>
+
+      </div>
+
+
+      <!-- Chart 11 -->
+      <div class="chart-grid">
+
+        <div class="story">
+          <h3>Chart 11 — Indigenous and All Children by PHN</h3>
+          <p>
+            This paragraph will explain the story linking immunisation coverage for Indigenous and all children, population size, and regional classification.
+          </p>
+        </div>
+
+        <div class="visualisation">
+          <div id="vis11" class="vis-container"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAGE FOOTER / METADATA
+    ========================== -->
+
+    <footer class="page-footer">
+
+      <h3>Metadata</h3>
+
+      <p>Data source: Metadata placeholder.</p>
+      <p>Data period: Metadata placeholder.</p>
+      <p>Definitions: Metadata placeholder.</p>
+      <p>Methodology: Metadata placeholder.</p>
+      <p>Visualisation author: Metadata placeholder.</p>
+      <p>Last updated: Metadata placeholder.</p>
+
+    </footer>
+
+  </div>
+
+
+  <!-- =========================
+       VEGA-LITE CHARTS
+  ========================== -->
 
   <script type="text/javascript">
-    var vis1 = "./chart1/chart1.vl.json";
 
+    var vis1 = "./chart1/chart1.vl.json";
     vegaEmbed('#vis1', vis1, { "actions": false });
 
     var vis2 = "./chart2/chart2.vl.json";
-
     vegaEmbed('#vis2', vis2, { "actions": false });
 
     var vis3 = "./chart3/chart3.vl.json";
-
     vegaEmbed('#vis3', vis3, { "actions": false });
 
     var vis4 = "./chart4/chart4.vl.json";
-
     vegaEmbed('#vis4', vis4, { "actions": false });
 
     var vis5 = "./chart5/chart5.vl.json";
-
     vegaEmbed('#vis5', vis5, { "actions": false });
 
     var vis6 = "./chart6/chart6.vl.json";
-
-    vegaEmbed('#vis6', vis6, { "actions": false });
-
-    var vis7 = "./chart7/chart7.vl.json";
-
-    vegaEmbed('#vis7', vis7, { "actions": false });
-
-    var vis7detail = "./chart7/chart7detail.vl.json";
-
-    vegaEmbed('#vis7detail', vis7detail, { "actions": false });
-
-    var vis8 = "./chart8/chart8.vl.json";
-
-    vegaEmbed('#vis8', vis8, { "actions": false });
+    vegaEmbed('#vis6', vis6, { "actions": false }); 
 
     var vis9 = "./chart9/chart9.vl.json";
-
     vegaEmbed('#vis9', vis9, { "actions": false });
 
     var vis10 = "./chart10/chart10.vl.json";
-
     vegaEmbed('#vis10', vis10, { "actions": false });
 
     var vis11 = "./chart11/chart11.vl.json";
-
     vegaEmbed('#vis11', vis11, { "actions": false });
+
   </script>
+
 </body>
 
 </html>
