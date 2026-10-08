@@ -7,7 +7,18 @@
   "projection": {
     "type": "mercator"
   },
-
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 2000000,
+        "step": 10000,
+        "name": "Minimum Population: "
+      }
+    }],
   "layer": [
     {
       "data": {
@@ -41,9 +52,9 @@
 
     {
       "data": {
-        "url": "chart2/chart2testdata.csv"
+        "url": "chart2/chart2data.csv"
       },
-
+      "transform": [{"filter": "datum.population > Population_Above"}],
       "mark": {
         "type": "square",
         "tooltip": {
@@ -53,22 +64,22 @@
 
       "encoding": {
         "longitude": {
-          "field": "Test_Long",
+          "field": "longitude",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "Test_Lat",
+          "field": "latitude",
           "type": "quantitative"
         },
         "size": {
-          "field": "Test_Population",
+          "field": "population",
           "type": "quantitative",
-          "title": "Test Population"
+          "title": "Population"
         },
         "color": {
-          "field": "Value",
+          "field": "% 5 year olds vaccinated children",
           "type": "quantitative",
-          "title": "Value",
+          "title": "% Vaccinated",
           "scale": {
             "scheme": "reds"
           }

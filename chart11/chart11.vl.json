@@ -2,7 +2,20 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Aborig vs all 5 year old vacc % 2025, region vs non regioanl area",
   "data": {"url": "chart11/vacc2025perphn5yaer.csv"},
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 2000000,
+        "step": 10000,
+        "name": "Minimum Population: "
+      }
+    }],
   "mark": "circle",
+  "transform": [{"filter": "datum.population > Population_Above"}],
   "encoding": {
     "x": {
       "field": "% 5 year olds vaccinated children",
@@ -17,6 +30,24 @@
       "title": "Aboriginal children vaccinated (%) with scale 86-100%"
     },
     "size": {"field": "population", "type": "quantitative"},
-    "color": {"field": "group", "type": "nominal"}
+    "color": {"field": "group", "type": "nominal"},
+     "tooltip": [
+      {
+        "field": "phn_name",
+        "title": "PHN Name"
+      },
+      {
+        "field": "% 5 year olds vaccinated children"
+      },
+      {
+        "field": "% 5 year olds vaccinated aboriginal"
+      },
+      {
+        "field": "population",
+        "title": "Population",
+        "format": ","
+      }
+    ]
   }
+  
 }
