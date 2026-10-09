@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Child Immunisation Age 5 By Phn 2025",
-  "width": 800,
-  "height": 400,
+  "width": "container",
+  "height": 260,
 
   "projection": {
     "type": "mercator"

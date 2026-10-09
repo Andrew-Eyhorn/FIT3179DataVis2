@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "chart10/chart10data.csv"},
+  "width": "container",
+  "height": 520,
   "mark": "rect",
   "title": "Per vaccine per phn in 2025 % immune",
   "transform": [

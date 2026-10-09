@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Aborig vs all 5 year old vacc % 2025, region vs non regioanl area",
+  "width": "container",
+  "height": 280,
   "data": {"url": "chart11/vacc2025perphn5yaer.csv"},
   "params": [
     {

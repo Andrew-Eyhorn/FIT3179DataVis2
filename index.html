@@ -1,14 +1,19 @@
 <!-- Based on example from week 9 content https://github.com/FIT3179/Vega-Lite/blob/main/5_multiple_charts_html/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <title>Childhood Immunisation in Australia</title>
 
   <!-- Import Vega & Vega-Lite -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,15 +25,15 @@
     body {
       margin: 0;
       background-color: #f4f4f2;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
       color: #222;
     }
 
     .page {
-      width: 100%;
-      max-width: 1000px;
+      width: 90%;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 35px 30px 30px 30px;
+      padding: 35px 24px 30px 24px;
     }
 
     .page-header {
@@ -39,55 +44,69 @@
 
     .page-header h1 {
       margin: 0 0 8px 0;
-      font-size: 32px;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 34px;
       font-weight: 700;
+      line-height: 1.2;
+      max-width: 18em;
     }
 
     .page-header .subtitle {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: 19px;
+      line-height: 1.45;
+      max-width: 22em;
     }
 
     .section {
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
     .section-title {
       grid-column: 1 / -1;
-      margin: 0 0 5px 0;
-      font-size: 23px;
+      margin: 0 0 8px 0;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 26px;
       font-weight: 700;
+      line-height: 1.25;
     }
 
     .section-description {
       grid-column: 1 / -1;
-      margin: 0 0 20px 0;
-      font-size: 15px;
-      line-height: 1.5;
+      margin: 0 0 22px 0;
+      font-size: 18px;
+      line-height: 1.45;
+      max-width: 22em;
     }
 
     .chart-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px 30px;
+      gap: 28px 24px;
       align-items: center;
     }
 
     .story {
-      padding: 10px 15px;
+      padding: 8px 4px;
+      max-width: 22em;
     }
 
     .story h3 {
       margin: 0 0 10px 0;
-      font-size: 18px;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 20px;
       font-weight: 700;
+      line-height: 1.3;
     }
 
     .story p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .story p:last-child {
+      margin-bottom: 0;
     }
 
     .vis-container {
@@ -95,38 +114,49 @@
       min-width: 0;
     }
 
+    .vis-container .vega-embed {
+      width: 100%;
+    }
+
     .chart-full {
       grid-column: 1 / -1;
     }
 
-    .chart-pair {
+    .chart-triple {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(12em, 0.7fr) minmax(0, 1.15fr);
+      gap: 16px;
       grid-column: 1 / -1;
       align-items: center;
+    }
+
+    .chart-triple .story {
+      max-width: none;
+      padding: 0 6px;
+      text-align: left;
     }
 
     .page-footer {
       margin-top: 25px;
       padding-top: 18px;
       border-top: 1px solid #d5d5d5;
-      font-size: 11px;
+      font-size: 13px;
       line-height: 1.5;
       color: #555;
+      max-width: 42em;
     }
 
     .page-footer p {
-      margin: 3px 0;
+      margin: 6px 0;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       .page {
-        padding: 25px 18px;
+        padding: 25px 16px;
       }
 
       .chart-grid,
-      .chart-pair {
+      .chart-triple {
         grid-template-columns: 1fr;
       }
 
@@ -146,10 +176,11 @@
 
   <div class="page">
 
-    <!-- Page Header -->
     <header class="page-header">
-      <h1>Placeholder Main Title</h1>
-      <p class="subtitle">Placeholder subtitle explaining the overall visualisation story.</p>
+      <h1>Childhood immunisation in Australia</h1>
+      <p class="subtitle">
+        Coverage is high, but not even. Age, place, and community still shape who is protected.
+      </p>
     </header>
 
 
@@ -161,34 +192,46 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">Section 1 — Overview</h2>
+        <h2 class="section-title">A high national rate hides local gaps</h2>
 
         <p class="section-description">
-          This paragraph will introduce the overall story and explain how the charts in this section provide an overview.
+          Most Australian children are immunised. The average still hides differences by state, year, and vaccine. These first charts set that national picture.
         </p>
 
-        <!-- Chart 1 -->
         <div class="story">
-          <h3>Story Placeholder for Chart 1</h3>
-          <p>This paragraph will explain the story linking for chart 1.</p>
+          <h3>Age-five coverage sits just below the 95% target</h3>
+          <p>
+            In 2024, 93.63% of five-year-olds were vaccinated. Only the ACT, at 95.44%, clears the national target.
+          </p>
+          <p>
+            South Australia and Victoria follow at about 94.7%. The Northern Territory is lowest, at 91.53%. Queensland and Western Australia also sit near 92%.
+          </p>
         </div>
 
         <div id="vis1" class="vis-container"></div>
 
 
-        <!-- Chart 4 -->
         <div id="vis4" class="vis-container"></div>
 
         <div class="story">
-          <h3>Story Placeholder for Chart 4</h3>
-          <p>This paragraph will explain the story linking for chart 4.</p>
+          <h3>Rates rose for years, then slipped after 2020</h3>
+          <p>
+            National coverage climbed from 2006 through 2020. Age-five coverage peaked at 95.09% in 2020.
+          </p>
+          <p>
+            By 2024 it had fallen to 93.63%. One-year-olds fell from 94.85% to 92.14%. Two-year-olds fell from 92.55% to 90.44%.
+          </p>
         </div>
 
 
-        <!-- Chart 10 -->
         <div class="story">
-          <h3>Story Placeholder for Chart 10</h3>
-          <p>This paragraph will explain the story linking for chart 10.</p>
+          <h3>Not every vaccine reaches the same share of children</h3>
+          <p>
+            Among two-year-olds in 2025, hepatitis B and polio are strongest, averaging about 95% and 95%.
+          </p>
+          <p>
+            DTP, MMR, and varicella lag, near 90–91%. The North Coast and Gold Coast show the weakest cells, with several vaccines near 85%.
+          </p>
         </div>
 
         <div id="vis10" class="vis-container"></div>
@@ -206,36 +249,48 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">Section 2 — Per State Exploration</h2>
+        <h2 class="section-title">States improved, but local areas still diverge</h2>
 
         <p class="section-description">
-          This paragraph will introduce the state-level comparison and explain how the charts reveal differences between states and regions.
+          Every state lifted age-five coverage since 2006. The next charts show that lift, then how rates move from age one to five, then the Primary Health Networks inside each state.
         </p>
 
-        <!-- Chart 5 -->
         <div id="vis5" class="vis-container"></div>
 
         <div class="story">
-          <h3>Story Placeholder for Chart 5</h3>
-          <p>This paragraph will explain the story linking for chart 5.</p>
+          <h3>Every state climbed toward 95%, none equally</h3>
+          <p>
+            South Australia jumped from 76.5% in 2006 to 94.69% in 2024. The ACT now leads at 95.44%.
+          </p>
+          <p>
+            Queensland rose from 82.29% to 92.39%. The Northern Territory rose from 78.8% to 91.53%. Both remain furthest from the dashed 95% line.
+          </p>
         </div>
 
 
-        <!-- Chart 6 -->
         <div class="story">
-          <h3>Story Placeholder for Chart 6</h3>
-          <p>This paragraph will explain the story linking for chart 6.</p>
+          <h3>Coverage dips at age two, then recovers by five</h3>
+          <p>
+            In 2024, every state is lower at age two than at age one. Rates then rise again by age five.
+          </p>
+          <p>
+            Western Australia has the deepest age-two dip, at 88.9%. The ACT stays highest at every age, finishing at 95.44%.
+          </p>
         </div>
 
         <div id="vis6" class="vis-container"></div>
 
 
-        <!-- Chart 2 -->
         <div id="vis2" class="vis-container"></div>
 
         <div class="story">
-          <h3>Story Placeholder for Chart 2</h3>
-          <p>This paragraph will explain the story linking for chart 2.</p>
+          <h3>Primary Health Networks vary more than states</h3>
+          <p>
+            Western NSW reaches 96.07% of five-year-olds vaccinated. The North Coast sits at 88.00%.
+          </p>
+          <p>
+            Gold Coast (89.12%) and Central Queensland, Wide Bay and Sunshine Coast (89.20%) also sit under 90%. Use the slider to hide smaller populations.
+          </p>
         </div>
 
       </div>
@@ -251,34 +306,46 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">Section 3 — Indigenous vs All Children</h2>
+        <h2 class="section-title">Aboriginal children catch up by age five</h2>
 
         <p class="section-description">
-          This paragraph will introduce the comparison between Indigenous children and all children.
+          Aboriginal and Torres Strait Islander children now match or exceed the national age-five rate. The remaining gap is earlier, at ages one and two, and in a few networks.
         </p>
 
-        <!-- Chart 3 -->
         <div class="story">
-          <h3>Story Placeholder for Chart 3</h3>
-          <p>This paragraph will explain the story linking for chart 3.</p>
+          <h3>The gap is at one and two, not at five</h3>
+          <p>
+            In 2024, Aboriginal coverage is 89.9% at age one and 87.74% at age two. All children sit at 92.14% and 90.44%.
+          </p>
+          <p>
+            By age five the pattern reverses. Aboriginal children reach 94.95%. All children sit at 93.63%.
+          </p>
         </div>
 
         <div id="vis3" class="vis-container"></div>
 
 
-        <!-- Chart 9 -->
         <div id="vis9" class="vis-container"></div>
 
         <div class="story">
-          <h3>Story Placeholder for Chart 9</h3>
-          <p>This paragraph will explain the story linking for chart 9.</p>
+          <h3>A long catch-up, then a shared post-2020 dip</h3>
+          <p>
+            Aboriginal age-five coverage was below the national rate until about 2013. It then overtook all children and has stayed ahead.
+          </p>
+          <p>
+            Both groups peaked around 2020 (97.25% Aboriginal; 95.09% all children) and eased by 2024.
+          </p>
         </div>
 
 
-        <!-- Chart 11 -->
         <div class="story">
-          <h3>Story Placeholder for Chart 11</h3>
-          <p>This paragraph will explain the story linking for chart 11.</p>
+          <h3>Most networks sit near the diagonal. A few do not.</h3>
+          <p>
+            Points near the diagonal mean similar Aboriginal and overall rates. Regional networks often sit above it.
+          </p>
+          <p>
+            Northern Sydney is the stark outlier: 86.15% of Aboriginal five-year-olds versus 93.91% of all five-year-olds. Gold Coast and the North Coast show the reverse.
+          </p>
         </div>
 
         <div id="vis11" class="vis-container"></div>
@@ -296,30 +363,39 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">Section 4 — World Context / Conclusion</h2>
+        <h2 class="section-title">Australia’s vaccines, and its peers, sit overseas</h2>
 
         <p class="section-description">
-          This paragraph will introduce the international context and explain how the final charts connect the Australian story to the wider world.
+          The childhood schedule depends on products made in Europe and the United States. Among those same countries, Australia’s DTP3 coverage is solid, not leading.
         </p>
 
-        <!-- Chart 7 and Chart 7 Detail -->
-        <div class="story">
-          <h3>Story Placeholder for Chart 7 and Chart 7 Detail</h3>
-          <p>This paragraph will explain the story linking for chart 7 and chart 7 detail.</p>
-        </div>
-
-        <div class="chart-pair">
+        <div class="chart-triple">
           <div id="vis7" class="vis-container"></div>
+
+          <div class="story">
+            <h3>Supply lines run mainly through Europe</h3>
+            <p>
+              Hexavalent, MMR, pneumococcal, meningococcal, and varicella products used in Australia are made in Belgium, the Netherlands, France, and the United States.
+            </p>
+            <p>
+              The world map traces those routes. The Europe detail shows the cluster around Rixensart, Leiden, Puurs, and Marcy-l’Étoile.
+            </p>
+          </div>
+
           <div id="vis7detail" class="vis-container"></div>
         </div>
 
 
-        <!-- Chart 8 -->
         <div id="vis8" class="vis-container"></div>
 
         <div class="story">
-          <h3>Story Placeholder for Chart 8</h3>
-          <p>This paragraph will explain the story linking for chart 8.</p>
+          <h3>Among supplier countries, Australia is mid-pack</h3>
+          <p>
+            In 2025, 92% of Australian one-year-olds had DTP3 coverage. Belgium is at 98%. France is at 96%.
+          </p>
+          <p>
+            The United States is at 94%. The Netherlands, another source of hexavalent vaccine, is at 90%. High local supply does not always mean the highest coverage.
+          </p>
         </div>
 
       </div>
@@ -327,63 +403,38 @@
     </section>
 
 
-    <!-- =========================================================
-         FOOTER / METADATA
-         ========================================================= -->
-
     <footer class="page-footer">
-      <p><strong>Metadata</strong></p>
-      <p>Placeholder for data sources.</p>
-      <p>Placeholder for data dates and coverage.</p>
-      <p>Placeholder for author / student information.</p>
-      <p>Placeholder for additional notes or acknowledgements.</p>
+      <p><strong>About this visualisation</strong></p>
+      <p>Author: Andrew Eyhorn. FIT3179 Data Visualisation 2, October 2026. Made for a general Australian audience.</p>
+      <p>
+        Coverage data: Australian Immunisation Register / Department of Health, childhood immunisation by state (2006–2024), by Primary Health Network (2025), and Aboriginal and Torres Strait Islander children compared with all children.
+      </p>
+      <p>
+        International DTP3 coverage (one-year-olds, 2025) is from the comparison file used in Chart 8. Vaccine manufacturing locations are compiled from Australian Immunisation Handbook, Department of Health, TGA, EMA, and FDA product documents listed in chart7/vaccinesources.csv.
+      </p>
+      <p>
+        Draft narrative text was assisted by a generative AI tool and should be fact-checked before final submission.
+      </p>
     </footer>
 
   </div>
 
 
-  <!-- =========================================================
-       VEGA-LITE VISUALISATIONS
-       ========================================================= -->
-
   <script type="text/javascript">
+    var embedOpt = { "actions": false };
 
-    var vis1 = "./chart1/chart1.vl.json";
-    vegaEmbed('#vis1', vis1, { "actions": false });
-
-    var vis2 = "./chart2/chart2.vl.json";
-    vegaEmbed('#vis2', vis2, { "actions": false });
-
-    var vis3 = "./chart3/chart3.vl.json";
-    vegaEmbed('#vis3', vis3, { "actions": false });
-
-    var vis4 = "./chart4/chart4.vl.json";
-    vegaEmbed('#vis4', vis4, { "actions": false });
-
-    var vis5 = "./chart5/chart5.vl.json";
-    vegaEmbed('#vis5', vis5, { "actions": false });
-
-    var vis6 = "./chart6/chart6.vl.json";
-    vegaEmbed('#vis6', vis6, { "actions": false });
-
-    var vis7 = "./chart7/chart7.vl.json";
-    vegaEmbed('#vis7', vis7, { "actions": false });
-
-    var vis7detail = "./chart7/chart7detail.vl.json";
-    vegaEmbed('#vis7detail', vis7detail, { "actions": false });
-
-    var vis8 = "./chart8/chart8.vl.json";
-    vegaEmbed('#vis8', vis8, { "actions": false });
-
-    var vis9 = "./chart9/chart9.vl.json";
-    vegaEmbed('#vis9', vis9, { "actions": false });
-
-    var vis10 = "./chart10/chart10.vl.json";
-    vegaEmbed('#vis10', vis10, { "actions": false });
-
-    var vis11 = "./chart11/chart11.vl.json";
-    vegaEmbed('#vis11', vis11, { "actions": false });
-
+    vegaEmbed('#vis1', "./chart1/chart1.vl.json", embedOpt);
+    vegaEmbed('#vis2', "./chart2/chart2.vl.json", embedOpt);
+    vegaEmbed('#vis3', "./chart3/chart3.vl.json", embedOpt);
+    vegaEmbed('#vis4', "./chart4/chart4.vl.json", embedOpt);
+    vegaEmbed('#vis5', "./chart5/chart5.vl.json", embedOpt);
+    vegaEmbed('#vis6', "./chart6/chart6.vl.json", embedOpt);
+    vegaEmbed('#vis7', "./chart7/chart7.vl.json", embedOpt);
+    vegaEmbed('#vis7detail', "./chart7/chart7detail.vl.json", embedOpt);
+    vegaEmbed('#vis8', "./chart8/chart8.vl.json", embedOpt);
+    vegaEmbed('#vis9', "./chart9/chart9.vl.json", embedOpt);
+    vegaEmbed('#vis10', "./chart10/chart10.vl.json", embedOpt);
+    vegaEmbed('#vis11', "./chart11/chart11.vl.json", embedOpt);
   </script>
 
 </body>

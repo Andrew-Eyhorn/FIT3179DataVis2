@@ -1,8 +1,8 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 "title": { "text": "Aboriginal Immune Vs Aus over Time" },
-"width": 800,
-"height": 500,
+"width": "container",
+"height": 260,
 "data": {
 "url": "chart9/chart9data.csv"
 },

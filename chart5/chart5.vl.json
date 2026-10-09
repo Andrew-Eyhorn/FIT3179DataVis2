@@ -8,8 +8,8 @@
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }
 ],
-"width": 800,
-"height": 500,
+"width": "container",
+"height": 260,
   "layer": [ {"mark": "line",
   "encoding": {
     "x": {

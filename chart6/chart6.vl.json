@@ -19,8 +19,8 @@
     "text": "Child Immune Parallel Coordinates"
   },
 
-  "width": 800,
-  "height": 500,
+  "width": "container",
+  "height": 260,
 
   "layer": [
     {
@@ -214,7 +214,7 @@
         },
 
         "y": {
-          "value": 520
+          "value": 280
         },
 
         "text": {
