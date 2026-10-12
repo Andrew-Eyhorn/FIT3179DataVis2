@@ -8,7 +8,7 @@
 
   <!-- Import Vega & Vega-Lite -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,12 +83,12 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px 24px;
-      align-items: center;
+      align-items: start;
     }
 
     .story {
-      padding: 8px 4px;
-      max-width: 22em;
+      padding: 0 4px;
+      max-width: none;
     }
 
     .story h3 {
@@ -127,7 +127,7 @@
       grid-template-columns: minmax(0, 1.15fr) minmax(12em, 0.7fr) minmax(0, 1.15fr);
       gap: 16px;
       grid-column: 1 / -1;
-      align-items: center;
+      align-items: start;
     }
 
     .chart-triple .story {
@@ -155,7 +155,6 @@
         padding: 25px 16px;
       }
 
-      .chart-grid,
       .chart-triple {
         grid-template-columns: 1fr;
       }
@@ -177,10 +176,7 @@
   <div class="page">
 
     <header class="page-header">
-      <h1>Childhood immunisation in Australia</h1>
-      <p class="subtitle">
-        Coverage is high, but not even. Age, place, and community still shape who is protected.
-      </p>
+      <h1>Childhood immunisation in Australia, does it reac the target 95%</h1>
     </header>
 
 
@@ -192,10 +188,10 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">A high national rate hides local gaps</h2>
+        <h2 class="section-title"> National view -> how is Australia doing overall?</A></h2>
 
         <p class="section-description">
-          Most Australian children are immunised. The average still hides differences by state, year, and vaccine. These first charts set that national picture.
+          The Austrlian national target is 95% for childhood immunisation rate. In this visualisation we explore how Australia has move towards that goal over time, and whether improvments are made both for all children and for younger groups and aboriginals. 
         </p>
 
         <div class="story">
@@ -205,6 +201,8 @@
           </p>
           <p>
             South Australia and Victoria follow at about 94.7%. The Northern Territory is lowest, at 91.53%. Queensland and Western Australia also sit near 92%.
+
+            Overall, although most states are not at the 95% target, they are above 92%, and as we will see below this is an improvment from past years.
           </p>
         </div>
 
@@ -214,9 +212,9 @@
         <div id="vis4" class="vis-container"></div>
 
         <div class="story">
-          <h3>Rates rose for years, then slipped after 2020</h3>
+          <h3>Rates rose for years, but have started slipping after 2020</h3>
           <p>
-            National coverage climbed from 2006 through 2020. Age-five coverage peaked at 95.09% in 2020.
+            National coverage climbed from 2006 through 2020. Age-five especially had a good improvemnt, going from only 80% covrege in 2006, but peaked at 95.09% in 2020 and is now the hgihest of the 3 age groups.
           </p>
           <p>
             By 2024 it had fallen to 93.63%. One-year-olds fell from 94.85% to 92.14%. Two-year-olds fell from 92.55% to 90.44%.
@@ -227,10 +225,13 @@
         <div class="story">
           <h3>Not every vaccine reaches the same share of children</h3>
           <p>
-            Among two-year-olds in 2025, hepatitis B and polio are strongest, averaging about 95% and 95%.
+            Austrlian immnisation scheudlue has 8 difference vaccines for childhood immunisation for 2 year olds. Per PHN (Primary Health Network), we can see
+            that despite differences per PHN, there a visible trends. Hepatitis B and polio are strongest, averaging about 95%.
+            
           </p>
           <p>
-            DTP, MMR, and varicella lag, near 90–91%. The North Coast and Gold Coast show the weakest cells, with several vaccines near 85%.
+            Austlira has 31 PHNs that are used to split the country for medical statistics, and help highlight weaker areas. In this case, DTP, MMR, and varicella lag, near 90-91%. 
+            The North Coast and Gold Coast show the weakest cells, with several vaccines near 85%.
           </p>
         </div>
 
@@ -249,21 +250,21 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">States improved, but local areas still diverge</h2>
+        <h2 class="section-title">How does immunisation differ per state</h2>
 
         <p class="section-description">
-          Every state lifted age-five coverage since 2006. The next charts show that lift, then how rates move from age one to five, then the Primary Health Networks inside each state.
+          Every state lifted age-five coverage since 2006, although the pace and final level differ. The next charts show that lift, how rates move from age one to five, and how the Primary Health Networks inside each state compare.
         </p>
 
         <div id="vis5" class="vis-container"></div>
 
         <div class="story">
-          <h3>Every state climbed toward 95%, none equally</h3>
+          <h3>Every state climbed toward 95% over 18 years</h3>
           <p>
-            South Australia jumped from 76.5% in 2006 to 94.69% in 2024. The ACT now leads at 95.44%.
+            South Australia jumped from 76.5% in 2006 to 94.69% in 2024. The ACT now leads at 95.44%, showing that some jurisdictions have reached or passed the national target.
           </p>
           <p>
-            Queensland rose from 82.29% to 92.39%. The Northern Territory rose from 78.8% to 91.53%. Both remain furthest from the dashed 95% line.
+            Queensland rose from 82.29% to 92.39%. The Northern Territory rose from 78.8% to 91.53%. Both remain furthest from the target 95% line.
           </p>
         </div>
 
@@ -271,7 +272,7 @@
         <div class="story">
           <h3>Coverage dips at age two, then recovers by five</h3>
           <p>
-            In 2024, every state is lower at age two than at age one. Rates then rise again by age five.
+            In 2024, every state's coverage per age group is lower at age two than at age one. Rates then rise again by age five, returning to around the one-year-old level or slightly above it.
           </p>
           <p>
             Western Australia has the deepest age-two dip, at 88.9%. The ACT stays highest at every age, finishing at 95.44%.
@@ -286,7 +287,7 @@
         <div class="story">
           <h3>Primary Health Networks vary more than states</h3>
           <p>
-            Western NSW reaches 96.07% of five-year-olds vaccinated. The North Coast sits at 88.00%.
+            Western NSW reaches 96.07% of five-year-olds vaccinated, while the North Coast sits at 88.00%. This spread shows why the national average can hide important local differences.
           </p>
           <p>
             Gold Coast (89.12%) and Central Queensland, Wide Bay and Sunshine Coast (89.20%) also sit under 90%. Use the slider to hide smaller populations.
@@ -309,13 +310,13 @@
         <h2 class="section-title">Aboriginal children catch up by age five</h2>
 
         <p class="section-description">
-          Aboriginal and Torres Strait Islander children now match or exceed the national age-five rate. The remaining gap is earlier, at ages one and two, and in a few networks.
+          Aboriginal and Torres Strait Islander children now match or exceed the national age-five rate. The remaining gap is earlier, at ages one and two, and in a few networks where local coverage remains lower.
         </p>
 
         <div class="story">
           <h3>The gap is at one and two, not at five</h3>
           <p>
-            In 2024, Aboriginal coverage is 89.9% at age one and 87.74% at age two. All children sit at 92.14% and 90.44%.
+            In 2024, Aboriginal coverage is 89.9% at age one and 87.74% at age two. All children sit at 92.14% and 90.44%, so the clearest difference appears before age five.
           </p>
           <p>
             By age five the pattern reverses. Aboriginal children reach 94.95%. All children sit at 93.63%.
@@ -330,7 +331,7 @@
         <div class="story">
           <h3>A long catch-up, then a shared post-2020 dip</h3>
           <p>
-            Aboriginal age-five coverage was below the national rate until about 2013. It then overtook all children and has stayed ahead.
+            Aboriginal age-five coverage was below the national rate until about 2013. It then overtook all children and has stayed ahead, marking a long-term shift rather than a single-year change.
           </p>
           <p>
             Both groups peaked around 2020 (97.25% Aboriginal; 95.09% all children) and eased by 2024.
@@ -341,7 +342,7 @@
         <div class="story">
           <h3>Most networks sit near the diagonal. A few do not.</h3>
           <p>
-            Points near the diagonal mean similar Aboriginal and overall rates. Regional networks often sit above it.
+            Points near the diagonal mean similar Aboriginal and overall rates. Regional networks often sit above it, while points below it indicate that Aboriginal children are covered at a lower rate locally.
           </p>
           <p>
             Northern Sydney is the stark outlier: 86.15% of Aboriginal five-year-olds versus 93.91% of all five-year-olds. Gold Coast and the North Coast show the reverse.
@@ -363,10 +364,10 @@
 
       <div class="chart-grid">
 
-        <h2 class="section-title">Australia’s vaccines, and its peers, sit overseas</h2>
+        <h2 class="section-title">Australia's vaccines, and its peers, sit overseas</h2>
 
         <p class="section-description">
-          The childhood schedule depends on products made in Europe and the United States. Among those same countries, Australia’s DTP3 coverage is solid, not leading.
+          The childhood schedule depends on products made in Europe and the United States. Among those same countries, Australia’s DTP3 coverage is solid, but it is not the highest, showing that supply networks and local coverage are separate issues.
         </p>
 
         <div class="chart-triple">
@@ -375,7 +376,7 @@
           <div class="story">
             <h3>Supply lines run mainly through Europe</h3>
             <p>
-              Hexavalent, MMR, pneumococcal, meningococcal, and varicella products used in Australia are made in Belgium, the Netherlands, France, and the United States.
+              Hexavalent, MMR, pneumococcal, meningococcal, and varicella products used in Australia are made in Belgium, the Netherlands, France, and the United States. The map highlights how widely those supply lines are distributed.
             </p>
             <p>
               The world map traces those routes. The Europe detail shows the cluster around Rixensart, Leiden, Puurs, and Marcy-l’Étoile.
@@ -391,7 +392,7 @@
         <div class="story">
           <h3>Among supplier countries, Australia is mid-pack</h3>
           <p>
-            In 2025, 92% of Australian one-year-olds had DTP3 coverage. Belgium is at 98%. France is at 96%.
+            In 2025, 92% of Australian one-year-olds had DTP3 coverage. Belgium is at 98% and France is at 96%, placing Australia below several of the countries connected to its vaccine supply.
           </p>
           <p>
             The United States is at 94%. The Netherlands, another source of hexavalent vaccine, is at 90%. High local supply does not always mean the highest coverage.
@@ -405,15 +406,13 @@
 
     <footer class="page-footer">
       <p><strong>About this visualisation</strong></p>
-      <p>Author: Andrew Eyhorn. FIT3179 Data Visualisation 2, October 2026. Made for a general Australian audience.</p>
+      <p>Author: Andrew Eyhorn. FIT3179 Data Visualisation 2, October 2026</p>
+      <p>Todo add source links</p>
       <p>
-        Coverage data: Australian Immunisation Register / Department of Health, childhood immunisation by state (2006–2024), by Primary Health Network (2025), and Aboriginal and Torres Strait Islander children compared with all children.
+        Coverage data: Australian Immunisation Register / Department of Health, childhood immunisation by state (2006-2024), by Primary Health Network (2025), and Aboriginal and Torres Strait Islander children compared with all children.
       </p>
       <p>
         International DTP3 coverage (one-year-olds, 2025) is from the comparison file used in Chart 8. Vaccine manufacturing locations are compiled from Australian Immunisation Handbook, Department of Health, TGA, EMA, and FDA product documents listed in chart7/vaccinesources.csv.
-      </p>
-      <p>
-        Draft narrative text was assisted by a generative AI tool and should be fact-checked before final submission.
       </p>
     </footer>
 

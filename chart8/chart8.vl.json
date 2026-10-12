@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "A simple bar chart",
+  "title": "Age 1 DTP3 Coverage of Australia and Supplier Countries",
   "width": "container",
   "height": 260,
   "data": {
@@ -18,7 +18,7 @@
           "value": "#4682b4"
         },
           "tooltip": 
-            [{"field": "Country", "type": "nominal"}, {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative"}]
+            [{"field": "Country", "type": "nominal"}, {"field": "DTP3 coverage age 1 2025(%)", "type": "quantitative"}]
 
   }
 
