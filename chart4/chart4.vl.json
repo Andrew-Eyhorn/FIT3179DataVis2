@@ -4,7 +4,7 @@
 "width": "container",
 "height": 260,
 "data": {
-"url": "../data/overtimegeneralvax.csv"
+"url": "data/overtimegeneralvax.csv"
 },
 "transform": [
   { "filter": "datum.category == 'all children' && datum.state_name == 'Australia'" }
