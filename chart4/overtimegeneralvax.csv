@@ -1,0 +1,1018 @@
+state_name,state_code,year,age,value,category
+Australian Capital Territory,ACT,2024,1,94.94,all children
+Australian Capital Territory,ACT,2023,1,96.1,all children
+Australian Capital Territory,ACT,2022,1,96.44,all children
+Australian Capital Territory,ACT,2021,1,96.22,all children
+Australian Capital Territory,ACT,2020,1,96.09,all children
+Australian Capital Territory,ACT,2019,1,95.61,all children
+Australian Capital Territory,ACT,2018,1,95.77,all children
+Australian Capital Territory,ACT,2017,1,94.84,all children
+Australian Capital Territory,ACT,2016,1,94.87,all children
+Australian Capital Territory,ACT,2015,1,93.76,all children
+Australian Capital Territory,ACT,2014,1,92.91,all children
+Australian Capital Territory,ACT,2013,1,92.97,all children
+Australian Capital Territory,ACT,2012,1,92.83,all children
+Australian Capital Territory,ACT,2011,1,93.24,all children
+Australian Capital Territory,ACT,2010,1,93.26,all children
+Australian Capital Territory,ACT,2009,1,93.99,all children
+Australian Capital Territory,ACT,2008,1,93.63,all children
+Australian Capital Territory,ACT,2007,1,93.36,all children
+Australian Capital Territory,ACT,2006,1,91.35,all children
+New South Wales,NSW,2024,1,92.36,all children
+New South Wales,NSW,2023,1,93.29,all children
+New South Wales,NSW,2022,1,93.75,all children
+New South Wales,NSW,2021,1,94.72,all children
+New South Wales,NSW,2020,1,94.77,all children
+New South Wales,NSW,2019,1,94.17,all children
+New South Wales,NSW,2018,1,93.94,all children
+New South Wales,NSW,2017,1,93.87,all children
+New South Wales,NSW,2016,1,93.31,all children
+New South Wales,NSW,2015,1,92.2,all children
+New South Wales,NSW,2014,1,90.11,all children
+New South Wales,NSW,2013,1,90.02,all children
+New South Wales,NSW,2012,1,91.4,all children
+New South Wales,NSW,2011,1,91.16,all children
+New South Wales,NSW,2010,1,91.43,all children
+New South Wales,NSW,2009,1,92.1,all children
+New South Wales,NSW,2008,1,91.44,all children
+New South Wales,NSW,2007,1,91.52,all children
+New South Wales,NSW,2006,1,90.68,all children
+Victoria,VIC,2024,1,92.67,all children
+Victoria,VIC,2023,1,93.77,all children
+Victoria,VIC,2022,1,93.98,all children
+Victoria,VIC,2021,1,94.96,all children
+Victoria,VIC,2020,1,95.08,all children
+Victoria,VIC,2019,1,94.71,all children
+Victoria,VIC,2018,1,94.31,all children
+Victoria,VIC,2017,1,94.25,all children
+Victoria,VIC,2016,1,93.35,all children
+Victoria,VIC,2015,1,92.18,all children
+Victoria,VIC,2014,1,90.83,all children
+Victoria,VIC,2013,1,91.04,all children
+Victoria,VIC,2012,1,92.35,all children
+Victoria,VIC,2011,1,92.39,all children
+Victoria,VIC,2010,1,92.02,all children
+Victoria,VIC,2009,1,92.18,all children
+Victoria,VIC,2008,1,91.76,all children
+Victoria,VIC,2007,1,91.72,all children
+Victoria,VIC,2006,1,91.27,all children
+Queensland,QLD,2024,1,91.19,all children
+Queensland,QLD,2023,1,92.45,all children
+Queensland,QLD,2022,1,93.11,all children
+Queensland,QLD,2021,1,94.08,all children
+Queensland,QLD,2020,1,94.65,all children
+Queensland,QLD,2019,1,94.2,all children
+Queensland,QLD,2018,1,94.01,all children
+Queensland,QLD,2017,1,94.11,all children
+Queensland,QLD,2016,1,93.89,all children
+Queensland,QLD,2015,1,92.42,all children
+Queensland,QLD,2014,1,91.53,all children
+Queensland,QLD,2013,1,91.55,all children
+Queensland,QLD,2012,1,91.86,all children
+Queensland,QLD,2011,1,91.6,all children
+Queensland,QLD,2010,1,91.71,all children
+Queensland,QLD,2009,1,91.49,all children
+Queensland,QLD,2008,1,90.87,all children
+Queensland,QLD,2007,1,91.0,all children
+Queensland,QLD,2006,1,90.38,all children
+South Australia,SA,2024,1,92.55,all children
+South Australia,SA,2023,1,93.35,all children
+South Australia,SA,2022,1,94.48,all children
+South Australia,SA,2021,1,94.98,all children
+South Australia,SA,2020,1,95.01,all children
+South Australia,SA,2019,1,94.62,all children
+South Australia,SA,2018,1,94.25,all children
+South Australia,SA,2017,1,94.25,all children
+South Australia,SA,2016,1,93.36,all children
+South Australia,SA,2015,1,92.41,all children
+South Australia,SA,2014,1,90.38,all children
+South Australia,SA,2013,1,90.6,all children
+South Australia,SA,2012,1,92.01,all children
+South Australia,SA,2011,1,91.83,all children
+South Australia,SA,2010,1,91.26,all children
+South Australia,SA,2009,1,91.52,all children
+South Australia,SA,2008,1,91.09,all children
+South Australia,SA,2007,1,90.93,all children
+South Australia,SA,2006,1,90.82,all children
+Western Australia,WA,2024,1,91.15,all children
+Western Australia,WA,2023,1,92.14,all children
+Western Australia,WA,2022,1,93.48,all children
+Western Australia,WA,2021,1,93.97,all children
+Western Australia,WA,2020,1,94.47,all children
+Western Australia,WA,2019,1,93.71,all children
+Western Australia,WA,2018,1,93.43,all children
+Western Australia,WA,2017,1,93.38,all children
+Western Australia,WA,2016,1,92.75,all children
+Western Australia,WA,2015,1,92.09,all children
+Western Australia,WA,2014,1,90.67,all children
+Western Australia,WA,2013,1,90.16,all children
+Western Australia,WA,2012,1,90.08,all children
+Western Australia,WA,2011,1,89.78,all children
+Western Australia,WA,2010,1,89.82,all children
+Western Australia,WA,2009,1,89.4,all children
+Western Australia,WA,2008,1,89.72,all children
+Western Australia,WA,2007,1,89.28,all children
+Western Australia,WA,2006,1,89.52,all children
+Tasmania,TAS,2024,1,93.57,all children
+Tasmania,TAS,2023,1,94.37,all children
+Tasmania,TAS,2022,1,94.48,all children
+Tasmania,TAS,2021,1,95.04,all children
+Tasmania,TAS,2020,1,95.13,all children
+Tasmania,TAS,2019,1,94.06,all children
+Tasmania,TAS,2018,1,94.2,all children
+Tasmania,TAS,2017,1,94.26,all children
+Tasmania,TAS,2016,1,93.56,all children
+Tasmania,TAS,2015,1,92.38,all children
+Tasmania,TAS,2014,1,89.79,all children
+Tasmania,TAS,2013,1,91.05,all children
+Tasmania,TAS,2012,1,92.81,all children
+Tasmania,TAS,2011,1,91.56,all children
+Tasmania,TAS,2010,1,92.17,all children
+Tasmania,TAS,2009,1,91.95,all children
+Tasmania,TAS,2008,1,91.84,all children
+Tasmania,TAS,2007,1,92.32,all children
+Tasmania,TAS,2006,1,93.22,all children
+Northern Territory,NT,2024,1,91.56,all children
+Northern Territory,NT,2023,1,92.19,all children
+Northern Territory,NT,2022,1,93.07,all children
+Northern Territory,NT,2021,1,94.03,all children
+Northern Territory,NT,2020,1,95.46,all children
+Northern Territory,NT,2019,1,93.99,all children
+Northern Territory,NT,2018,1,93.14,all children
+Northern Territory,NT,2017,1,93.51,all children
+Northern Territory,NT,2016,1,92.98,all children
+Northern Territory,NT,2015,1,92.63,all children
+Northern Territory,NT,2014,1,89.63,all children
+Northern Territory,NT,2013,1,91.22,all children
+Northern Territory,NT,2012,1,92.48,all children
+Northern Territory,NT,2011,1,90.75,all children
+Northern Territory,NT,2010,1,89.98,all children
+Northern Territory,NT,2009,1,90.03,all children
+Northern Territory,NT,2008,1,90.41,all children
+Northern Territory,NT,2007,1,90.8,all children
+Northern Territory,NT,2006,1,91.23,all children
+Australia,AUS,2024,1,92.14,all children
+Australia,AUS,2023,1,93.18,all children
+Australia,AUS,2022,1,93.75,all children
+Australia,AUS,2021,1,94.61,all children
+Australia,AUS,2020,1,94.85,all children
+Australia,AUS,2019,1,94.31,all children
+Australia,AUS,2018,1,94.04,all children
+Australia,AUS,2017,1,94.0,all children
+Australia,AUS,2016,1,93.41,all children
+Australia,AUS,2015,1,92.28,all children
+Australia,AUS,2014,1,90.69,all children
+Australia,AUS,2013,1,90.73,all children
+Australia,AUS,2012,1,91.69,all children
+Australia,AUS,2011,1,91.49,all children
+Australia,AUS,2010,1,91.48,all children
+Australia,AUS,2009,1,91.67,all children
+Australia,AUS,2008,1,91.24,all children
+Australia,AUS,2007,1,91.24,all children
+Australia,AUS,2006,1,90.73,all children
+Australian Capital Territory,ACT,2024,2,93.59,all children
+Australian Capital Territory,ACT,2023,2,94.14,all children
+Australian Capital Territory,ACT,2022,2,94.81,all children
+Australian Capital Territory,ACT,2021,2,94.29,all children
+Australian Capital Territory,ACT,2020,2,93.29,all children
+Australian Capital Territory,ACT,2019,2,93.52,all children
+Australian Capital Territory,ACT,2018,2,92.55,all children
+Australian Capital Territory,ACT,2017,2,92.51,all children
+Australian Capital Territory,ACT,2016,2,92.14,all children
+Australian Capital Territory,ACT,2015,2,90.97,all children
+Australian Capital Territory,ACT,2014,2,92.84,all children
+Australian Capital Territory,ACT,2013,2,92.97,all children
+Australian Capital Territory,ACT,2012,2,93.21,all children
+Australian Capital Territory,ACT,2011,2,93.46,all children
+Australian Capital Territory,ACT,2010,2,94.04,all children
+Australian Capital Territory,ACT,2009,2,93.75,all children
+Australian Capital Territory,ACT,2008,2,94.52,all children
+Australian Capital Territory,ACT,2007,2,93.15,all children
+Australian Capital Territory,ACT,2006,2,93.38,all children
+New South Wales,NSW,2024,2,90.47,all children
+New South Wales,NSW,2023,2,91.31,all children
+New South Wales,NSW,2022,2,91.94,all children
+New South Wales,NSW,2021,2,92.48,all children
+New South Wales,NSW,2020,2,92.34,all children
+New South Wales,NSW,2019,2,91.33,all children
+New South Wales,NSW,2018,2,90.23,all children
+New South Wales,NSW,2017,2,89.85,all children
+New South Wales,NSW,2016,2,90.83,all children
+New South Wales,NSW,2015,2,89.09,all children
+New South Wales,NSW,2014,2,90.72,all children
+New South Wales,NSW,2013,2,91.84,all children
+New South Wales,NSW,2012,2,92.42,all children
+New South Wales,NSW,2011,2,92.41,all children
+New South Wales,NSW,2010,2,92.43,all children
+New South Wales,NSW,2009,2,92.3,all children
+New South Wales,NSW,2008,2,92.57,all children
+New South Wales,NSW,2007,2,92.27,all children
+New South Wales,NSW,2006,2,91.7,all children
+Victoria,VIC,2024,2,91.33,all children
+Victoria,VIC,2023,2,91.73,all children
+Victoria,VIC,2022,2,92.57,all children
+Victoria,VIC,2021,2,92.92,all children
+Victoria,VIC,2020,2,93.16,all children
+Victoria,VIC,2019,2,92.38,all children
+Victoria,VIC,2018,2,91.17,all children
+Victoria,VIC,2017,2,90.85,all children
+Victoria,VIC,2016,2,91.61,all children
+Victoria,VIC,2015,2,89.72,all children
+Victoria,VIC,2014,2,91.59,all children
+Victoria,VIC,2013,2,92.79,all children
+Victoria,VIC,2012,2,93.38,all children
+Victoria,VIC,2011,2,93.46,all children
+Victoria,VIC,2010,2,93.15,all children
+Victoria,VIC,2009,2,93.4,all children
+Victoria,VIC,2008,2,93.61,all children
+Victoria,VIC,2007,2,93.67,all children
+Victoria,VIC,2006,2,93.51,all children
+Queensland,QLD,2024,2,89.78,all children
+Queensland,QLD,2023,2,90.77,all children
+Queensland,QLD,2022,2,91.6,all children
+Queensland,QLD,2021,2,92.7,all children
+Queensland,QLD,2020,2,92.79,all children
+Queensland,QLD,2019,2,91.89,all children
+Queensland,QLD,2018,2,91.51,all children
+Queensland,QLD,2017,2,91.67,all children
+Queensland,QLD,2016,2,92.29,all children
+Queensland,QLD,2015,2,90.23,all children
+Queensland,QLD,2014,2,92.36,all children
+Queensland,QLD,2013,2,92.65,all children
+Queensland,QLD,2012,2,92.75,all children
+Queensland,QLD,2011,2,92.81,all children
+Queensland,QLD,2010,2,92.41,all children
+Queensland,QLD,2009,2,91.93,all children
+Queensland,QLD,2008,2,92.27,all children
+Queensland,QLD,2007,2,91.88,all children
+Queensland,QLD,2006,2,91.83,all children
+South Australia,SA,2024,2,90.5,all children
+South Australia,SA,2023,2,91.93,all children
+South Australia,SA,2022,2,92.33,all children
+South Australia,SA,2021,2,92.95,all children
+South Australia,SA,2020,2,92.85,all children
+South Australia,SA,2019,2,91.72,all children
+South Australia,SA,2018,2,91.1,all children
+South Australia,SA,2017,2,90.18,all children
+South Australia,SA,2016,2,91.75,all children
+South Australia,SA,2015,2,88.26,all children
+South Australia,SA,2014,2,90.63,all children
+South Australia,SA,2013,2,92.39,all children
+South Australia,SA,2012,2,92.45,all children
+South Australia,SA,2011,2,92.71,all children
+South Australia,SA,2010,2,92.28,all children
+South Australia,SA,2009,2,92.57,all children
+South Australia,SA,2008,2,92.77,all children
+South Australia,SA,2007,2,92.84,all children
+South Australia,SA,2006,2,92.51,all children
+Western Australia,WA,2024,2,88.9,all children
+Western Australia,WA,2023,2,89.73,all children
+Western Australia,WA,2022,2,91.02,all children
+Western Australia,WA,2021,2,91.79,all children
+Western Australia,WA,2020,2,91.44,all children
+Western Australia,WA,2019,2,90.06,all children
+Western Australia,WA,2018,2,89.63,all children
+Western Australia,WA,2017,2,89.1,all children
+Western Australia,WA,2016,2,90.35,all children
+Western Australia,WA,2015,2,88.07,all children
+Western Australia,WA,2014,2,89.92,all children
+Western Australia,WA,2013,2,90.52,all children
+Western Australia,WA,2012,2,90.54,all children
+Western Australia,WA,2011,2,91.18,all children
+Western Australia,WA,2010,2,90.52,all children
+Western Australia,WA,2009,2,91.49,all children
+Western Australia,WA,2008,2,90.91,all children
+Western Australia,WA,2007,2,90.78,all children
+Western Australia,WA,2006,2,90.87,all children
+Tasmania,TAS,2024,2,91.5,all children
+Tasmania,TAS,2023,2,92.81,all children
+Tasmania,TAS,2022,2,91.92,all children
+Tasmania,TAS,2021,2,91.57,all children
+Tasmania,TAS,2020,2,90.37,all children
+Tasmania,TAS,2019,2,91.88,all children
+Tasmania,TAS,2018,2,90.98,all children
+Tasmania,TAS,2017,2,91.13,all children
+Tasmania,TAS,2016,2,92.13,all children
+Tasmania,TAS,2015,2,88.33,all children
+Tasmania,TAS,2014,2,90.48,all children
+Tasmania,TAS,2013,2,94.09,all children
+Tasmania,TAS,2012,2,93.77,all children
+Tasmania,TAS,2011,2,94.09,all children
+Tasmania,TAS,2010,2,93.6,all children
+Tasmania,TAS,2009,2,93.48,all children
+Tasmania,TAS,2008,2,93.95,all children
+Tasmania,TAS,2007,2,94.96,all children
+Tasmania,TAS,2006,2,94.1,all children
+Northern Territory,NT,2024,2,89.48,all children
+Northern Territory,NT,2023,2,90.81,all children
+Northern Territory,NT,2022,2,89.76,all children
+Northern Territory,NT,2021,2,91.92,all children
+Northern Territory,NT,2020,2,91.86,all children
+Northern Territory,NT,2019,2,91.06,all children
+Northern Territory,NT,2018,2,88.29,all children
+Northern Territory,NT,2017,2,88.44,all children
+Northern Territory,NT,2016,2,89.42,all children
+Northern Territory,NT,2015,2,87.66,all children
+Northern Territory,NT,2014,2,92.29,all children
+Northern Territory,NT,2013,2,93.43,all children
+Northern Territory,NT,2012,2,94.34,all children
+Northern Territory,NT,2011,2,94.17,all children
+Northern Territory,NT,2010,2,93.39,all children
+Northern Territory,NT,2009,2,93.42,all children
+Northern Territory,NT,2008,2,93.71,all children
+Northern Territory,NT,2007,2,93.44,all children
+Northern Territory,NT,2006,2,94.45,all children
+Australia,AUS,2024,2,90.44,all children
+Australia,AUS,2023,2,91.24,all children
+Australia,AUS,2022,2,91.98,all children
+Australia,AUS,2021,2,92.6,all children
+Australia,AUS,2020,2,92.55,all children
+Australia,AUS,2019,2,91.64,all children
+Australia,AUS,2018,2,90.75,all children
+Australia,AUS,2017,2,90.46,all children
+Australia,AUS,2016,2,91.36,all children
+Australia,AUS,2015,2,89.31,all children
+Australia,AUS,2014,2,91.23,all children
+Australia,AUS,2013,2,92.21,all children
+Australia,AUS,2012,2,92.59,all children
+Australia,AUS,2011,2,92.72,all children
+Australia,AUS,2010,2,92.45,all children
+Australia,AUS,2009,2,92.48,all children
+Australia,AUS,2008,2,92.69,all children
+Australia,AUS,2007,2,92.5,all children
+Australia,AUS,2006,2,92.26,all children
+Australian Capital Territory,ACT,2024,5,95.44,all children
+Australian Capital Territory,ACT,2023,5,95.55,all children
+Australian Capital Territory,ACT,2022,5,95.73,all children
+Australian Capital Territory,ACT,2021,5,95.91,all children
+Australian Capital Territory,ACT,2020,5,95.45,all children
+Australian Capital Territory,ACT,2019,5,94.91,all children
+Australian Capital Territory,ACT,2018,5,94.54,all children
+Australian Capital Territory,ACT,2017,5,94.47,all children
+Australian Capital Territory,ACT,2016,5,93.56,all children
+Australian Capital Territory,ACT,2015,5,93.54,all children
+Australian Capital Territory,ACT,2014,5,93.29,all children
+Australian Capital Territory,ACT,2013,5,92.17,all children
+Australian Capital Territory,ACT,2012,5,91.68,all children
+Australian Capital Territory,ACT,2011,5,91.38,all children
+Australian Capital Territory,ACT,2010,5,89.41,all children
+Australian Capital Territory,ACT,2009,5,85.32,all children
+Australian Capital Territory,ACT,2008,5,86.17,all children
+Australian Capital Territory,ACT,2007,5,87.57,all children
+Australian Capital Territory,ACT,2006,5,83.53,all children
+New South Wales,NSW,2024,5,93.74,all children
+New South Wales,NSW,2023,5,93.99,all children
+New South Wales,NSW,2022,5,94.16,all children
+New South Wales,NSW,2021,5,94.85,all children
+New South Wales,NSW,2020,5,94.9,all children
+New South Wales,NSW,2019,5,94.66,all children
+New South Wales,NSW,2018,5,94.56,all children
+New South Wales,NSW,2017,5,93.91,all children
+New South Wales,NSW,2016,5,93.48,all children
+New South Wales,NSW,2015,5,93.05,all children
+New South Wales,NSW,2014,5,92.43,all children
+New South Wales,NSW,2013,5,92.06,all children
+New South Wales,NSW,2012,5,90.82,all children
+New South Wales,NSW,2011,5,89.43,all children
+New South Wales,NSW,2010,5,87.6,all children
+New South Wales,NSW,2009,5,80.61,all children
+New South Wales,NSW,2008,5,76.58,all children
+New South Wales,NSW,2007,5,83.74,all children
+New South Wales,NSW,2006,5,78.72,all children
+Victoria,VIC,2024,5,94.65,all children
+Victoria,VIC,2023,5,94.86,all children
+Victoria,VIC,2022,5,95.04,all children
+Victoria,VIC,2021,5,95.76,all children
+Victoria,VIC,2020,5,96.06,all children
+Victoria,VIC,2019,5,95.69,all children
+Victoria,VIC,2018,5,95.52,all children
+Victoria,VIC,2017,5,94.55,all children
+Victoria,VIC,2016,5,93.63,all children
+Victoria,VIC,2015,5,93.02,all children
+Victoria,VIC,2014,5,92.46,all children
+Victoria,VIC,2013,5,92.64,all children
+Victoria,VIC,2012,5,91.99,all children
+Victoria,VIC,2011,5,91.18,all children
+Victoria,VIC,2010,5,90.07,all children
+Victoria,VIC,2009,5,85.48,all children
+Victoria,VIC,2008,5,83.11,all children
+Victoria,VIC,2007,5,85.65,all children
+Victoria,VIC,2006,5,80.98,all children
+Queensland,QLD,2024,5,92.39,all children
+Queensland,QLD,2023,5,92.94,all children
+Queensland,QLD,2022,5,93.5,all children
+Queensland,QLD,2021,5,94.4,all children
+Queensland,QLD,2020,5,94.72,all children
+Queensland,QLD,2019,5,94.45,all children
+Queensland,QLD,2018,5,94.54,all children
+Queensland,QLD,2017,5,94.25,all children
+Queensland,QLD,2016,5,93.07,all children
+Queensland,QLD,2015,5,92.44,all children
+Queensland,QLD,2014,5,92.41,all children
+Queensland,QLD,2013,5,91.85,all children
+Queensland,QLD,2012,5,91.07,all children
+Queensland,QLD,2011,5,89.85,all children
+Queensland,QLD,2010,5,88.22,all children
+Queensland,QLD,2009,5,82.22,all children
+Queensland,QLD,2008,5,81.24,all children
+Queensland,QLD,2007,5,83.83,all children
+Queensland,QLD,2006,5,82.29,all children
+South Australia,SA,2024,5,94.69,all children
+South Australia,SA,2023,5,95.03,all children
+South Australia,SA,2022,5,95.53,all children
+South Australia,SA,2021,5,96.11,all children
+South Australia,SA,2020,5,95.06,all children
+South Australia,SA,2019,5,94.84,all children
+South Australia,SA,2018,5,94.67,all children
+South Australia,SA,2017,5,93.75,all children
+South Australia,SA,2016,5,93.11,all children
+South Australia,SA,2015,5,91.25,all children
+South Australia,SA,2014,5,90.99,all children
+South Australia,SA,2013,5,91.32,all children
+South Australia,SA,2012,5,89.13,all children
+South Australia,SA,2011,5,87.21,all children
+South Australia,SA,2010,5,85.61,all children
+South Australia,SA,2009,5,77.48,all children
+South Australia,SA,2008,5,74.38,all children
+South Australia,SA,2007,5,80.47,all children
+South Australia,SA,2006,5,76.5,all children
+Western Australia,WA,2024,5,92.54,all children
+Western Australia,WA,2023,5,92.82,all children
+Western Australia,WA,2022,5,93.26,all children
+Western Australia,WA,2021,5,93.88,all children
+Western Australia,WA,2020,5,94.13,all children
+Western Australia,WA,2019,5,93.55,all children
+Western Australia,WA,2018,5,93.2,all children
+Western Australia,WA,2017,5,92.17,all children
+Western Australia,WA,2016,5,91.47,all children
+Western Australia,WA,2015,5,91.08,all children
+Western Australia,WA,2014,5,90.0,all children
+Western Australia,WA,2013,5,89.69,all children
+Western Australia,WA,2012,5,88.38,all children
+Western Australia,WA,2011,5,86.03,all children
+Western Australia,WA,2010,5,85.36,all children
+Western Australia,WA,2009,5,79.75,all children
+Western Australia,WA,2008,5,77.77,all children
+Western Australia,WA,2007,5,80.31,all children
+Western Australia,WA,2006,5,77.4,all children
+Tasmania,TAS,2024,5,93.63,all children
+Tasmania,TAS,2023,5,93.78,all children
+Tasmania,TAS,2022,5,94.47,all children
+Tasmania,TAS,2021,5,94.97,all children
+Tasmania,TAS,2020,5,94.77,all children
+Tasmania,TAS,2019,5,95.51,all children
+Tasmania,TAS,2018,5,95.54,all children
+Tasmania,TAS,2017,5,94.58,all children
+Tasmania,TAS,2016,5,94.21,all children
+Tasmania,TAS,2015,5,93.25,all children
+Tasmania,TAS,2014,5,92.32,all children
+Tasmania,TAS,2013,5,92.84,all children
+Tasmania,TAS,2012,5,92.04,all children
+Tasmania,TAS,2011,5,90.46,all children
+Tasmania,TAS,2010,5,90.07,all children
+Tasmania,TAS,2009,5,82.92,all children
+Tasmania,TAS,2008,5,80.6,all children
+Tasmania,TAS,2007,5,83.89,all children
+Tasmania,TAS,2006,5,80.5,all children
+Northern Territory,NT,2024,5,91.53,all children
+Northern Territory,NT,2023,5,92.38,all children
+Northern Territory,NT,2022,5,93.79,all children
+Northern Territory,NT,2021,5,93.89,all children
+Northern Territory,NT,2020,5,94.88,all children
+Northern Territory,NT,2019,5,94.06,all children
+Northern Territory,NT,2018,5,93.4,all children
+Northern Territory,NT,2017,5,93.22,all children
+Northern Territory,NT,2016,5,92.18,all children
+Northern Territory,NT,2015,5,92.79,all children
+Northern Territory,NT,2014,5,91.64,all children
+Northern Territory,NT,2013,5,91.3,all children
+Northern Territory,NT,2012,5,90.29,all children
+Northern Territory,NT,2011,5,87.88,all children
+Northern Territory,NT,2010,5,85.77,all children
+Northern Territory,NT,2009,5,81.8,all children
+Northern Territory,NT,2008,5,81.4,all children
+Northern Territory,NT,2007,5,83.61,all children
+Northern Territory,NT,2006,5,78.8,all children
+Australia,AUS,2024,5,93.63,all children
+Australia,AUS,2023,5,93.93,all children
+Australia,AUS,2022,5,94.27,all children
+Australia,AUS,2021,5,94.98,all children
+Australia,AUS,2020,5,95.09,all children
+Australia,AUS,2019,5,94.79,all children
+Australia,AUS,2018,5,94.67,all children
+Australia,AUS,2017,5,93.96,all children
+Australia,AUS,2016,5,93.19,all children
+Australia,AUS,2015,5,92.59,all children
+Australia,AUS,2014,5,92.08,all children
+Australia,AUS,2013,5,91.86,all children
+Australia,AUS,2012,5,90.82,all children
+Australia,AUS,2011,5,89.48,all children
+Australia,AUS,2010,5,88.02,all children
+Australia,AUS,2009,5,81.97,all children
+Australia,AUS,2008,5,79.39,all children
+Australia,AUS,2007,5,83.71,all children
+Australia,AUS,2006,5,79.83,all children
+Australian Capital Territory,ACT,2024,1,89.3,aboriginal
+Australian Capital Territory,ACT,2023,1,90.78,aboriginal
+Australian Capital Territory,ACT,2022,1,92.49,aboriginal
+Australian Capital Territory,ACT,2021,1,96.07,aboriginal
+Australian Capital Territory,ACT,2020,1,93.64,aboriginal
+Australian Capital Territory,ACT,2019,1,98.36,aboriginal
+Australian Capital Territory,ACT,2018,1,97.52,aboriginal
+Australian Capital Territory,ACT,2017,1,92.48,aboriginal
+Australian Capital Territory,ACT,2016,1,91.87,aboriginal
+Australian Capital Territory,ACT,2015,1,93.15,aboriginal
+Australian Capital Territory,ACT,2014,1,94.53,aboriginal
+Australian Capital Territory,ACT,2013,1,89.74,aboriginal
+Australian Capital Territory,ACT,2012,1,78.81,aboriginal
+Australian Capital Territory,ACT,2011,1,89.11,aboriginal
+Australian Capital Territory,ACT,2010,1,92.93,aboriginal
+Australian Capital Territory,ACT,2009,1,88.42,aboriginal
+Australian Capital Territory,ACT,2008,1,88.24,aboriginal
+Australian Capital Territory,ACT,2007,1,90.0,aboriginal
+Australian Capital Territory,ACT,2006,1,80.28,aboriginal
+New South Wales,NSW,2024,1,91.49,aboriginal
+New South Wales,NSW,2023,1,92.57,aboriginal
+New South Wales,NSW,2022,1,93.07,aboriginal
+New South Wales,NSW,2021,1,93.67,aboriginal
+New South Wales,NSW,2020,1,94.9,aboriginal
+New South Wales,NSW,2019,1,94.44,aboriginal
+New South Wales,NSW,2018,1,94.29,aboriginal
+New South Wales,NSW,2017,1,94.34,aboriginal
+New South Wales,NSW,2016,1,93.34,aboriginal
+New South Wales,NSW,2015,1,91.22,aboriginal
+New South Wales,NSW,2014,1,89.21,aboriginal
+New South Wales,NSW,2013,1,86.25,aboriginal
+New South Wales,NSW,2012,1,85.91,aboriginal
+New South Wales,NSW,2011,1,85.86,aboriginal
+New South Wales,NSW,2010,1,86.57,aboriginal
+New South Wales,NSW,2009,1,86.97,aboriginal
+New South Wales,NSW,2008,1,85.07,aboriginal
+New South Wales,NSW,2007,1,84.59,aboriginal
+New South Wales,NSW,2006,1,83.74,aboriginal
+Victoria,VIC,2024,1,90.4,aboriginal
+Victoria,VIC,2023,1,92.39,aboriginal
+Victoria,VIC,2022,1,91.57,aboriginal
+Victoria,VIC,2021,1,93.66,aboriginal
+Victoria,VIC,2020,1,94.34,aboriginal
+Victoria,VIC,2019,1,92.08,aboriginal
+Victoria,VIC,2018,1,93.51,aboriginal
+Victoria,VIC,2017,1,93.06,aboriginal
+Victoria,VIC,2016,1,90.62,aboriginal
+Victoria,VIC,2015,1,87.11,aboriginal
+Victoria,VIC,2014,1,86.79,aboriginal
+Victoria,VIC,2013,1,85.32,aboriginal
+Victoria,VIC,2012,1,86.7,aboriginal
+Victoria,VIC,2011,1,83.9,aboriginal
+Victoria,VIC,2010,1,84.97,aboriginal
+Victoria,VIC,2009,1,86.6,aboriginal
+Victoria,VIC,2008,1,85.67,aboriginal
+Victoria,VIC,2007,1,86.82,aboriginal
+Victoria,VIC,2006,1,82.66,aboriginal
+Queensland,QLD,2024,1,89.29,aboriginal
+Queensland,QLD,2023,1,89.85,aboriginal
+Queensland,QLD,2022,1,90.3,aboriginal
+Queensland,QLD,2021,1,92.44,aboriginal
+Queensland,QLD,2020,1,93.74,aboriginal
+Queensland,QLD,2019,1,92.49,aboriginal
+Queensland,QLD,2018,1,92.22,aboriginal
+Queensland,QLD,2017,1,91.41,aboriginal
+Queensland,QLD,2016,1,90.39,aboriginal
+Queensland,QLD,2015,1,87.47,aboriginal
+Queensland,QLD,2014,1,86.18,aboriginal
+Queensland,QLD,2013,1,86.16,aboriginal
+Queensland,QLD,2012,1,86.09,aboriginal
+Queensland,QLD,2011,1,85.3,aboriginal
+Queensland,QLD,2010,1,85.3,aboriginal
+Queensland,QLD,2009,1,85.93,aboriginal
+Queensland,QLD,2008,1,85.58,aboriginal
+Queensland,QLD,2007,1,85.81,aboriginal
+Queensland,QLD,2006,1,85.16,aboriginal
+South Australia,SA,2024,1,90.57,aboriginal
+South Australia,SA,2023,1,88.98,aboriginal
+South Australia,SA,2022,1,91.28,aboriginal
+South Australia,SA,2021,1,92.41,aboriginal
+South Australia,SA,2020,1,91.31,aboriginal
+South Australia,SA,2019,1,90.61,aboriginal
+South Australia,SA,2018,1,90.27,aboriginal
+South Australia,SA,2017,1,90.27,aboriginal
+South Australia,SA,2016,1,92.45,aboriginal
+South Australia,SA,2015,1,89.23,aboriginal
+South Australia,SA,2014,1,83.82,aboriginal
+South Australia,SA,2013,1,77.48,aboriginal
+South Australia,SA,2012,1,77.85,aboriginal
+South Australia,SA,2011,1,79.14,aboriginal
+South Australia,SA,2010,1,77.99,aboriginal
+South Australia,SA,2009,1,79.89,aboriginal
+South Australia,SA,2008,1,77.46,aboriginal
+South Australia,SA,2007,1,78.14,aboriginal
+South Australia,SA,2006,1,80.12,aboriginal
+Western Australia,WA,2024,1,85.73,aboriginal
+Western Australia,WA,2023,1,84.72,aboriginal
+Western Australia,WA,2022,1,86.83,aboriginal
+Western Australia,WA,2021,1,87.34,aboriginal
+Western Australia,WA,2020,1,89.84,aboriginal
+Western Australia,WA,2019,1,88.39,aboriginal
+Western Australia,WA,2018,1,88.71,aboriginal
+Western Australia,WA,2017,1,88.21,aboriginal
+Western Australia,WA,2016,1,86.51,aboriginal
+Western Australia,WA,2015,1,83.42,aboriginal
+Western Australia,WA,2014,1,84.3,aboriginal
+Western Australia,WA,2013,1,81.48,aboriginal
+Western Australia,WA,2012,1,79.34,aboriginal
+Western Australia,WA,2011,1,80.8,aboriginal
+Western Australia,WA,2010,1,78.68,aboriginal
+Western Australia,WA,2009,1,76.45,aboriginal
+Western Australia,WA,2008,1,76.96,aboriginal
+Western Australia,WA,2007,1,77.23,aboriginal
+Western Australia,WA,2006,1,77.45,aboriginal
+Tasmania,TAS,2024,1,93.71,aboriginal
+Tasmania,TAS,2023,1,93.73,aboriginal
+Tasmania,TAS,2022,1,96.4,aboriginal
+Tasmania,TAS,2021,1,96.07,aboriginal
+Tasmania,TAS,2020,1,97.4,aboriginal
+Tasmania,TAS,2019,1,94.4,aboriginal
+Tasmania,TAS,2018,1,96.46,aboriginal
+Tasmania,TAS,2017,1,94.74,aboriginal
+Tasmania,TAS,2016,1,93.33,aboriginal
+Tasmania,TAS,2015,1,91.36,aboriginal
+Tasmania,TAS,2014,1,86.37,aboriginal
+Tasmania,TAS,2013,1,88.6,aboriginal
+Tasmania,TAS,2012,1,91.74,aboriginal
+Tasmania,TAS,2011,1,90.49,aboriginal
+Tasmania,TAS,2010,1,92.05,aboriginal
+Tasmania,TAS,2009,1,89.66,aboriginal
+Tasmania,TAS,2008,1,89.33,aboriginal
+Tasmania,TAS,2007,1,91.27,aboriginal
+Tasmania,TAS,2006,1,92.93,aboriginal
+Northern Territory,NT,2024,1,88.64,aboriginal
+Northern Territory,NT,2023,1,88.08,aboriginal
+Northern Territory,NT,2022,1,87.88,aboriginal
+Northern Territory,NT,2021,1,91.27,aboriginal
+Northern Territory,NT,2020,1,95.03,aboriginal
+Northern Territory,NT,2019,1,92.77,aboriginal
+Northern Territory,NT,2018,1,92.33,aboriginal
+Northern Territory,NT,2017,1,92.04,aboriginal
+Northern Territory,NT,2016,1,92.08,aboriginal
+Northern Territory,NT,2015,1,92.02,aboriginal
+Northern Territory,NT,2014,1,87.2,aboriginal
+Northern Territory,NT,2013,1,90.22,aboriginal
+Northern Territory,NT,2012,1,91.79,aboriginal
+Northern Territory,NT,2011,1,88.38,aboriginal
+Northern Territory,NT,2010,1,86.71,aboriginal
+Northern Territory,NT,2009,1,88.02,aboriginal
+Northern Territory,NT,2008,1,87.27,aboriginal
+Northern Territory,NT,2007,1,87.72,aboriginal
+Northern Territory,NT,2006,1,88.65,aboriginal
+Australia,AUS,2024,1,89.9,aboriginal
+Australia,AUS,2023,1,90.41,aboriginal
+Australia,AUS,2022,1,91.11,aboriginal
+Australia,AUS,2021,1,92.42,aboriginal
+Australia,AUS,2020,1,93.79,aboriginal
+Australia,AUS,2019,1,92.61,aboriginal
+Australia,AUS,2018,1,92.62,aboriginal
+Australia,AUS,2017,1,92.19,aboriginal
+Australia,AUS,2016,1,91.16,aboriginal
+Australia,AUS,2015,1,88.72,aboriginal
+Australia,AUS,2014,1,86.96,aboriginal
+Australia,AUS,2013,1,85.58,aboriginal
+Australia,AUS,2012,1,85.4,aboriginal
+Australia,AUS,2011,1,85.01,aboriginal
+Australia,AUS,2010,1,84.77,aboriginal
+Australia,AUS,2009,1,84.92,aboriginal
+Australia,AUS,2008,1,84.11,aboriginal
+Australia,AUS,2007,1,84.26,aboriginal
+Australia,AUS,2006,1,83.96,aboriginal
+Australian Capital Territory,ACT,2024,2,88.56,aboriginal
+Australian Capital Territory,ACT,2023,2,90.32,aboriginal
+Australian Capital Territory,ACT,2022,2,89.77,aboriginal
+Australian Capital Territory,ACT,2021,2,91.7,aboriginal
+Australian Capital Territory,ACT,2020,2,94.18,aboriginal
+Australian Capital Territory,ACT,2019,2,94.48,aboriginal
+Australian Capital Territory,ACT,2018,2,89.81,aboriginal
+Australian Capital Territory,ACT,2017,2,89.31,aboriginal
+Australian Capital Territory,ACT,2016,2,88.89,aboriginal
+Australian Capital Territory,ACT,2015,2,82.17,aboriginal
+Australian Capital Territory,ACT,2014,2,92.11,aboriginal
+Australian Capital Territory,ACT,2013,2,88.7,aboriginal
+Australian Capital Territory,ACT,2012,2,93.75,aboriginal
+Australian Capital Territory,ACT,2011,2,94.85,aboriginal
+Australian Capital Territory,ACT,2010,2,96.67,aboriginal
+Australian Capital Territory,ACT,2009,2,94.06,aboriginal
+Australian Capital Territory,ACT,2008,2,89.72,aboriginal
+Australian Capital Territory,ACT,2007,2,89.71,aboriginal
+Australian Capital Territory,ACT,2006,2,89.13,aboriginal
+New South Wales,NSW,2024,2,89.61,aboriginal
+New South Wales,NSW,2023,2,90.81,aboriginal
+New South Wales,NSW,2022,2,91.22,aboriginal
+New South Wales,NSW,2021,2,92.94,aboriginal
+New South Wales,NSW,2020,2,93.05,aboriginal
+New South Wales,NSW,2019,2,91.96,aboriginal
+New South Wales,NSW,2018,2,91.01,aboriginal
+New South Wales,NSW,2017,2,90.77,aboriginal
+New South Wales,NSW,2016,2,91.05,aboriginal
+New South Wales,NSW,2015,2,88.5,aboriginal
+New South Wales,NSW,2014,2,91.3,aboriginal
+New South Wales,NSW,2013,2,90.8,aboriginal
+New South Wales,NSW,2012,2,91.97,aboriginal
+New South Wales,NSW,2011,2,92.15,aboriginal
+New South Wales,NSW,2010,2,91.96,aboriginal
+New South Wales,NSW,2009,2,90.53,aboriginal
+New South Wales,NSW,2008,2,91.64,aboriginal
+New South Wales,NSW,2007,2,91.31,aboriginal
+New South Wales,NSW,2006,2,91.94,aboriginal
+Victoria,VIC,2024,2,90.09,aboriginal
+Victoria,VIC,2023,2,88.41,aboriginal
+Victoria,VIC,2022,2,89.64,aboriginal
+Victoria,VIC,2021,2,92.22,aboriginal
+Victoria,VIC,2020,2,93.93,aboriginal
+Victoria,VIC,2019,2,90.56,aboriginal
+Victoria,VIC,2018,2,89.08,aboriginal
+Victoria,VIC,2017,2,88.82,aboriginal
+Victoria,VIC,2016,2,89.32,aboriginal
+Victoria,VIC,2015,2,83.76,aboriginal
+Victoria,VIC,2014,2,89.71,aboriginal
+Victoria,VIC,2013,2,91.48,aboriginal
+Victoria,VIC,2012,2,89.14,aboriginal
+Victoria,VIC,2011,2,92.24,aboriginal
+Victoria,VIC,2010,2,92.48,aboriginal
+Victoria,VIC,2009,2,92.28,aboriginal
+Victoria,VIC,2008,2,90.74,aboriginal
+Victoria,VIC,2007,2,89.8,aboriginal
+Victoria,VIC,2006,2,94.29,aboriginal
+Queensland,QLD,2024,2,87.66,aboriginal
+Queensland,QLD,2023,2,89.34,aboriginal
+Queensland,QLD,2022,2,89.42,aboriginal
+Queensland,QLD,2021,2,91.81,aboriginal
+Queensland,QLD,2020,2,91.63,aboriginal
+Queensland,QLD,2019,2,89.91,aboriginal
+Queensland,QLD,2018,2,88.74,aboriginal
+Queensland,QLD,2017,2,88.79,aboriginal
+Queensland,QLD,2016,2,88.98,aboriginal
+Queensland,QLD,2015,2,85.93,aboriginal
+Queensland,QLD,2014,2,91.33,aboriginal
+Queensland,QLD,2013,2,92.46,aboriginal
+Queensland,QLD,2012,2,93.26,aboriginal
+Queensland,QLD,2011,2,93.22,aboriginal
+Queensland,QLD,2010,2,92.69,aboriginal
+Queensland,QLD,2009,2,91.07,aboriginal
+Queensland,QLD,2008,2,92.43,aboriginal
+Queensland,QLD,2007,2,91.78,aboriginal
+Queensland,QLD,2006,2,91.43,aboriginal
+South Australia,SA,2024,2,85.75,aboriginal
+South Australia,SA,2023,2,87.69,aboriginal
+South Australia,SA,2022,2,90.12,aboriginal
+South Australia,SA,2021,2,89.67,aboriginal
+South Australia,SA,2020,2,88.3,aboriginal
+South Australia,SA,2019,2,87.14,aboriginal
+South Australia,SA,2018,2,86.83,aboriginal
+South Australia,SA,2017,2,87.56,aboriginal
+South Australia,SA,2016,2,87.5,aboriginal
+South Australia,SA,2015,2,84.45,aboriginal
+South Australia,SA,2014,2,84.6,aboriginal
+South Australia,SA,2013,2,86.63,aboriginal
+South Australia,SA,2012,2,86.87,aboriginal
+South Australia,SA,2011,2,87.59,aboriginal
+South Australia,SA,2010,2,91.12,aboriginal
+South Australia,SA,2009,2,88.75,aboriginal
+South Australia,SA,2008,2,89.03,aboriginal
+South Australia,SA,2007,2,89.39,aboriginal
+South Australia,SA,2006,2,88.33,aboriginal
+Western Australia,WA,2024,2,80.99,aboriginal
+Western Australia,WA,2023,2,81.23,aboriginal
+Western Australia,WA,2022,2,82.17,aboriginal
+Western Australia,WA,2021,2,86.47,aboriginal
+Western Australia,WA,2020,2,85.98,aboriginal
+Western Australia,WA,2019,2,85.09,aboriginal
+Western Australia,WA,2018,2,81.61,aboriginal
+Western Australia,WA,2017,2,81.84,aboriginal
+Western Australia,WA,2016,2,85.33,aboriginal
+Western Australia,WA,2015,2,83.24,aboriginal
+Western Australia,WA,2014,2,87.98,aboriginal
+Western Australia,WA,2013,2,90.66,aboriginal
+Western Australia,WA,2012,2,88.99,aboriginal
+Western Australia,WA,2011,2,89.9,aboriginal
+Western Australia,WA,2010,2,86.88,aboriginal
+Western Australia,WA,2009,2,84.35,aboriginal
+Western Australia,WA,2008,2,85.36,aboriginal
+Western Australia,WA,2007,2,84.59,aboriginal
+Western Australia,WA,2006,2,85.54,aboriginal
+Tasmania,TAS,2024,2,91.72,aboriginal
+Tasmania,TAS,2023,2,94.75,aboriginal
+Tasmania,TAS,2022,2,94.5,aboriginal
+Tasmania,TAS,2021,2,92.87,aboriginal
+Tasmania,TAS,2020,2,91.97,aboriginal
+Tasmania,TAS,2019,2,93.84,aboriginal
+Tasmania,TAS,2018,2,89.03,aboriginal
+Tasmania,TAS,2017,2,89.71,aboriginal
+Tasmania,TAS,2016,2,91.52,aboriginal
+Tasmania,TAS,2015,2,86.41,aboriginal
+Tasmania,TAS,2014,2,88.79,aboriginal
+Tasmania,TAS,2013,2,93.77,aboriginal
+Tasmania,TAS,2012,2,94.51,aboriginal
+Tasmania,TAS,2011,2,94.29,aboriginal
+Tasmania,TAS,2010,2,93.5,aboriginal
+Tasmania,TAS,2009,2,93.41,aboriginal
+Tasmania,TAS,2008,2,92.61,aboriginal
+Tasmania,TAS,2007,2,93.87,aboriginal
+Tasmania,TAS,2006,2,94.13,aboriginal
+Northern Territory,NT,2024,2,86.76,aboriginal
+Northern Territory,NT,2023,2,86.56,aboriginal
+Northern Territory,NT,2022,2,84.43,aboriginal
+Northern Territory,NT,2021,2,89.29,aboriginal
+Northern Territory,NT,2020,2,90.45,aboriginal
+Northern Territory,NT,2019,2,90.25,aboriginal
+Northern Territory,NT,2018,2,83.77,aboriginal
+Northern Territory,NT,2017,2,84.58,aboriginal
+Northern Territory,NT,2016,2,88.3,aboriginal
+Northern Territory,NT,2015,2,86.56,aboriginal
+Northern Territory,NT,2014,2,93.53,aboriginal
+Northern Territory,NT,2013,2,95.86,aboriginal
+Northern Territory,NT,2012,2,96.92,aboriginal
+Northern Territory,NT,2011,2,95.6,aboriginal
+Northern Territory,NT,2010,2,94.83,aboriginal
+Northern Territory,NT,2009,2,93.76,aboriginal
+Northern Territory,NT,2008,2,94.28,aboriginal
+Northern Territory,NT,2007,2,93.67,aboriginal
+Northern Territory,NT,2006,2,94.58,aboriginal
+Australia,AUS,2024,2,87.74,aboriginal
+Australia,AUS,2023,2,88.77,aboriginal
+Australia,AUS,2022,2,89.08,aboriginal
+Australia,AUS,2021,2,91.38,aboriginal
+Australia,AUS,2020,2,91.43,aboriginal
+Australia,AUS,2019,2,90.03,aboriginal
+Australia,AUS,2018,2,88.2,aboriginal
+Australia,AUS,2017,2,88.18,aboriginal
+Australia,AUS,2016,2,89.13,aboriginal
+Australia,AUS,2015,2,86.18,aboriginal
+Australia,AUS,2014,2,90.57,aboriginal
+Australia,AUS,2013,2,91.68,aboriginal
+Australia,AUS,2012,2,92.19,aboriginal
+Australia,AUS,2011,2,92.46,aboriginal
+Australia,AUS,2010,2,91.87,aboriginal
+Australia,AUS,2009,2,90.29,aboriginal
+Australia,AUS,2008,2,91.07,aboriginal
+Australia,AUS,2007,2,90.64,aboriginal
+Australia,AUS,2006,2,91.26,aboriginal
+Australian Capital Territory,ACT,2024,5,93.24,aboriginal
+Australian Capital Territory,ACT,2023,5,95.79,aboriginal
+Australian Capital Territory,ACT,2022,5,96.98,aboriginal
+Australian Capital Territory,ACT,2021,5,95.77,aboriginal
+Australian Capital Territory,ACT,2020,5,≥99.00,aboriginal
+Australian Capital Territory,ACT,2019,5,95.39,aboriginal
+Australian Capital Territory,ACT,2018,5,97.93,aboriginal
+Australian Capital Territory,ACT,2017,5,96.85,aboriginal
+Australian Capital Territory,ACT,2016,5,89.08,aboriginal
+Australian Capital Territory,ACT,2015,5,94.96,aboriginal
+Australian Capital Territory,ACT,2014,5,94.4,aboriginal
+Australian Capital Territory,ACT,2013,5,97.92,aboriginal
+Australian Capital Territory,ACT,2012,5,89.22,aboriginal
+Australian Capital Territory,ACT,2011,5,83.87,aboriginal
+Australian Capital Territory,ACT,2010,5,92.11,aboriginal
+Australian Capital Territory,ACT,2009,5,82.95,aboriginal
+Australian Capital Territory,ACT,2008,5,75.86,aboriginal
+Australian Capital Territory,ACT,2007,5,81.33,aboriginal
+New South Wales,NSW,2024,5,95.72,aboriginal
+New South Wales,NSW,2023,5,96.35,aboriginal
+New South Wales,NSW,2022,5,96.89,aboriginal
+New South Wales,NSW,2021,5,97.53,aboriginal
+New South Wales,NSW,2020,5,97.6,aboriginal
+New South Wales,NSW,2019,5,97.86,aboriginal
+New South Wales,NSW,2018,5,97.34,aboriginal
+New South Wales,NSW,2017,5,96.97,aboriginal
+New South Wales,NSW,2016,5,96.47,aboriginal
+New South Wales,NSW,2015,5,95.31,aboriginal
+New South Wales,NSW,2014,5,94.4,aboriginal
+New South Wales,NSW,2013,5,93.94,aboriginal
+New South Wales,NSW,2012,5,90.12,aboriginal
+New South Wales,NSW,2011,5,84.88,aboriginal
+New South Wales,NSW,2010,5,82.27,aboriginal
+New South Wales,NSW,2009,5,77.07,aboriginal
+New South Wales,NSW,2008,5,71.58,aboriginal
+New South Wales,NSW,2007,5,72.42,aboriginal
+Victoria,VIC,2024,5,95.64,aboriginal
+Victoria,VIC,2023,5,95.75,aboriginal
+Victoria,VIC,2022,5,95.63,aboriginal
+Victoria,VIC,2021,5,97.82,aboriginal
+Victoria,VIC,2020,5,97.4,aboriginal
+Victoria,VIC,2019,5,97.36,aboriginal
+Victoria,VIC,2018,5,96.81,aboriginal
+Victoria,VIC,2017,5,94.65,aboriginal
+Victoria,VIC,2016,5,93.66,aboriginal
+Victoria,VIC,2015,5,92.51,aboriginal
+Victoria,VIC,2014,5,91.77,aboriginal
+Victoria,VIC,2013,5,91.65,aboriginal
+Victoria,VIC,2012,5,90.86,aboriginal
+Victoria,VIC,2011,5,86.58,aboriginal
+Victoria,VIC,2010,5,85.48,aboriginal
+Victoria,VIC,2009,5,79.32,aboriginal
+Victoria,VIC,2008,5,78.9,aboriginal
+Victoria,VIC,2007,5,74.31,aboriginal
+Queensland,QLD,2024,5,94.59,aboriginal
+Queensland,QLD,2023,5,95.45,aboriginal
+Queensland,QLD,2022,5,95.95,aboriginal
+Queensland,QLD,2021,5,96.54,aboriginal
+Queensland,QLD,2020,5,97.15,aboriginal
+Queensland,QLD,2019,5,96.92,aboriginal
+Queensland,QLD,2018,5,97.02,aboriginal
+Queensland,QLD,2017,5,96.94,aboriginal
+Queensland,QLD,2016,5,95.46,aboriginal
+Queensland,QLD,2015,5,93.6,aboriginal
+Queensland,QLD,2014,5,93.51,aboriginal
+Queensland,QLD,2013,5,93.59,aboriginal
+Queensland,QLD,2012,5,90.8,aboriginal
+Queensland,QLD,2011,5,88.41,aboriginal
+Queensland,QLD,2010,5,84.76,aboriginal
+Queensland,QLD,2009,5,78.49,aboriginal
+Queensland,QLD,2008,5,79.89,aboriginal
+Queensland,QLD,2007,5,83.8,aboriginal
+South Australia,SA,2024,5,96.01,aboriginal
+South Australia,SA,2023,5,94.65,aboriginal
+South Australia,SA,2022,5,96.82,aboriginal
+South Australia,SA,2021,5,96.64,aboriginal
+South Australia,SA,2020,5,97.01,aboriginal
+South Australia,SA,2019,5,95.59,aboriginal
+South Australia,SA,2018,5,95.83,aboriginal
+South Australia,SA,2017,5,94.24,aboriginal
+South Australia,SA,2016,5,94.27,aboriginal
+South Australia,SA,2015,5,92.06,aboriginal
+South Australia,SA,2014,5,88.89,aboriginal
+South Australia,SA,2013,5,87.27,aboriginal
+South Australia,SA,2012,5,83.25,aboriginal
+South Australia,SA,2011,5,77.4,aboriginal
+South Australia,SA,2010,5,77.35,aboriginal
+South Australia,SA,2009,5,66.19,aboriginal
+South Australia,SA,2008,5,63.14,aboriginal
+South Australia,SA,2007,5,70.38,aboriginal
+Western Australia,WA,2024,5,93.33,aboriginal
+Western Australia,WA,2023,5,93.65,aboriginal
+Western Australia,WA,2022,5,94.39,aboriginal
+Western Australia,WA,2021,5,95.26,aboriginal
+Western Australia,WA,2020,5,96.03,aboriginal
+Western Australia,WA,2019,5,95.73,aboriginal
+Western Australia,WA,2018,5,95.31,aboriginal
+Western Australia,WA,2017,5,95.43,aboriginal
+Western Australia,WA,2016,5,93.98,aboriginal
+Western Australia,WA,2015,5,92.04,aboriginal
+Western Australia,WA,2014,5,91.63,aboriginal
+Western Australia,WA,2013,5,90.53,aboriginal
+Western Australia,WA,2012,5,84.82,aboriginal
+Western Australia,WA,2011,5,81.33,aboriginal
+Western Australia,WA,2010,5,79.09,aboriginal
+Western Australia,WA,2009,5,73.11,aboriginal
+Western Australia,WA,2008,5,72.69,aboriginal
+Western Australia,WA,2007,5,73.42,aboriginal
+Tasmania,TAS,2024,5,95.07,aboriginal
+Tasmania,TAS,2023,5,96.09,aboriginal
+Tasmania,TAS,2022,5,97.69,aboriginal
+Tasmania,TAS,2021,5,96.87,aboriginal
+Tasmania,TAS,2020,5,98.15,aboriginal
+Tasmania,TAS,2019,5,96.77,aboriginal
+Tasmania,TAS,2018,5,96.76,aboriginal
+Tasmania,TAS,2017,5,95.34,aboriginal
+Tasmania,TAS,2016,5,95.83,aboriginal
+Tasmania,TAS,2015,5,94.81,aboriginal
+Tasmania,TAS,2014,5,91.0,aboriginal
+Tasmania,TAS,2013,5,94.78,aboriginal
+Tasmania,TAS,2012,5,92.67,aboriginal
+Tasmania,TAS,2011,5,88.07,aboriginal
+Tasmania,TAS,2010,5,88.92,aboriginal
+Tasmania,TAS,2009,5,76.72,aboriginal
+Tasmania,TAS,2008,5,77.17,aboriginal
+Tasmania,TAS,2007,5,83.02,aboriginal
+Northern Territory,NT,2024,5,93.93,aboriginal
+Northern Territory,NT,2023,5,93.06,aboriginal
+Northern Territory,NT,2022,5,94.89,aboriginal
+Northern Territory,NT,2021,5,96.51,aboriginal
+Northern Territory,NT,2020,5,97.48,aboriginal
+Northern Territory,NT,2019,5,96.15,aboriginal
+Northern Territory,NT,2018,5,94.83,aboriginal
+Northern Territory,NT,2017,5,93.79,aboriginal
+Northern Territory,NT,2016,5,93.91,aboriginal
+Northern Territory,NT,2015,5,95.37,aboriginal
+Northern Territory,NT,2014,5,94.59,aboriginal
+Northern Territory,NT,2013,5,95.82,aboriginal
+Northern Territory,NT,2012,5,94.09,aboriginal
+Northern Territory,NT,2011,5,89.9,aboriginal
+Northern Territory,NT,2010,5,88.5,aboriginal
+Northern Territory,NT,2009,5,87.3,aboriginal
+Northern Territory,NT,2008,5,87.55,aboriginal
+Northern Territory,NT,2007,5,85.24,aboriginal
+Australia,AUS,2024,5,94.95,aboriginal
+Australia,AUS,2023,5,95.41,aboriginal
+Australia,AUS,2022,5,96.09,aboriginal
+Australia,AUS,2021,5,96.83,aboriginal
+Australia,AUS,2020,5,97.25,aboriginal
+Australia,AUS,2019,5,96.96,aboriginal
+Australia,AUS,2018,5,96.66,aboriginal
+Australia,AUS,2017,5,96.16,aboriginal
+Australia,AUS,2016,5,95.2,aboriginal
+Australia,AUS,2015,5,93.94,aboriginal
+Australia,AUS,2014,5,93.2,aboriginal
+Australia,AUS,2013,5,93.07,aboriginal
+Australia,AUS,2012,5,89.81,aboriginal
+Australia,AUS,2011,5,85.84,aboriginal
+Australia,AUS,2010,5,83.58,aboriginal
+Australia,AUS,2009,5,77.84,aboriginal
+Australia,AUS,2008,5,76.82,aboriginal
+Australia,AUS,2007,5,78.0,aboriginal
