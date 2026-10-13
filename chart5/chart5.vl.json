@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-"url": "data/overtimegeneralvax.csv"
+"url": "../data/overtimegeneralvax.csv"
 },
   "title": { "text": "Child Immune Slope Chart" },
   "transform": [
