@@ -43,73 +43,40 @@
     },
     {
   "data": {
-    "url": "chart7/vaccinesources.csv",
+    "url": "chart7/vaccinecurves.csv",
     "format": {
       "type": "csv",
       "parse": {
-        "Source Long": "number",
-        "Source Lat": "number",
-        "Dest Long": "number",
-        "Dest Lat": "number"
+        "point_order": "number",
+        "longitude": "number",
+        "latitude": "number"
       }
     }
   },
-  "transform": [
-    {
-      "calculate": "datum['Dest Long'] - datum['Source Long']",
-      "as": "dx"
-    },
-    {
-      "calculate": "datum['Dest Lat'] - datum['Source Lat']",
-      "as": "dy"
-    },
-    {
-      "calculate": "sqrt(datum.dx * datum.dx + datum.dy * datum.dy)",
-      "as": "distance"
-    },
-    {
-      "calculate": "datum['Vaccine Type'] === 'DTP' ? -3.5 : datum['Vaccine Type'] === 'Polio' ? -2.5 : datum['Vaccine Type'] === 'Hib' ? -1.5 : datum['Vaccine Type'] === 'Hep B' ? -0.5 : datum['Vaccine Type'] === 'MMR' ? 0.5 : datum['Vaccine Type'] === 'Pneumococcal' ? 1.5 : datum['Vaccine Type'] === 'MenC' ? 2.5 : 3.5",
-      "as": "offset"
-    },
-    {
-      "calculate": "datum['Source Long'] + (-datum.dy / datum.distance) * datum.offset",
-      "as": "line_source_long"
-    },
-    {
-      "calculate": "datum['Source Lat'] + (datum.dx / datum.distance) * datum.offset",
-      "as": "line_source_lat"
-    },
-    {
-      "calculate": "datum['Dest Long'] + (-datum.dy / datum.distance) * datum.offset",
-      "as": "line_dest_long"
-    },
-    {
-      "calculate": "datum['Dest Lat'] + (datum.dx / datum.distance) * datum.offset",
-      "as": "line_dest_lat"
-    }
-  ],
   "projection": {
     "type": "equalEarth"
   },
   "mark": {
-    "type": "rule",
-    "strokeWidth": 3,
+    "type": "line",
+    "strokeWidth": 2.1,
     "opacity": 0.8
   },
   "encoding": {
     "longitude": {
-      "field": "line_source_long",
+      "field": "longitude",
       "type": "quantitative"
     },
     "latitude": {
-      "field": "line_source_lat",
+      "field": "latitude",
       "type": "quantitative"
     },
-    "longitude2": {
-      "field": "line_dest_long"
+    "detail": {
+      "field": "line_id",
+      "type": "nominal"
     },
-    "latitude2": {
-      "field": "line_dest_lat"
+    "order": {
+      "field": "point_order",
+      "type": "quantitative"
     },
     "color": {
       "field": "Vaccine Type",
@@ -126,17 +93,19 @@
           "Varicella"
         ],
         "range": [
-          "#1f77b4",
-          "#ff7f0e",
-          "#2ca02c",
-          "#d62728",
-          "#9467bd",
-          "#8c564b",
-          "#e377c2",
-          "#17becf"
+          "#0072B2",
+          "#E69F00",
+          "#009E73",
+          "#56B4E9",
+          "#CC79A7",
+          "#F0E442",
+          "#8C6D31",
+          "#666666"
         ]
       },
-      "legend": null
+      "legend": {
+        "title": "Vaccine Type"
+      }
     }
   }
 }

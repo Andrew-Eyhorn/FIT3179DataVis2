@@ -136,6 +136,32 @@
       text-align: left;
     }
 
+    .chart-two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 30px;
+      grid-column: 1 / -1;
+      align-items: start;
+    }
+
+    .chart-stack {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .chart-stack-note {
+      margin: 0 4px 4px 4px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .chart-two-column .story {
+      max-width: none;
+      padding: 0 4px;
+    }
+
     .page-footer {
       margin-top: 25px;
       padding-top: 18px;
@@ -156,6 +182,10 @@
       }
 
       .chart-triple {
+        grid-template-columns: 1fr;
+      }
+
+      .chart-two-column {
         grid-template-columns: 1fr;
       }
 
@@ -370,8 +400,14 @@
           The childhood schedule depends on products made in Europe and the United States. Among those same countries, Australia’s DTP3 coverage is solid, but it is not the highest, showing that supply networks and local coverage are separate issues.
         </p>
 
-        <div class="chart-triple">
-          <div id="vis7" class="vis-container"></div>
+        <div class="chart-two-column">
+          <div class="chart-stack">
+            <div id="vis7" class="vis-container"></div>
+            <p class="chart-stack-note">
+              Lines show vaccine flows, not travel paths. The world view is above; the Europe view below locates the main origins.
+            </p>
+            <div id="vis7detail" class="vis-container"></div>
+          </div>
 
           <div class="story">
             <h3>Supply lines run mainly through Europe</h3>
@@ -379,11 +415,9 @@
               Hexavalent, MMR, pneumococcal, meningococcal, and varicella products used in Australia are made in Belgium, the Netherlands, France, and the United States. The map highlights how widely those supply lines are distributed.
             </p>
             <p>
-              The world map traces those routes. The Europe detail shows the cluster around Rixensart, Leiden, Puurs, and Marcy-l’Étoile.
+              Europe contains the main manufacturing cluster, around Rixensart, Leiden, Puurs, and Marcy-l’Étoile.
             </p>
           </div>
-
-          <div id="vis7detail" class="vis-container"></div>
         </div>
 
 

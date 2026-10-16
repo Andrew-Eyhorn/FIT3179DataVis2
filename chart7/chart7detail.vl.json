@@ -13,12 +13,12 @@
       },
       "projection": {
         "type": "conicConformal",
-        "center": [10, 52],
-        "scale": 600
+        "center": [4.5, 49],
+"scale": 1700
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
+        "fill": "#e7e7e7",
         "stroke": "white"
       }
     },
@@ -35,22 +35,181 @@
       },
       "transform": [
         {
-          "calculate": "datum['Source Long'] + (datum['Vaccine Type'] === 'DTP' ? -0.3 : datum['Vaccine Type'] === 'Polio' ? -0.2 : datum['Vaccine Type'] === 'Hib' ? -0.1 : datum['Vaccine Type'] === 'Hep B' ? 0 : datum['Vaccine Type'] === 'MMR' ? 0.1 : datum['Vaccine Type'] === 'Pneumococcal' ? 0.2 : datum['Vaccine Type'] === 'MenC' ? 0.3 : 0.4)",
+          "filter": "datum['Origin Country'] !== 'United States'"
+        },
+        {
+          "aggregate": [],
+          "groupby": [
+            "Origin City",
+            "Source Long",
+            "Source Lat"
+          ]
+        }
+      ],
+      "projection": {
+        "type": "conicConformal",
+        "center": [4.5, 49],
+        "scale": 1700
+      },
+      "mark": {
+        "type": "circle",
+        "size": 28,
+        "fill": "white",
+        "stroke": "#222222",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Source Long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Source Lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "chart7/vaccinesources.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Source Long": "number",
+            "Source Lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum['Origin Country'] !== 'United States'"
+        },
+        {
+          "aggregate": [],
+          "groupby": [
+            "Origin City",
+            "Source Long",
+            "Source Lat"
+          ]
+        },
+        {
+          "calculate": "datum['Origin City'] === 'Leiden' ? datum['Source Long'] - 2 : datum['Source Long'] + 1.4",
+          "as": "label_long"
+        },
+        {
+          "calculate": "datum['Origin City'] === 'Leiden' ? datum['Source Lat'] - 0 : datum['Source Lat'] + (datum['Origin City'] === 'Marcy-l\\u00c9toile' ? -0.4 : 0.4)",
+          "as": "label_lat"
+        }
+      ],
+      "projection": {
+        "type": "conicConformal",
+        "center": [4.5, 49],
+        "scale": 1700
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#555555",
+        "strokeWidth": 1,
+        "opacity": 0.7
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Source Long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Source Lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "label_long"
+        },
+        "latitude2": {
+          "field": "label_lat"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "chart7/europe_only.json",
+        "format": {
+          "type": "topojson",
+          "feature": "europe_only"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.LABELRANK <= 5"
+        },
+        {
+          "calculate": "datum.properties.LABEL_X",
+          "as": "label_long"
+        },
+        {
+          "calculate": "datum.properties.LABEL_Y",
+          "as": "label_lat"
+        },
+        {
+          "calculate": "datum.properties.NAME_EN",
+          "as": "country_name"
+        }
+      ],
+      "projection": {
+        "type": "conicConformal",
+        "center": [4.5, 49],
+"scale": 1700
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#555555",
+        "opacity": 0.75
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country_name",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "chart7/vaccinesources.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Source Long": "number",
+            "Source Lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum['Source Long'] + (datum['Vaccine Type'] === 'DTP' ? -0.35 : datum['Vaccine Type'] === 'Polio' ? -0.1 : datum['Vaccine Type'] === 'Hib' ? 0.2 : datum['Vaccine Type'] === 'Hep B' ? 0.35 : datum['Vaccine Type'] === 'MMR' ? 0.25 : datum['Vaccine Type'] === 'Pneumococcal' ? -0.05 : datum['Vaccine Type'] === 'MenC' ? -0.25 : 0.05)",
           "as": "jitter_long"
         },
         {
-          "calculate": "datum['Source Lat'] + (datum['Vaccine Type'] === 'DTP' ? 0.3 : datum['Vaccine Type'] === 'Polio' ? 0.2 : datum['Vaccine Type'] === 'Hib' ? 0.1 : datum['Vaccine Type'] === 'Hep B' ? 0 : datum['Vaccine Type'] === 'MMR' ? -0.1 : datum['Vaccine Type'] === 'Pneumococcal' ? -0.2 : datum['Vaccine Type'] === 'MenC' ? -0.3 : -0.4)",
+          "calculate": "datum['Source Lat'] + (datum['Vaccine Type'] === 'DTP' ? 0.1 : datum['Vaccine Type'] === 'Polio' ? 0.35 : datum['Vaccine Type'] === 'Hib' ? 0.25 : datum['Vaccine Type'] === 'Hep B' ? 0.05 : datum['Vaccine Type'] === 'MMR' ? -0.25 : datum['Vaccine Type'] === 'Pneumococcal' ? -0.35 : datum['Vaccine Type'] === 'MenC' ? -0.25 : -0.05)",
           "as": "jitter_lat"
         }
       ],
       "projection": {
         "type": "conicConformal",
-        "center": [10, 52],
-        "scale": 600
+        "center": [4.5, 49],
+"scale": 1700
       },
       "mark": {
         "type": "circle",
-        "size": 60
+        "size": 42
       },
       "encoding": {
         "longitude": {
@@ -78,17 +237,85 @@
             "range": [
               "#0072B2",
               "#E69F00",
-              "#56B4E9",
               "#009E73",
-              "#F0E442",
+              "#56B4E9",
               "#CC79A7",
-              "#D55E00",
-              "#000000"
+              "#F0E442",
+              "#8C6D31",
+              "#666666"
             ]
           },
           "legend": {
             "title": "Vaccine Type"
           }
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "chart7/vaccinesources.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Source Long": "number",
+            "Source Lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum['Origin Country'] !== 'United States'"
+        },
+        {
+          "aggregate": [],
+          "groupby": [
+            "Origin City",
+            "Source Long",
+            "Source Lat"
+          ]
+        },
+        {
+          "calculate": "datum['Origin City'] === 'Leiden' ? datum['Source Long'] - 1.6 : datum['Source Long'] + 1.4",
+          "as": "label_long"
+        },
+        {
+          "calculate": "datum['Origin City'] === 'Leiden' ? datum['Source Lat'] - 0 : datum['Source Lat'] + (datum['Origin City'] === 'Marcy-l\\u00c9toile' ? -0.4 : 0.4)",
+          "as": "label_lat"
+        },
+        {
+          "calculate": "datum['Origin City'] === 'Leiden' ? 'right' : 'left'",
+          "as": "label_align"
+        }
+      ],
+      "projection": {
+        "type": "conicConformal",
+        "center": [4.5, 49],
+        "scale": 1700
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "dx": 0,
+        "dy": 0,
+        "color": "#222222"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_long",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Origin City",
+          "type": "nominal"
+        },
+        "align": {
+          "field": "label_align",
+          "type": "nominal"
         }
       }
     }
