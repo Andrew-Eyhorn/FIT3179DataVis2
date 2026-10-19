@@ -3,7 +3,7 @@
   "data": {
 "url": "chart5/overtimegeneralvax.csv"
 },
-  "title": { "text": "Child Immune Slope Chart" },
+  "title": { "text": "Child Immune improvements per state" },
   "transform": [
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }

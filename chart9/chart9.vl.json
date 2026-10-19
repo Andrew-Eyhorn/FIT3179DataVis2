@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Aboriginal Immune Vs Aus over Time" },
+"title": { "text": "Aboriginal Immune % Vs All Children over Time" },
 "width": "container",
 "height": 260,
 "data": {

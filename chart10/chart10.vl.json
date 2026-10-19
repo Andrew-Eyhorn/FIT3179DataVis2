@@ -4,7 +4,7 @@
   "width": "container",
   "height": 520,
   "mark": "rect",
-  "title": "Per vaccine per phn in 2025 % immune for 2 year olds",
+  "title": {"text": "Per vaccine per phn in 2025 % immune for age 2", "fontSize": 18},
   "transform": [
   {
     "fold": [

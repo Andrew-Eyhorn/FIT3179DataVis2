@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Child Immune over Time" },
+"title": { "text": "National Child Immune % over Time" },
 "width": "container",
 "height": 260,
 "data": {
