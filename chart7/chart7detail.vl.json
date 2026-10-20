@@ -12,7 +12,7 @@
         }
       },
       "projection": {
-        "type": "conicConformal",
+        "type": "transverseMercator",
         "center": [4.5, 49],
 "scale": 1700
       },
@@ -47,7 +47,7 @@
         }
       ],
       "projection": {
-        "type": "conicConformal",
+        "type": "transverseMercator",
         "center": [4.5, 49],
         "scale": 1700
       },
@@ -102,7 +102,7 @@
         }
       ],
       "projection": {
-        "type": "conicConformal",
+        "type": "transverseMercator",
         "center": [4.5, 49],
         "scale": 1700
       },
@@ -155,7 +155,7 @@
         }
       ],
       "projection": {
-        "type": "conicConformal",
+        "type": "transverseMercator",
         "center": [4.5, 49],
 "scale": 1700
       },
@@ -203,7 +203,7 @@
         }
       ],
       "projection": {
-        "type": "conicConformal",
+        "type": "transverseMercator",
         "center": [4.5, 49],
 "scale": 1700
       },
@@ -288,7 +288,7 @@
         }
       ],
       "projection": {
-        "type": "conicConformal",
+        "type": "transverseMercator",
         "center": [4.5, 49],
         "scale": 1700
       },
