@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Age-five vaccination coverage by Primary Health Network, 2025",
+  "title": {"text": "Age-five coverage by PHN, 2025", "fontSize": 17},
   "width": "container",
   "height": 260,
 
@@ -79,7 +79,7 @@
         "color": {
           "field": "% 5 year olds vaccinated children",
           "type": "quantitative",
-          "title": "% Vaccinated",
+          "title": "Coverage (%)",
           "scale": {
             "scheme": "blues",
             "domain": [88, 98]
@@ -87,44 +87,51 @@
         },
 
         "tooltip": [
-          {
-            "field": "PHN_Code",
-            "title": "PHN Code"
-          },
-          {
-            "field": "PHN_Name",
-            "title": "PHN Name"
-          },
-          {
-            "field": "Test_Population",
-            "title": "Test Population"
-          },
-          {
-            "field": "Value",
-            "title": "Value"
-          }
+          {"field": "phn_code", "title": "PHN code"},
+          {"field": "phn_name", "title": "PHN name"},
+          {"field": "population", "title": "Population", "format": ","},
+          {"field": "% 5 year olds vaccinated children", "title": "Coverage (%)", "format": ".2f"}
         ]
       }
     },
     {
       "data": {
         "values": [
-          {"longitude": 148.25, "latitude": -32.8, "label": "Western NSW 96.07%"},
-          {"longitude": 152.7, "latitude": -29.6, "label": "North Coast 88.00%"},
-          {"longitude": 153.35, "latitude": -28.05, "label": "Gold Coast 89.12%"},
-          {"longitude": 151.5, "latitude": -25.8, "label": "Central Qld, Wide Bay, Sunshine Coast 89.20%"}
+          {"longitude": 148.25, "latitude": -32.8, "label_longitude": 145.8, "label_latitude": -31.7, "population": 315382, "label": "Western NSW 96.07%"},
+          {"longitude": 152.7, "latitude": -29.6, "label_longitude": 160.0, "label_latitude": -28.7, "population": 557038, "label": "North Coast 88.00%"},
+          {"longitude": 153.35, "latitude": -28.05, "label_longitude": 161.7, "label_latitude": -27.3, "population": 698017, "label": "Gold Coast 89.12%"},
+          {"longitude": 151.5, "latitude": -25.8, "label_longitude": 154.0, "label_latitude": -24.8, "population": 970173, "label": "Central Qld, Wide Bay, Sunshine Coast 89.20%"}
         ]
       },
+      "transform": [{"filter": "datum.population > Population_Above"}],
       "mark": {
         "type": "text",
-        "fontSize": 10,
+        "fontSize": 8,
         "fontWeight": "bold",
         "dy": -10
       },
       "encoding": {
+        "longitude": {"field": "label_longitude", "type": "quantitative"},
+        "latitude": {"field": "label_latitude", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"longitude": 148.25, "latitude": -32.8, "label_longitude": 145.8, "label_latitude": -31.7, "population": 315382},
+          {"longitude": 152.7, "latitude": -29.6, "label_longitude": 160.0, "label_latitude": -28.7, "population": 557038},
+          {"longitude": 153.35, "latitude": -28.05, "label_longitude": 161.7, "label_latitude": -27.3, "population": 698017},
+          {"longitude": 151.5, "latitude": -25.8, "label_longitude": 154.0, "label_latitude": -24.8, "population": 970173}
+        ]
+      },
+      "transform": [{"filter": "datum.population > Population_Above"}],
+      "mark": {"type": "rule", "stroke": "#555555", "strokeWidth": 0.8},
+      "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
-        "text": {"field": "label"}
+        "longitude2": {"field": "label_longitude"},
+        "latitude2": {"field": "label_latitude"}
       }
     }
   ]

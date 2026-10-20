@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Age 1 DTP3 Coverage of Australia and Supplier Countries 2025", "fontSize" : 17},
+  "title": {"text": "DTP3 coverage: Australia and supplier countries, 2025", "fontSize" : 16},
   "width": "container",
   "height": 260,
   "data": {
@@ -8,8 +8,8 @@
       },
   "mark": "bar",
   "encoding": {
-    "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": 0}, "sort": "-y"},
-    "y": {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative"},
+    "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": 0, "title": "Country"}, "sort": "-y"},
+    "y": {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative", "title": "DTP3 coverage (%)"},
     "color": {
           "condition": {
             "test": "datum.Country == 'Australia'",
@@ -18,9 +18,11 @@
           "value": "#4682b4"
         },
           "tooltip": 
-            [{"field": "Country", "type": "nominal"}, {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative"}]
+            [
+              {"field": "Country", "type": "nominal", "title": "Country"},
+              {"field": "DTP3 coverage 1 year old 2025(%)", "type": "quantitative", "title": "DTP3 coverage (%)", "format": ".2f"}
+            ]
 
   }
 
 }
-

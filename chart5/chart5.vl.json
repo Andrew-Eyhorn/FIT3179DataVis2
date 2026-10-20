@@ -13,7 +13,7 @@
       }
     }
   ],
-  "title": { "text": "Change in age-five vaccination coverage by state, 2006-2024" },
+  "title": { "text": "Age-five coverage change by state, 2006-2024", "fontSize": 16 },
   "transform": [
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }
@@ -25,11 +25,13 @@
     "x": {
       "field": "year",
       "type": "ordinal",
+      "title": "Year",
       "scale": {"padding": 0.5}
     },
     "y": {
       "field": "value",
       "type": "quantitative",
+      "title": "Coverage (%)",
       "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}
     },
     "color": {
@@ -37,7 +39,8 @@
       "type": "nominal",
       "scale": {
         "range": ["#0072B2", "#E69F00", "#56B4E9", "#CC79A7", "#009E73", "#D55E00", "#6A3D9A", "#8C6D31"]
-      }
+      },
+      "legend": {"title": "State"}
     }
   }
 },{

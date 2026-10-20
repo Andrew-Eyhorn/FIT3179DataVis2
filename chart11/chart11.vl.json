@@ -3,7 +3,7 @@
   "title": {
     "text": "Aboriginal and overall age-five coverage by PHN, 2025",
     "subtitle": "Points above the diagonal have higher Aboriginal coverage than overall coverage.",
-    "fontSize": 18
+    "fontSize": 16
   },
   "width": "container",
   "height": 280,
@@ -29,19 +29,20 @@
       "field": "% 5 year olds vaccinated children",
       "type": "quantitative",
       "scale": {"domain": [86, 100]},
-      "title": "Children vaccinated (%) with scale 86-100%"
+      "title": "Overall coverage (%)"
     },
     "y": {
       "field": "% 5 year olds vaccinated aboriginal",
       "type": "quantitative",
       "scale": {"domain": [86, 100]},
-      "title": "Aboriginal children vaccinated (%) with scale 86-100%"
+      "title": "Aboriginal coverage (%)"
     },
     "size": {"field": "population", "type": "quantitative"},
     "color": {
       "field": "group",
       "type": "nominal",
-      "scale": {"domain": ["Metropolitan", "Regional"], "range": ["#0072B2", "#CC79A7"]}
+      "scale": {"domain": ["Metropolitan", "Regional"], "range": ["#0072B2", "#CC79A7"]},
+      "legend": {"title": "Area type"}
     },
      "tooltip": [
       {
@@ -49,10 +50,14 @@
         "title": "PHN Name"
       },
       {
-        "field": "% 5 year olds vaccinated children"
+        "field": "% 5 year olds vaccinated children",
+        "title": "Overall coverage (%)",
+        "format": ".2f"
       },
       {
-        "field": "% 5 year olds vaccinated aboriginal"
+        "field": "% 5 year olds vaccinated aboriginal",
+        "title": "Aboriginal coverage (%)",
+        "format": ".2f"
       },
       {
         "field": "population",
@@ -73,9 +78,10 @@
     {
       "data": {
         "values": [
-          {"x": 93.91, "y": 86.15, "label": "Northern Sydney: 86.15% vs 93.91%"}
+          {"x": 93.91, "y": 86.15, "population": 963869, "label": "Northern Sydney: 86.15% vs 93.91%"}
         ]
       },
+      "transform": [{"filter": "datum.population > Population_Above"}],
       "mark": {"type": "text", "align": "left", "dx": 5, "dy": -7, "fontSize": 10},
       "encoding": {
         "x": {"field": "x", "type": "quantitative", "scale": {"domain": [86, 100]}},

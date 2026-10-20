@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Age-five vaccination coverage by state, 2024",
+  "title": {"text": "Age-five coverage by state, 2024", "fontSize": 17},
   "width": "container",
   "height": 320,
 

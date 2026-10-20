@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Age-five vaccination coverage over time: Aboriginal and all children" },
+"title": { "text": "Age-five coverage: Aboriginal and all children", "fontSize": 17 },
 "width": "container",
 "height": 260,
 "data": {
@@ -20,24 +20,26 @@
   {
     "mark": "line",
     "encoding": {
-      "x": { "field": "year", "type": "ordinal" },
+      "x": { "field": "year", "type": "ordinal", "title": "Year" },
       "y": {
         "field": "vaccination coverage (%)",
         "type": "quantitative",
+        "title": "Coverage (%)",
         "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}
       },
       "color": {
         "field": "group",
         "type": "nominal",
-        "scale": {"domain": ["all children", "indigenous"], "range": ["#0072B2", "#CC79A7"]}
+        "scale": {"domain": ["all children", "indigenous"], "range": ["#0072B2", "#CC79A7"]},
+        "legend": {"title": "Population group"}
       }
     }
   },
   {
     "data": {
       "values": [
-        {"year": 2020, "value": 97.25, "label": "High: 97.25%"},
-        {"year": 2024, "value": 87.74, "label": "Low: 87.74%"}
+        {"year": 2020, "value": 97.25, "label": "Indigenous high: 97.25%"},
+        {"year": 2020, "value": 95.09, "label": "All children high: 95.09%"}
       ]
     },
     "mark": {"type": "text", "align": "left", "dx": 5, "dy": -7, "fontSize": 10},

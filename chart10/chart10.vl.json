@@ -32,6 +32,7 @@
   "x": {
     "field": "Vaccine",
     "type": "nominal",
+    "title": "Vaccine",
     "sort": [
       "% DTP",
       "% Polio",
@@ -45,20 +46,22 @@
   },
   "y": {
     "field": "PHN Name",
-    "type": "nominal"
+    "type": "nominal",
+    "title": "PHN"
   },
   "color": {
     "field": "Coverage",
     "type": "quantitative",
+    "title": "Coverage (%)",
     "scale": {
       "domain": [80, 100],
       "scheme": "blues"
     }
   },
   "tooltip": [
-    {"field": "PHN Name", "type": "nominal"},
-    {"field": "Vaccine", "type": "nominal"},
-    {"field": "Coverage", "type": "quantitative", "format": ".2f"}
+    {"field": "PHN Name", "type": "nominal", "title": "PHN"},
+    {"field": "Vaccine", "type": "nominal", "title": "Vaccine"},
+    {"field": "Coverage", "type": "quantitative", "title": "Coverage (%)", "format": ".2f"}
   ]
 }
 }

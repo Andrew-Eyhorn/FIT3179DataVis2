@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "National vaccination coverage by age, 2006-2024" },
+"title": { "text": "National coverage by age, 2006-2024", "fontSize": 17 },
 "width": "container",
 "height": 260,
 "data": {
@@ -23,16 +23,18 @@
   {
     "mark": "line",
     "encoding": {
-      "x": { "field": "year", "type": "ordinal" },
+      "x": { "field": "year", "type": "ordinal", "title": "Year" },
       "y": {
         "field": "value",
         "type": "quantitative",
+        "title": "Coverage (%)",
         "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}
       },
       "color": {
         "field": "age",
         "type": "nominal",
-        "scale": {"domain": [1, 2, 5], "range": ["#0072B2", "#CC79A7", "#E69F00"]}
+        "scale": {"domain": [1, 2, 5], "range": ["#0072B2", "#CC79A7", "#E69F00"]},
+        "legend": {"title": "Age (years)"}
       }
     }
   },
