@@ -3,7 +3,17 @@
   "data": {
 "url": "chart5/overtimegeneralvax.csv"
 },
-  "title": { "text": "Child Immune improvements per state" },
+  "params": [
+    {
+      "name": "zoomedIn",
+      "value": false,
+      "bind": {
+        "input": "checkbox",
+        "name": "Focus view (75–100%): "
+      }
+    }
+  ],
+  "title": { "text": "Change in age-five vaccination coverage by state, 2006–2024" },
   "transform": [
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }
@@ -19,9 +29,16 @@
     },
     "y": {
       "field": "value",
-      "type": "quantitative"
+      "type": "quantitative",
+      "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}
     },
-    "color": {"field": "state_name", "type": "nominal"}
+    "color": {
+      "field": "state_name",
+      "type": "nominal",
+      "scale": {
+        "range": ["#0072B2", "#E69F00", "#56B4E9", "#CC79A7", "#009E73", "#D55E00", "#6A3D9A", "#8C6D31"]
+      }
+    }
   }
 },{
       "mark": {
@@ -41,10 +58,40 @@
       "dx": 5,
       "dy": -5
     },
+    "transform": [{"filter": "zoomedIn"}],
     "encoding": {
       "x": {"value": 0},
       "y": {"datum": 95},
       "text": {"value": "95% target"}
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {"year": 2024, "value": 94.69, "label": "South Australia 94.69%"},
+        {"year": 2024, "value": 95.44, "label": "ACT 95.44%"},
+        {"year": 2024, "value": 92.39, "label": "Queensland 92.39%"},
+        {"year": 2024, "value": 91.53, "label": "NT 91.53%"}
+      ]
+    },
+    "mark": {"type": "text", "align": "left", "dx": 6, "dy": -6, "fontSize": 10},
+    "transform": [{"filter": "zoomedIn"}],
+    "encoding": {
+      "x": {"field": "year", "type": "ordinal"},
+      "y": {"field": "value", "type": "quantitative"},
+      "text": {"field": "label"}
+    }
+  },
+  {
+    "data": {"values": [{}]},
+    "mark": {"type": "text", "align": "left", "fontSize": 11, "color": "#555555"},
+    "encoding": {
+      "x": {"value": 0},
+      "y": {"value": 99},
+      "text": {
+        "condition": {"test": "zoomedIn", "value": "Focused view: 75–100%"},
+        "value": "Full scale: 0–100%"
+      }
     }
   }
 ]}

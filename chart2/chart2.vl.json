@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Child Immunisation Age 5 By Phn 2025",
+  "title": "Age-five vaccination coverage by Primary Health Network, 2025",
   "width": "container",
   "height": 260,
 
@@ -81,7 +81,8 @@
           "type": "quantitative",
           "title": "% Vaccinated",
           "scale": {
-            "scheme": "reds"
+            "scheme": "blues",
+            "domain": [88, 98]
           }
         },
 
@@ -103,6 +104,27 @@
             "title": "Value"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"longitude": 148.25, "latitude": -32.8, "label": "Western NSW 96.07%"},
+          {"longitude": 152.7, "latitude": -29.6, "label": "North Coast 88.00%"},
+          {"longitude": 153.35, "latitude": -28.05, "label": "Gold Coast 89.12%"},
+          {"longitude": 151.5, "latitude": -25.8, "label": "Central Qld, Wide Bay, Sunshine Coast 89.20%"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "dy": -10
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "label"}
       }
     }
   ]

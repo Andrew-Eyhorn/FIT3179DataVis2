@@ -4,7 +4,7 @@
   "width": "container",
   "height": 520,
   "mark": "rect",
-  "title": {"text": "Per vaccine per phn in 2025 % immune for age 2", "fontSize": 18},
+  "title": {"text": "Two-year-old vaccination coverage by vaccine and PHN, 2025", "fontSize": 18},
   "transform": [
   {
     "fold": [
@@ -51,7 +51,8 @@
     "field": "Coverage",
     "type": "quantitative",
     "scale": {
-      "domain": [80, 100]
+      "domain": [80, 100],
+      "scheme": "blues"
     }
   },
   "tooltip": [

@@ -1,18 +1,80 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "National Child Immune % over Time" },
+"title": { "text": "National vaccination coverage by age, 2006–2024" },
 "width": "container",
 "height": 260,
 "data": {
 "url": "chart4/overtimegeneralvax.csv"
 },
+"params": [
+  {
+    "name": "zoomedIn",
+    "value": false,
+    "bind": {
+      "input": "checkbox",
+      "name": "Focus view (75–100%): "
+    }
+  }
+],
 "transform": [
   { "filter": "datum.category == 'all children' && datum.state_name == 'Australia'" }
 ],
-"mark": "line",
-"encoding": {
-"x": { "field": "year", "type": "ordinal" },
-"y": { "field": "value", "type": "quantitative" },
-"color": { "field": "age", "type": "nominal" }
-}
+"layer": [
+  {
+    "mark": "line",
+    "encoding": {
+      "x": { "field": "year", "type": "ordinal" },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}
+      },
+      "color": {
+        "field": "age",
+        "type": "nominal",
+        "scale": {"domain": [1, 2, 5], "range": ["#0072B2", "#CC79A7", "#E69F00"]}
+      }
+    }
+  },
+  {
+    "mark": {"type": "rule", "strokeDash": [6, 4], "color": "#555555"},
+    "encoding": {"y": {"datum": 95}}
+  },
+  {
+    "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "fontSize": 11},
+    "transform": [{"filter": "zoomedIn"}],
+    "encoding": {
+      "x": {"value": 0},
+      "y": {"datum": 95},
+      "text": {"value": "95% target"}
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {"year": 2020, "value": 95.09, "label": "Age five peak: 95.09%"},
+        {"year": 2024, "value": 93.63, "label": "2024: 93.63%"}
+      ]
+    },
+    "mark": {"type": "text", "align": "left", "dx": 5, "dy": -8, "fontSize": 11},
+    "transform": [{"filter": "zoomedIn"}],
+    "encoding": {
+      "x": {"field": "year", "type": "ordinal"},
+      "y": {"field": "value", "type": "quantitative"},
+      "text": {"field": "label"}
+    }
+  },
+  {
+    "data": {"values": [{}]},
+    "mark": {"type": "text", "align": "left", "fontSize": 11, "color": "#555555"},
+    "encoding": {
+      "x": {"value": 0},
+      "y": {"value": 99},
+      "text": {
+        "condition": {"test": "zoomedIn", "value": "Focused view: 75–100%"},
+        "value": "Full scale: 0–100%"
+      }
+    }
+  }
+]
 }

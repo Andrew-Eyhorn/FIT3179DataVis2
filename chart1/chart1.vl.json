@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Child Immunisation Age 5 By State 2024",
+  "title": "Age-five vaccination coverage by state, 2024",
   "width": "container",
   "height": 320,
 
@@ -30,23 +30,49 @@
     }
   ],
 
-  "mark": "geoshape",
-
-  "encoding": {
-    "color": {
-      "field": "immunisationValue",
-      "type": "quantitative"
-    },
-
-    "tooltip": [
-      {
-        "field": "properties.STE_NAME21",
-        "title": "State"
-      },
-      {
-        "field": "immunisationValue",
-        "title": "Immunisation"
+  "layer": [
+    {
+      "mark": "geoshape",
+      "encoding": {
+        "color": {
+          "field": "immunisationValue",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "blues",
+            "domain": [90, 96]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.STE_NAME21",
+            "title": "State"
+          },
+          {
+            "field": "immunisationValue",
+            "title": "Coverage (%)",
+            "format": ".2f"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "data": {
+        "values": [
+          {"longitude": 149.1, "latitude": -35.45, "label": "ACT 95.44%"},
+          {"longitude": 133, "latitude": -19.5, "label": "NT 91.53%"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "dy": -8
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
 }

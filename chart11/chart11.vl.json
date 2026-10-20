@@ -1,6 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Aboriginal vs all 5 yr old vaccinated % 2025", "fontSize" : 18},
+  "title": {
+    "text": "Aboriginal and overall age-five coverage by PHN, 2025",
+    "subtitle": "Points above the diagonal have higher Aboriginal coverage than overall coverage.",
+    "fontSize": 18
+  },
   "width": "container",
   "height": 280,
   "data": {"url": "chart11/vacc2025perphn5yaer.csv"},
@@ -16,9 +20,11 @@
         "name": "Minimum Population: "
       }
     }],
-  "mark": "circle",
-  "transform": [{"filter": "datum.population > Population_Above"}],
-  "encoding": {
+  "layer": [
+    {
+      "transform": [{"filter": "datum.population > Population_Above"}],
+      "mark": "circle",
+      "encoding": {
     "x": {
       "field": "% 5 year olds vaccinated children",
       "type": "quantitative",
@@ -32,7 +38,11 @@
       "title": "Aboriginal children vaccinated (%) with scale 86-100%"
     },
     "size": {"field": "population", "type": "quantitative"},
-    "color": {"field": "group", "type": "nominal"},
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {"domain": ["Metropolitan", "Regional"], "range": ["#0072B2", "#CC79A7"]}
+    },
      "tooltip": [
       {
         "field": "phn_name",
@@ -49,7 +59,29 @@
         "title": "Population",
         "format": ","
       }
-    ]
-  }
-  
+      ]
+      }
+    },
+    {
+      "data": {"values": [{"x": 86, "y": 86}, {"x": 100, "y": 100}]},
+      "mark": {"type": "line", "strokeDash": [5, 4], "color": "#555555"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "scale": {"domain": [86, 100]}},
+        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [86, 100]}}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 93.91, "y": 86.15, "label": "Northern Sydney: 86.15% vs 93.91%"}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "dx": 5, "dy": -7, "fontSize": 10},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "scale": {"domain": [86, 100]}},
+        "y": {"field": "y", "type": "quantitative", "scale": {"domain": [86, 100]}},
+        "text": {"field": "label"}
+      }
+    }
+  ]
 }

@@ -1,15 +1,65 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Aboriginal Immune % Vs All Children over Time" },
+"title": { "text": "Age-five vaccination coverage over time: Aboriginal and all children" },
 "width": "container",
 "height": 260,
 "data": {
 "url": "chart9/chart9data.csv"
 },
-"mark": "line",
-"encoding": {
-"x": { "field": "year", "type": "ordinal" },
-"y": { "field": "immune %", "type": "quantitative" },
-"color": { "field": "group", "type": "nominal" }
-}
+"params": [
+  {
+    "name": "zoomedIn",
+    "value": false,
+    "bind": {
+      "input": "checkbox",
+      "name": "Focus view (75–100%): "
+    }
+  }
+],
+"layer": [
+  {
+    "mark": "line",
+    "encoding": {
+      "x": { "field": "year", "type": "ordinal" },
+      "y": {
+        "field": "vaccination coverage (%)",
+        "type": "quantitative",
+        "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}
+      },
+      "color": {
+        "field": "group",
+        "type": "nominal",
+        "scale": {"domain": ["all children", "indigenous"], "range": ["#0072B2", "#CC79A7"]}
+      }
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {"year": 2013, "value": 91.86, "label": "Catch-up crossover"},
+        {"year": 2020, "value": 97.25, "label": "Aboriginal peak: 97.25%"},
+        {"year": 2020, "value": 95.09, "label": "All children peak: 95.09%"}
+      ]
+    },
+    "mark": {"type": "text", "align": "left", "dx": 5, "dy": -7, "fontSize": 10},
+    "transform": [{"filter": "zoomedIn"}],
+    "encoding": {
+      "x": {"field": "year", "type": "ordinal"},
+      "y": {"field": "value", "type": "quantitative"},
+      "text": {"field": "label"}
+    }
+  },
+  {
+    "data": {"values": [{}]},
+    "mark": {"type": "text", "align": "left", "fontSize": 11, "color": "#555555"},
+    "encoding": {
+      "x": {"value": 0},
+      "y": {"value": 99},
+      "text": {
+        "condition": {"test": "zoomedIn", "value": "Focused view: 75–100%"},
+        "value": "Full scale: 0–100%"
+      }
+    }
+  }
+]
 }

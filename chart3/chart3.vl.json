@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Child Immune All vs Aboriginal 2024" },
+"title": { "text": "Vaccination coverage by age and population group, 2024" },
 "width": "container",
 "height": 260,
 "data": {
@@ -9,11 +9,28 @@
 "transform": [
   { "filter": "datum.year == 2024 && datum.state_name == 'Australia'" }
 ],
-"mark": "bar",
-"encoding": {
-"xOffset": { "field": "category", "type": "ordinal" },
-"y": { "field": "value", "type": "quantitative" },
-"x": { "field": "age", "type": "nominal" },
-"color": { "field": "category", "type": "ordinal" }
-}
+"layer": [
+  {
+    "mark": "bar",
+    "encoding": {
+      "xOffset": { "field": "category", "type": "ordinal" },
+      "y": { "field": "value", "type": "quantitative", "scale": {"domain": [0, 100]} },
+      "x": { "field": "age", "type": "nominal" },
+      "color": {
+        "field": "category",
+        "type": "nominal",
+        "scale": {"domain": ["all children", "aboriginal"], "range": ["#0072B2", "#CC79A7"]}
+      }
+    }
+  },
+  {
+    "mark": {"type": "text", "dy": -6, "fontSize": 11},
+    "encoding": {
+      "xOffset": { "field": "category", "type": "ordinal" },
+      "y": { "field": "value", "type": "quantitative", "scale": {"domain": [0, 100]} },
+      "x": { "field": "age", "type": "nominal" },
+      "text": {"field": "value", "type": "quantitative", "format": ".2f"}
+    }
+  }
+]
 }
