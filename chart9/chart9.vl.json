@@ -12,7 +12,7 @@
     "value": false,
     "bind": {
       "input": "checkbox",
-      "name": "Focus view (75–100%): "
+      "name": "Focus view (75-100%): "
     }
   }
 ],
@@ -36,9 +36,8 @@
   {
     "data": {
       "values": [
-        {"year": 2013, "value": 91.86, "label": "Catch-up crossover"},
-        {"year": 2020, "value": 97.25, "label": "Aboriginal peak: 97.25%"},
-        {"year": 2020, "value": 95.09, "label": "All children peak: 95.09%"}
+        {"year": 2020, "value": 97.25, "label": "High: 97.25%"},
+        {"year": 2024, "value": 87.74, "label": "Low: 87.74%"}
       ]
     },
     "mark": {"type": "text", "align": "left", "dx": 5, "dy": -7, "fontSize": 10},
@@ -51,13 +50,16 @@
   },
   {
     "data": {"values": [{}]},
+    "transform": [
+      {"calculate": "zoomedIn ? 76 : 2", "as": "scale_label_y"}
+    ],
     "mark": {"type": "text", "align": "left", "fontSize": 11, "color": "#555555"},
     "encoding": {
       "x": {"value": 0},
-      "y": {"value": 99},
+      "y": {"field": "scale_label_y", "type": "quantitative", "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}},
       "text": {
-        "condition": {"test": "zoomedIn", "value": "Focused view: 75–100%"},
-        "value": "Full scale: 0–100%"
+        "condition": {"test": "zoomedIn", "value": "Focused view: 75-100%"},
+        "value": "Full scale: 0-100%"
       }
     }
   }

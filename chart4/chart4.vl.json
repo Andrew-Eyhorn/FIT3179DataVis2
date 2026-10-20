@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "National vaccination coverage by age, 2006–2024" },
+"title": { "text": "National vaccination coverage by age, 2006-2024" },
 "width": "container",
 "height": 260,
 "data": {
@@ -12,7 +12,7 @@
     "value": false,
     "bind": {
       "input": "checkbox",
-      "name": "Focus view (75–100%): "
+      "name": "Focus view (75-100%): "
     }
   }
 ],
@@ -41,19 +41,10 @@
     "encoding": {"y": {"datum": 95}}
   },
   {
-    "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "fontSize": 11},
-    "transform": [{"filter": "zoomedIn"}],
-    "encoding": {
-      "x": {"value": 0},
-      "y": {"datum": 95},
-      "text": {"value": "95% target"}
-    }
-  },
-  {
     "data": {
       "values": [
-        {"year": 2020, "value": 95.09, "label": "Age five peak: 95.09%"},
-        {"year": 2024, "value": 93.63, "label": "2024: 93.63%"}
+        {"year": 2020, "value": 95.09, "label": "High: 95.09%"},
+        {"year": 2024, "value": 90.44, "label": "Low: 90.44%"}
       ]
     },
     "mark": {"type": "text", "align": "left", "dx": 5, "dy": -8, "fontSize": 11},
@@ -66,13 +57,16 @@
   },
   {
     "data": {"values": [{}]},
+    "transform": [
+      {"calculate": "zoomedIn ? 76 : 2", "as": "scale_label_y"}
+    ],
     "mark": {"type": "text", "align": "left", "fontSize": 11, "color": "#555555"},
     "encoding": {
       "x": {"value": 0},
-      "y": {"value": 99},
+      "y": {"field": "scale_label_y", "type": "quantitative", "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}},
       "text": {
-        "condition": {"test": "zoomedIn", "value": "Focused view: 75–100%"},
-        "value": "Full scale: 0–100%"
+        "condition": {"test": "zoomedIn", "value": "Focused view: 75-100%"},
+        "value": "Full scale: 0-100%"
       }
     }
   }

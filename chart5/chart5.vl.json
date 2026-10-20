@@ -9,11 +9,11 @@
       "value": false,
       "bind": {
         "input": "checkbox",
-        "name": "Focus view (75–100%): "
+        "name": "Focus view (75-100%): "
       }
     }
   ],
-  "title": { "text": "Change in age-five vaccination coverage by state, 2006–2024" },
+  "title": { "text": "Change in age-five vaccination coverage by state, 2006-2024" },
   "transform": [
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }
@@ -51,27 +51,12 @@
           "datum": 95
         }
       }
-    },{
-    "mark": {
-      "type": "text",
-      "align": "left",
-      "dx": 5,
-      "dy": -5
     },
-    "transform": [{"filter": "zoomedIn"}],
-    "encoding": {
-      "x": {"value": 0},
-      "y": {"datum": 95},
-      "text": {"value": "95% target"}
-    }
-  },
   {
     "data": {
       "values": [
-        {"year": 2024, "value": 94.69, "label": "South Australia 94.69%"},
-        {"year": 2024, "value": 95.44, "label": "ACT 95.44%"},
-        {"year": 2024, "value": 92.39, "label": "Queensland 92.39%"},
-        {"year": 2024, "value": 91.53, "label": "NT 91.53%"}
+        {"year": 2024, "value": 95.44, "label": "High: ACT 95.44%"},
+        {"year": 2024, "value": 91.53, "label": "Low: NT 91.53%"}
       ]
     },
     "mark": {"type": "text", "align": "left", "dx": 6, "dy": -6, "fontSize": 10},
@@ -84,13 +69,16 @@
   },
   {
     "data": {"values": [{}]},
+    "transform": [
+      {"calculate": "zoomedIn ? 76 : 2", "as": "scale_label_y"}
+    ],
     "mark": {"type": "text", "align": "left", "fontSize": 11, "color": "#555555"},
     "encoding": {
       "x": {"value": 0},
-      "y": {"value": 99},
+      "y": {"field": "scale_label_y", "type": "quantitative", "scale": {"domain": {"expr": "zoomedIn ? [75, 100] : [0, 100]"}}},
       "text": {
-        "condition": {"test": "zoomedIn", "value": "Focused view: 75–100%"},
-        "value": "Full scale: 0–100%"
+        "condition": {"test": "zoomedIn", "value": "Focused view: 75-100%"},
+        "value": "Full scale: 0-100%"
       }
     }
   }
