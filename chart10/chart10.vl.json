@@ -3,8 +3,7 @@
   "data": {"url": "chart10/chart10data.csv"},
   "width": "container",
   "height": 520,
-  "mark": "rect",
-  "title": {"text": "Two-year-old vaccination coverage by vaccine and PHN, 2025", "fontSize": 18},
+  "title": {"text": "Two-year-old vaccination coverage by vaccine and PHN, 2025"},
   "transform": [
   {
     "fold": [
@@ -56,7 +55,10 @@
     "title": "PHN",
     "axis": {
       "title": "Primary Health Network (PHN)",
-      "labelLimit": 220,
+      "labelFontSize": 9,
+      "labelLimit": 300,
+      "labelExpr": "datum.label == 'Central Queensland, Wide Bay and Sunshine Coast' ? 'Central Qld, Wide Bay and Sunshine Coast' : datum.label",
+      "labelPadding": 4,
       "labelOverlap": false
     }
   },
@@ -74,5 +76,29 @@
     {"field": "Vaccine", "type": "nominal", "title": "Vaccine"},
     {"field": "Coverage", "type": "quantitative", "title": "Coverage (%)", "format": ".2f"}
   ]
-}
+  },
+  "layer": [
+    {"mark": "rect"},
+    {
+      "transform": [
+        {
+          "filter": "(datum.Vaccine == '% HEP' && datum['PHN Name'] == 'Western NSW') || (datum.Vaccine == '% MMR' && datum['PHN Name'] == 'North Coast') || (datum.Vaccine == '% Varicella' && datum['PHN Name'] == 'North Coast')"
+        },
+        {
+          "calculate": "format(datum.Coverage, '.2f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#222222"
+      },
+      "encoding": {
+        "text": {"field": "label"},
+        "color": {"value": "#222222"}
+      }
+    }
+  ]
 }

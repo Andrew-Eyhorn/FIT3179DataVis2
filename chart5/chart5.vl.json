@@ -13,7 +13,7 @@
       }
     }
   ],
-  "title": { "text": "Age-five coverage change by state, 2006-2024", "fontSize": 16 },
+  "title": { "text": "Age-five coverage change by state, 2006-2024" },
   "transform": [
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }

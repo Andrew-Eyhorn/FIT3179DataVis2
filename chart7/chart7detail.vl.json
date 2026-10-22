@@ -1,5 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "European vaccine manufacturing sources"
+  },
   "width": "container",
   "height": 240,
   "layer": [

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "DTP3 coverage: Australia and supplier countries, 2025", "fontSize" : 16},
+  "title": {"text": "DTP3 coverage: Australia and supplier countries, 2025"},
   "width": "container",
   "height": 260,
   "data": {

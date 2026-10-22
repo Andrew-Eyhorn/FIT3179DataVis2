@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Age-five coverage by state, 2024", "fontSize": 17},
+  "title": {"text": "Age-five coverage by state, 2024"},
   "width": "container",
   "height": 320,
 
@@ -26,7 +26,7 @@
         "key": "State Name",
         "fields": ["Value"]
       },
-      "as": "immunisationValue"
+      "as": "coverageValue"
     }
   ],
 
@@ -35,7 +35,7 @@
       "mark": "geoshape",
       "encoding": {
         "color": {
-          "field": "immunisationValue",
+          "field": "coverageValue",
           "type": "quantitative",
           "scale": {
             "scheme": "blues",
@@ -48,7 +48,7 @@
             "title": "State"
           },
           {
-            "field": "immunisationValue",
+            "field": "coverageValue",
             "title": "Coverage (%)",
             "format": ".2f"
           }

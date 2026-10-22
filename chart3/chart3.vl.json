@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Coverage by age and population group, 2024", "fontSize": 17 },
+"title": { "text": "Coverage by age and population group, 2024" },
 "width": "container",
 "height": 260,
 "data": {
@@ -19,7 +19,7 @@
       "color": {
         "field": "category",
         "type": "nominal",
-        "scale": {"domain": ["all children", "aboriginal"], "range": ["#0072B2", "#CC79A7"]}
+        "scale": {"domain": ["all children", "aboriginal"], "range": ["#0072B2", "#E69F00"]}
       }
     }
   },

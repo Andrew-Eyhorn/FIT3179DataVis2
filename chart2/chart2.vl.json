@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Age-five coverage by PHN, 2025", "fontSize": 17},
+  "title": {"text": "Age-five coverage by PHN, 2025"},
   "width": "container",
   "height": 260,
 
