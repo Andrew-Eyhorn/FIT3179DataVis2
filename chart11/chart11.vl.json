@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Aboriginal and overall age-five coverage by PHN, 2025",
+    "text": "Aboriginal and Overall Age-Five Coverage by PHN, 2025",
     "subtitle": "Points above the diagonal have higher Aboriginal coverage than overall coverage."
   },
   "width": "container",
@@ -28,20 +28,20 @@
       "field": "% 5 year olds vaccinated children",
       "type": "quantitative",
       "scale": {"domain": [86, 100]},
-      "title": "Overall coverage (%)"
+      "title": "Overall Coverage (%)"
     },
     "y": {
       "field": "% 5 year olds vaccinated aboriginal",
       "type": "quantitative",
       "scale": {"domain": [86, 100]},
-      "title": "Aboriginal coverage (%)"
+      "title": "Aboriginal Coverage (%)"
     },
     "size": {"field": "population", "type": "quantitative"},
     "color": {
       "field": "group",
       "type": "nominal",
       "scale": {"domain": ["Metropolitan", "Regional"], "range": ["#0072B2", "#E69F00"]},
-      "legend": {"title": "Area type"}
+      "legend": {"title": "Area Type"}
     },
      "tooltip": [
       {
@@ -50,12 +50,12 @@
       },
       {
         "field": "% 5 year olds vaccinated children",
-        "title": "Overall coverage (%)",
+        "title": "Overall Coverage (%)",
         "format": ".2f"
       },
       {
         "field": "% 5 year olds vaccinated aboriginal",
-        "title": "Aboriginal coverage (%)",
+        "title": "Aboriginal Coverage (%)",
         "format": ".2f"
       },
       {

@@ -3,7 +3,7 @@
   "data": {"url": "chart10/chart10data.csv"},
   "width": "container",
   "height": 520,
-  "title": {"text": "Two-year-old vaccination coverage by vaccine and PHN, 2025"},
+  "title": {"text": "2025 2-Year-Old Vaccination Coverage by Vaccine and PHN"},
   "transform": [
   {
     "fold": [
@@ -97,7 +97,13 @@
       },
       "encoding": {
         "text": {"field": "label"},
-        "color": {"value": "#222222"}
+        "color": {
+          "condition": {
+            "test": "datum.Vaccine == '% HEP' && datum['PHN Name'] == 'Western NSW'",
+            "value": "#FFFFFF"
+          },
+          "value": "#222222"
+        }
       }
     }
   ]

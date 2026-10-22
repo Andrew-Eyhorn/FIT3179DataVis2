@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Age-five coverage by state, 2024"},
+  "title": {"text": "Age-Five Coverage by State, 2024"},
   "width": "container",
   "height": 320,
 

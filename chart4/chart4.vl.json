@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "National coverage by age, 2006-2024" },
+"title": { "text": "National Coverage by Age, 2006-2024" },
 "width": "container",
 "height": 260,
 "data": {
@@ -12,7 +12,7 @@
     "value": false,
     "bind": {
       "input": "checkbox",
-      "name": "Focus view (75-100%): "
+      "name": "Focus View (75-100%): "
     }
   }
 ],
@@ -34,7 +34,7 @@
         "field": "age",
         "type": "nominal",
         "scale": {"domain": [1, 2, 5], "range": ["#0072B2", "#CC79A7", "#E69F00"]},
-        "legend": {"title": "Age (years)"}
+        "legend": {"title": "Age (Years)"}
       }
     }
   },

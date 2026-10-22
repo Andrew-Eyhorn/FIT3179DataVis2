@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Age-five coverage by PHN, 2025"},
+  "title": {"text": "Age-Five Coverage by PHN, 2025"},
   "width": "container",
   "height": 260,
 
@@ -87,8 +87,8 @@
         },
 
         "tooltip": [
-          {"field": "phn_code", "title": "PHN code"},
-          {"field": "phn_name", "title": "PHN name"},
+          {"field": "phn_code", "title": "PHN Code"},
+          {"field": "phn_name", "title": "PHN Name"},
           {"field": "population", "title": "Population", "format": ","},
           {"field": "% 5 year olds vaccinated children", "title": "Coverage (%)", "format": ".2f"}
         ]

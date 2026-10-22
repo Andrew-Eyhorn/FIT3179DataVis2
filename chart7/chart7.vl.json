@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
-    "text": "Vaccine manufacturing sources and routes"
+    "text": "Vaccine Manufacturing Sources and Routes"
   },
   "width": "container",
   "height": 240,

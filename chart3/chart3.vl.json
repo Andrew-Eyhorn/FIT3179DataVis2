@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Coverage by age and population group, 2024" },
+"title": { "text": "Coverage by Age and Population Group, 2024" },
 "width": "container",
 "height": 260,
 "data": {
@@ -15,7 +15,7 @@
     "encoding": {
       "xOffset": { "field": "category", "type": "ordinal" },
       "y": { "field": "value", "type": "quantitative", "scale": {"domain": [0, 100]}, "title": "Coverage (%)" },
-      "x": { "field": "age", "type": "nominal", "title": "Age (years)" },
+      "x": { "field": "age", "type": "nominal", "title": "Age (Years)" },
       "color": {
         "field": "category",
         "type": "nominal",
@@ -28,7 +28,7 @@
     "encoding": {
       "xOffset": { "field": "category", "type": "ordinal" },
       "y": { "field": "value", "type": "quantitative", "scale": {"domain": [0, 100]}, "title": "Coverage (%)" },
-      "x": { "field": "age", "type": "nominal", "title": "Age (years)" },
+      "x": { "field": "age", "type": "nominal", "title": "Age (Years)" },
       "text": {"field": "value", "type": "quantitative", "format": ".2f"}
     }
   }

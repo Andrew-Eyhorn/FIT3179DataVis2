@@ -16,7 +16,7 @@
   ],
 
   "title": {
-    "text": "Coverage across ages by state, 2024"
+    "text": "Coverage Across Ages by State, 2024"
   },
 
   "width": "container",
@@ -59,15 +59,25 @@
   "field": "state_name",
   "type": "nominal",
   "scale": {
+    "domain": [
+      "Australian Capital Territory",
+      "New South Wales",
+      "Victoria",
+      "Queensland",
+      "South Australia",
+      "Western Australia",
+      "Tasmania",
+      "Northern Territory"
+    ],
     "range": [
       "#0072B2",
       "#E69F00",
-      "#56B4E9",
       "#CC79A7",
+      "#56B4E9",
+      "#6B3E26",
       "#009E73",
-      "#D55E00",
-      "#6A3D9A",
-      "#8C6D31"
+      "#8C6D31",
+      "#6A3D9A"
     ],
     "legend": {"title": "State"}
   }

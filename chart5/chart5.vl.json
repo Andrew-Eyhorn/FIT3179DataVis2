@@ -9,11 +9,11 @@
       "value": false,
       "bind": {
         "input": "checkbox",
-        "name": "Focus view (75-100%): "
+        "name": "Focus View (75-100%): "
       }
     }
   ],
-  "title": { "text": "Age-five coverage change by state, 2006-2024" },
+  "title": { "text": "Age-Five Coverage Change by State, 2006-2024" },
   "transform": [
   { "filter": "datum.category == 'all children' && datum.age == 5" },
   { "filter": "datum.year == 2024 || datum.year == 2006" }
@@ -38,7 +38,17 @@
       "field": "state_name",
       "type": "nominal",
       "scale": {
-        "range": ["#0072B2", "#E69F00", "#56B4E9", "#CC79A7", "#009E73", "#D55E00", "#6A3D9A", "#8C6D31"]
+        "domain": [
+          "Australian Capital Territory",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "range": ["#0072B2", "#E69F00", "#CC79A7", "#56B4E9", "#6B3E26", "#009E73", "#8C6D31", "#6A3D9A"]
       },
       "legend": {"title": "State"}
     }

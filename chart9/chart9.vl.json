@@ -1,6 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": { "text": "Age-five coverage: Aboriginal and all children" },
+"title": { "text": "Age-Five Coverage: Aboriginal and All Children" },
 "width": "container",
 "height": 260,
 "data": {
@@ -12,7 +12,7 @@
     "value": false,
     "bind": {
       "input": "checkbox",
-      "name": "Focus view (75-100%): "
+      "name": "Focus View (75-100%): "
     }
   }
 ],
@@ -31,7 +31,7 @@
         "field": "group",
         "type": "nominal",
         "scale": {"domain": ["all children", "indigenous"], "range": ["#0072B2", "#E69F00"]},
-        "legend": {"title": "Population group"}
+        "legend": {"title": "Population Group"}
       }
     }
   },
