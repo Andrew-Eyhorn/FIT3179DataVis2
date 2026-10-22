@@ -33,6 +33,12 @@
     "field": "Vaccine",
     "type": "nominal",
     "title": "Vaccine",
+    "axis": {
+      "title": "Vaccine",
+      "labelExpr": "replace(datum.label, '% ', '')",
+      "labelAngle": -45,
+      "labelOverlap": false
+    },
     "sort": [
       "% DTP",
       "% Polio",
@@ -47,7 +53,12 @@
   "y": {
     "field": "PHN Name",
     "type": "nominal",
-    "title": "PHN"
+    "title": "PHN",
+    "axis": {
+      "title": "Primary Health Network (PHN)",
+      "labelLimit": 220,
+      "labelOverlap": false
+    }
   },
   "color": {
     "field": "Coverage",

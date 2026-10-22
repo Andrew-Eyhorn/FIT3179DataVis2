@@ -22,6 +22,12 @@
 
   "width": "container",
   "height": 260,
+  "padding": {
+    "left": 10,
+    "right": 8,
+    "top": 5,
+    "bottom": 5
+  },
 
   "layer": [
     {
@@ -125,7 +131,12 @@
           "scale": {
             "domain": [-0.2, 2.2]
           },
-          "axis": null
+          "axis": {
+            "title": "Age",
+            "values": [0, 1, 2],
+            "labelExpr": "datum.value === 0 ? '1 year' : datum.value === 1 ? '2 years' : datum.value === 2 ? '5 years' : ''",
+            "labelAngle": 0
+          }
         },
 
         "y": {
@@ -133,6 +144,10 @@
           "type": "quantitative",
           "scale": {
             "domain": [87, 96]
+          },
+          "axis": {
+            "orient": "left",
+            "labelPadding": 4
           }
         }
       }
@@ -219,6 +234,32 @@
           "value": 280
         },
 
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"age_pos": 0, "value": 91.5, "label": "Coverage (%)"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "angle": -90,
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "value": -24
+        },
+        "y": {
+          "value": 130
+        },
         "text": {
           "field": "label"
         }
